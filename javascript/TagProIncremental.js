@@ -63,8 +63,17 @@ function degreesCalc() {
 
 function winPercent2() {
 	var winPercUnrounded = (wins / games) * 100;
-	winPerCent = Math.ceil(winPercUnrounded);
-	console.log(winPerCent + " % - Win Percentage!");
+	winPercent = Math.ceil(winPercUnrounded);
+	console.log(winPercent + " % - Win Percentage!");
+}
+
+function showStats() {
+	document.querySelector('.wins').innerHTML = wins;
+	document.querySelector('.losses').innerHTML = losses;
+	document.querySelector('.ties').innerHTML = ties;
+	document.querySelector('.games').innerHTML = games;
+	document.querySelector('.wins').innerHTML = streak;
+	document.querySelector('.winpercent').innerHTML = winPercent;
 }
 	
 //Pubbing (This is messy)
@@ -1024,44 +1033,5 @@ function selectPub() {
 						pubHub(hubSkill);
 					}
 				};
+	showStats();
 }
-
-selectPub();
-console.log('Wins: ' + wins);
-console.log('Losses: ' + losses);
-console.log('Games: ' + games);
-console.log('Streak: ' + streak);
-console.log('Win Percent: ' + winPercent);
-console.log('---BREAK---');
-
-selectPub();
-console.log('Wins: ' + wins);
-console.log('Losses: ' + losses);
-console.log('Games: ' + games);
-console.log('Streak: ' + streak);
-console.log('Win Percent: ' + winPercent);
-console.log('---BREAK---');
-
-selectPub();
-console.log('Wins: ' + wins);
-console.log('Losses: ' + losses);
-console.log('Games: ' + games);
-console.log('Streak: ' + streak);
-console.log('Win Percent: ' + winPercent);
-console.log('---BREAK---');
-
-selectPub();
-console.log('Wins: ' + wins);
-console.log('Losses: ' + losses);
-console.log('Games: ' + games);
-console.log('Streak: ' + streak);
-console.log('Win Percent: ' + winPercent);
-console.log('---BREAK---');
-
-selectPub();
-console.log('Wins: ' + wins);
-console.log('Losses: ' + losses);
-console.log('Games: ' + games);
-console.log('Streak: ' + streak);
-console.log('Win Percent: ' + winPercent);
-console.log('---BREAK---');
