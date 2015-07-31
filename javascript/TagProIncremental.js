@@ -72,7 +72,7 @@ function showStats() {
 	document.getElementById('losses').innerHTML = losses;
 	document.getElementById('ties').innerHTML = ties;
 	document.getElementById('games').innerHTML = games;
-	document.getElementById('wins').innerHTML = streak;
+	document.getElementById('streak').innerHTML = streak;
 	document.getElementById('winpercent').innerHTML = winPercent;
 }
 	
@@ -95,12 +95,12 @@ function pubRicochet(ricochetSkill) {														// Ricochet
 		games = games + 1;
 		degreeProgress = degreeProgress + 1;
 		streak = streak + 1;
-		console.log('you pubbed on Ricochet and won!')
+		document.getElementById('log2').innerHTML = 'You pubbed on Ricochet and won!';
 	} else if (teamSkill < enemyTeamSkill) {									// If you lose
 		losses = losses + 1;
 		games = games + 1;
 		streak = 0;
-		console.log('you pubbed on Ricochet and lost.');
+		document.getElementById('log2').innerHTML = 'You pubbed on Ricochet and lost.';
 	} else if (teamSkill === enemyTeamSkill) {									// If you tie
 		streak = 0;
 		losses = losses + 1;
@@ -135,12 +135,12 @@ function pubVelocity(velocitySkill) {														// velocity
 		games = games + 1;
 		degreeProgress = degreeProgress + 1;
 		streak = streak + 1;
-		console.log('you pubbed on Velocity and won!');
+		document.getElementById('log2').innerHTML = 'You pubbed on Velocity and won!';
 	} else if (teamSkill < enemyTeamSkill) {									// If you lose
 		losses = losses + 1;
 		games = games + 1;
 		streak = 0;
-		console.log('you pubbed on Velocity and lost.');
+		document.getElementById('log2').innerHTML = 'You pubbed on Velocity and lost.';
 	} else if (teamSkill === enemyTeamSkill) {									// If you tie
 		streak = 0;
 		losses = losses + 1;
@@ -175,12 +175,12 @@ function pubWormy(wormySkill) {														// wormy
 		games = games + 1;
 		degreeProgress = degreeProgress + 1;
 		streak = streak + 1;
-		console.log('you pubbed on Wormy and won!');
+		document.getElementById('log2').innerHTML = 'You pubbed on Wormy and won!';
 	} else if (teamSkill < enemyTeamSkill) {									// If you lose
 		losses = losses + 1;
 		games = games + 1;
 		streak = 0;
-		console.log('you pubbed on Wormy and lost.');
+		document.getElementById('log2').innerHTML = 'You pubbed on Wormy and lost.';
 	} else if (teamSkill === enemyTeamSkill) {									// If you tie
 		streak = 0;
 		losses = losses + 1;
@@ -215,12 +215,12 @@ function pubCloud(cloudSkill) {														// cloud
 		games = games + 1;
 		degreeProgress = degreeProgress + 1;
 		streak = streak + 1;
-		console.log('you pubbed on Cloud and won!');
+		document.getElementById('log2').innerHTML = 'You pubbed on Cloud and won!';
 	} else if (teamSkill < enemyTeamSkill) {									// If you lose
 		losses = losses + 1;
 		games = games + 1;
 		streak = 0;
-		console.log('you pubbed on Cloud and lost.');
+		document.getElementById('log2').innerHTML = 'You pubbed on Cloud and lost.';
 	} else if (teamSkill === enemyTeamSkill) {									// If you tie
 		streak = 0;
 		losses = losses + 1;
@@ -255,12 +255,12 @@ function pubCommandCenter(commandCenterSkill) {														// commandCenter
 		games = games + 1;
 		degreeProgress = degreeProgress + 1;
 		streak = streak + 1;
-		console.log('you pubbed on Command Center and won!');
+		document.getElementById('log2').innerHTML = 'You pubbed on Command Center and won!';
 	} else if (teamSkill < enemyTeamSkill) {									// If you lose
 		losses = losses + 1;
 		games = games + 1;
 		streak = 0;
-		console.log('you pubbed on Command Center and lost.');
+		document.getElementById('log2').innerHTML = 'You pubbed on Command Center and lost.';
 	} else if (teamSkill === enemyTeamSkill) {									// If you tie
 		streak = 0;
 		losses = losses + 1;
@@ -295,12 +295,12 @@ function pubSmirk(smirkSkill) {														// smirk
 		games = games + 1;
 		degreeProgress = degreeProgress + 1;
 		streak = streak + 1;
-		console.log('you pubbed on Smirk and won!');
+		document.getElementById('log2').innerHTML = 'You pubbed on Smirk and won!';
 	} else if (teamSkill < enemyTeamSkill) {									// If you lose
 		losses = losses + 1;
 		games = games + 1;
 		streak = 0;
-		console.log('you pubbed on Smirk and lost.');
+		document.getElementById('log2').innerHTML = 'You pubbed on Smirk and lost.';
 	} else if (teamSkill === enemyTeamSkill) {									// If you tie
 		streak = 0;
 		losses = losses + 1;
@@ -335,12 +335,12 @@ function pubBoombox(boomboxSkill) {														// boombox
 		games = games + 1;
 		degreeProgress = degreeProgress + 1;
 		streak = streak + 1;
-		console.log('you pubbed on Boombox and won!');
+		document.getElementById('log2').innerHTML = 'You pubbed on Boombox and won!';
 	} else if (teamSkill < enemyTeamSkill) {									// If you lose
 		losses = losses + 1;
 		games = games + 1;
 		streak = 0;
-		console.log('you pubbed on Boombox and lost.');
+		document.getElementById('log2').innerHTML = 'You pubbed on Boombox and lost.';
 	} else if (teamSkill === enemyTeamSkill) {									// If you tie
 		streak = 0;
 		losses = losses + 1;
@@ -375,12 +375,12 @@ function pubIron(ironSkill) {														// iron
 		games = games + 1;
 		degreeProgress = degreeProgress + 1;
 		streak = streak + 1;
-		console.log('you pubbed on IRON and won!');
+		document.getElementById('log2').innerHTML = 'You pubbed on IRON and won!';
 	} else if (teamSkill < enemyTeamSkill) {									// If you lose
 		losses = losses + 1;
 		games = games + 1;
 		streak = 0;
-		console.log('you pubbed on IRON and lost.');
+		document.getElementById('log2').innerHTML = 'You pubbed on IRON and lost.';
 	} else if (teamSkill === enemyTeamSkill) {									// If you tie
 		streak = 0;
 		losses = losses + 1;
@@ -415,12 +415,12 @@ function pubGeoKoala(geoKoalaSkill) {														// geoKoala
 		games = games + 1;
 		degreeProgress = degreeProgress + 1;
 		streak = streak + 1;
-		console.log('you pubbed on GeoKoala and won!');
+		document.getElementById('log2').innerHTML = 'You pubbed on GeoKoala and won!';
 	} else if (teamSkill < enemyTeamSkill) {									// If you lose
 		losses = losses + 1;
 		games = games + 1;
 		streak = 0;
-		console.log('you pubbed on GeoKoala and lost.');
+		document.getElementById('log2').innerHTML = 'You pubbed on GeoKoala and lost.';
 	} else if (teamSkill === enemyTeamSkill) {									// If you tie
 		streak = 0;
 		losses = losses + 1;
@@ -455,12 +455,12 @@ function pubConstriction(constrictionSkill) {														// constriction
 		games = games + 1;
 		degreeProgress = degreeProgress + 1;
 		streak = streak + 1;
-		console.log('you pubbed on Constriction and won!');
+		document.getElementById('log2').innerHTML = 'You pubbed on Constriction and won!';
 	} else if (teamSkill < enemyTeamSkill) {									// If you lose
 		losses = losses + 1;
 		games = games + 1;
 		streak = 0;
-		console.log('you pubbed on Constriction and lost.');
+		document.getElementById('log2').innerHTML = 'You pubbed on Constriction and lost.';
 	} else if (teamSkill === enemyTeamSkill) {									// If you tie
 		streak = 0;
 		losses = losses + 1;
@@ -495,12 +495,12 @@ function pubHornswoggle(hornswoggleSkill) {														// hornswoggle
 		games = games + 1;
 		degreeProgress = degreeProgress + 1;
 		streak = streak + 1;
-		console.log('you pubbed on Hornswoggle and won!');
+		document.getElementById('log2').innerHTML = 'You pubbed on Hornswoggle and won!';
 	} else if (teamSkill < enemyTeamSkill) {									// If you lose
 		losses = losses + 1;
 		games = games + 1;
 		streak = 0;
-		console.log('you pubbed on Hornswoggle and lost.');
+		document.getElementById('log2').innerHTML = 'You pubbed on Hornswoggle and lost.';
 	} else if (teamSkill === enemyTeamSkill) {									// If you tie
 		streak = 0;
 		losses = losses + 1;
@@ -535,12 +535,12 @@ function pubWomboCombo(womboComboSkill) {														// womboCombo
 		games = games + 1;
 		degreeProgress = degreeProgress + 1;
 		streak = streak + 1;
-		console.log('you pubbed on Wombo Combo and won!');
+		document.getElementById('log2').innerHTML = 'You pubbed on Wombo Combo and won!';
 	} else if (teamSkill < enemyTeamSkill) {									// If you lose
 		losses = losses + 1;
 		games = games + 1;
 		streak = 0;
-		console.log('you pubbed on Wombo Combo and lost.');
+		document.getElementById('log2').innerHTML = 'You pubbed on Wombo Combo and lost.';
 	} else if (teamSkill === enemyTeamSkill) {									// If you tie
 		streak = 0;
 		losses = losses + 1;
@@ -575,12 +575,12 @@ function pubDraft(draftSkill) {														// draft
 		games = games + 1;
 		degreeProgress = degreeProgress + 1;
 		streak = streak + 1;
-		console.log('you pubbed on Draft and won!');
+		document.getElementById('log2').innerHTML = 'You pubbed on Draft and won!';
 	} else if (teamSkill < enemyTeamSkill) {									// If you lose
 		losses = losses + 1;
 		games = games + 1;
 		streak = 0;
-		console.log('you pubbed on Draft and lost.');
+		document.getElementById('log2').innerHTML = 'You pubbed on Draft and lost.';
 	} else if (teamSkill === enemyTeamSkill) {									// If you tie
 		streak = 0;
 		losses = losses + 1;
@@ -615,12 +615,12 @@ function pubTransilio(transilioSkill) {														// transilio
 		games = games + 1;
 		degreeProgress = degreeProgress + 1;
 		streak = streak + 1;
-		console.log('you pubbed on Transilio and won!');
+		document.getElementById('log2').innerHTML = 'You pubbed on Transilio and won!';
 	} else if (teamSkill < enemyTeamSkill) {									// If you lose
 		losses = losses + 1;
 		games = games + 1;
 		streak = 0;
-		console.log('you pubbed on Transilio and lost.');
+		document.getElementById('log2').innerHTML = 'You pubbed on Transilio and lost.';
 	} else if (teamSkill === enemyTeamSkill) {									// If you tie
 		streak = 0;
 		losses = losses + 1;
@@ -655,12 +655,12 @@ function pubPilot(pilotSkill) {														// pilot
 		games = games + 1;
 		degreeProgress = degreeProgress + 1;
 		streak = streak + 1;
-		console.log('you pubbed on Pilot and won!');
+		document.getElementById('log2').innerHTML = 'You pubbed on Pilot and won!';
 	} else if (teamSkill < enemyTeamSkill) {									// If you lose
 		losses = losses + 1;
 		games = games + 1;
 		streak = 0;
-		console.log('you pubbed on Pilot and lost.');
+		document.getElementById('log2').innerHTML = 'You pubbed on Pilot and lost.';
 	} else if (teamSkill === enemyTeamSkill) {									// If you tie
 		streak = 0;
 		losses = losses + 1;
@@ -695,12 +695,12 @@ function pubbulldog(bulldogSkill) {														// bulldog
 		games = games + 1;
 		degreeProgress = degreeProgress + 1;
 		streak = streak + 1;
-		console.log('you pubbed on Bulldog and won!');
+		document.getElementById('log2').innerHTML = 'You pubbed on Bulldog and won!';
 	} else if (teamSkill < enemyTeamSkill) {									// If you lose
 		losses = losses + 1;
 		games = games + 1;
 		streak = 0;
-		console.log('you pubbed on Bulldog and lost.');
+		document.getElementById('log2').innerHTML = 'You pubbed on Bulldog and lost.';
 	} else if (teamSkill === enemyTeamSkill) {									// If you tie
 		streak = 0;
 		losses = losses + 1;
@@ -735,12 +735,12 @@ function pubUltraDrive(ultraDriveSkill) {														// ultraDrive
 		games = games + 1;
 		degreeProgress = degreeProgress + 1;
 		streak = streak + 1;
-		console.log('you pubbed on Ultradrive and won!');
+		document.getElementById('log2').innerHTML = 'You pubbed on Ultradrive and won!';
 	} else if (teamSkill < enemyTeamSkill) {									// If you lose
 		losses = losses + 1;
 		games = games + 1;
 		streak = 0;
-		console.log('you pubbed on Ultradrive and lost.');
+		document.getElementById('log2').innerHTML = 'You pubbed on Ultradrive and lost.';
 	} else if (teamSkill === enemyTeamSkill) {									// If you tie
 		streak = 0;
 		losses = losses + 1;
@@ -775,12 +775,12 @@ function pubEmerald(emeraldSkill) {														// emerald
 		games = games + 1;
 		degreeProgress = degreeProgress + 1;
 		streak = streak + 1;
-		console.log('you pubbed on EMERALD and won!');
+		document.getElementById('log2').innerHTML = 'You pubbed on EMERALD and won!';
 	} else if (teamSkill < enemyTeamSkill) {									// If you lose
 		losses = losses + 1;
 		games = games + 1;
 		streak = 0;
-		console.log('you pubbed on EMERALD and lost.');
+		document.getElementById('log2').innerHTML = 'You pubbed on EMERALD and lost.';
 	} else if (teamSkill === enemyTeamSkill) {									// If you tie
 		streak = 0;
 		losses = losses + 1;
@@ -815,12 +815,12 @@ function pubPlatypus(platypusSkill) {														// platypus
 		games = games + 1;
 		degreeProgress = degreeProgress + 1;
 		streak = streak + 1;
-		console.log('you pubbed on Platypus and won!');
+		document.getElementById('log2').innerHTML = 'You pubbed on Platypus and won!';
 	} else if (teamSkill < enemyTeamSkill) {									// If you lose
 		losses = losses + 1;
 		games = games + 1;
 		streak = 0;
-		console.log('you pubbed on Platypus and lost.');
+		document.getElementById('log2').innerHTML = 'You pubbed on Platypus and lost.';
 	} else if (teamSkill === enemyTeamSkill) {									// If you tie
 		streak = 0;
 		losses = losses + 1;
@@ -855,12 +855,12 @@ function pubDz4(dz4Skill) {														// dz4
 		games = games + 1;
 		degreeProgress = degreeProgress + 1;
 		streak = streak + 1;
-		console.log('you pubbed on Danger Zone 4 and won!');
+		document.getElementById('log2').innerHTML = 'You pubbed on Danger Zone 4 and won!';
 	} else if (teamSkill < enemyTeamSkill) {									// If you lose
 		losses = losses + 1;
 		games = games + 1;
 		streak = 0;
-		console.log('you pubbed on Danger Zone 4 and lost.');
+		document.getElementById('log2').innerHTML = 'You pubbed on Danger Zone 4 and lost.';
 	} else if (teamSkill === enemyTeamSkill) {									// If you tie
 		streak = 0;
 		losses = losses + 1;
@@ -895,12 +895,12 @@ function pubRenegade(renegadeSkill) {														// renegade
 		games = games + 1;
 		degreeProgress = degreeProgress + 1;
 		streak = streak + 1;
-		console.log('you pubbed on Renegade and won!');
+		document.getElementById('log2').innerHTML = 'You pubbed on Renegade and won!';
 	} else if (teamSkill < enemyTeamSkill) {									// If you lose
 		losses = losses + 1;
 		games = games + 1;
 		streak = 0;
-		console.log('you pubbed on Renegade and lost.');
+		document.getElementById('log2').innerHTML = 'You pubbed on Renegade and lost.';
 	} else if (teamSkill === enemyTeamSkill) {									// If you tie
 		streak = 0;
 		losses = losses + 1;
@@ -934,12 +934,12 @@ function pubHub(hubSkill) {														// hub
 		games = games + 1;
 		degreeProgress = degreeProgress + 1;
 		streak = streak + 1;
-		console.log('you pubbed on Hub and won!');
+		document.getElementById('log2').innerHTML = 'You pubbed on Hub and won!';
 	} else if (teamSkill < enemyTeamSkill) {									// If you lose
 		losses = losses + 1;
 		games = games + 1;
 		streak = 0;
-		console.log('you pubbed on Hub and lost.');
+		document.getElementById('log2').innerHTML = 'You pubbed on Hub and lost.';
 	} else if (teamSkill === enemyTeamSkill) {									// If you tie
 		streak = 0;
 		losses = losses + 1;
