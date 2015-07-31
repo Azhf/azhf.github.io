@@ -64,7 +64,7 @@ function degreesCalc() {
 function winPercent2() {
 	var winPercUnrounded = (wins / games) * 100;
 	winPerCent = Math.ceil(winPercUnrounded);
-	console.log(winPerCent + " %");
+	console.log(winPerCent + " % - Win Percentage!");
 }
 	
 //Pubbing (This is messy)
