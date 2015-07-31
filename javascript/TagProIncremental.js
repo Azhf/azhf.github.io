@@ -68,12 +68,12 @@ function winPercent2() {
 }
 
 function showStats() {
-	document.querySelector('.wins').innerHTML = wins;
-	document.querySelector('.losses').innerHTML = losses;
-	document.querySelector('.ties').innerHTML = ties;
-	document.querySelector('.games').innerHTML = games;
-	document.querySelector('.wins').innerHTML = streak;
-	document.querySelector('.winpercent').innerHTML = winPercent;
+	document.getElementById('wins').innerHTML = wins;
+	document.getElementById('losses').innerHTML = losses;
+	document.getElementById('ties').innerHTML = ties;
+	document.getElementById('games').innerHTML = games;
+	document.getElementById('wins').innerHTML = streak;
+	document.getElementById('winpercent').innerHTML = winPercent;
 }
 	
 //Pubbing (This is messy)
