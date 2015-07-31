@@ -945,7 +945,7 @@ function pubHub(hubSkill) {														// hub
 	degreesCalc();
 	winPercent2();
 }
-function selectPub {
+function selectPub() {
 	mapChosen = Math.floor(Math.random() * (22 - 1 + 1)) + 1;	
 	/* 1-5 */	if (mapChosen > 0 && mapChosen < 6) {
 					if (mapChosen === 1) {
@@ -1025,3 +1025,10 @@ function selectPub {
 					}
 				};
 }
+
+console.log('Wins: ' + wins);
+console.log('Losses: ' + losses);
+console.log('Games: ' + games);
+console.log('Streak: ' + streak);
+console.log('Win Percent: ' + winPercent);
+console.log('---BREAK---');
