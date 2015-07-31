@@ -1026,6 +1026,39 @@ function selectPub() {
 				};
 }
 
+selectPub();
+console.log('Wins: ' + wins);
+console.log('Losses: ' + losses);
+console.log('Games: ' + games);
+console.log('Streak: ' + streak);
+console.log('Win Percent: ' + winPercent);
+console.log('---BREAK---');
+
+selectPub();
+console.log('Wins: ' + wins);
+console.log('Losses: ' + losses);
+console.log('Games: ' + games);
+console.log('Streak: ' + streak);
+console.log('Win Percent: ' + winPercent);
+console.log('---BREAK---');
+
+selectPub();
+console.log('Wins: ' + wins);
+console.log('Losses: ' + losses);
+console.log('Games: ' + games);
+console.log('Streak: ' + streak);
+console.log('Win Percent: ' + winPercent);
+console.log('---BREAK---');
+
+selectPub();
+console.log('Wins: ' + wins);
+console.log('Losses: ' + losses);
+console.log('Games: ' + games);
+console.log('Streak: ' + streak);
+console.log('Win Percent: ' + winPercent);
+console.log('---BREAK---');
+
+selectPub();
 console.log('Wins: ' + wins);
 console.log('Losses: ' + losses);
 console.log('Games: ' + games);
