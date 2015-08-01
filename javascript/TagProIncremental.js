@@ -51,6 +51,12 @@ var streak = 0;
 
 	// Functions
 	
+// Upgrades
+
+function purchaseMapMemory {
+	logic = logic + 10
+}
+	
 // Required	
 
 function degreesCalc() {
@@ -75,6 +81,10 @@ function showStats() {
 	document.getElementById('streak').innerHTML = streak;
 	document.getElementById('winpercent').innerHTML = winPercent;
 }
+
+/* function rolling300() {
+	???
+} */
 	
 //Pubbing (This is messy)
 
