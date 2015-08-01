@@ -151,10 +151,12 @@ function deleteSave() {
 // Upgrades (In order of when you get them)
 
 function purchaseNavigateSpikes() {
-	mech = mech + 10;
-	tagCoins = tagCoins - 5;
-	document.getElementById('log2').innerHTML = 'You learned to navigate spikes!';
-	$('#NavigateSpikes').remove();
+	if (tagCoins >= 5) {
+		mech = mech + 10;
+		tagCoins = tagCoins - 5;
+		document.getElementById('log2').innerHTML = 'You learned to navigate spikes!';
+		$('#NavigateSpikes').remove();
+	};
 }
 
 function purchaseDefense() {
