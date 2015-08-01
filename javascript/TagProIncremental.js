@@ -125,6 +125,7 @@ function load() {
 	if (typeof savegame.renegadeSkill !== "undefined") renegadeSkill = savegame.renegadeSkill;
 	if (typeof savegame.hubSkill !== "undefined") hubSkill = savegame.hubSkill;
 	document.getElementById('log2').innerHTML = 'The game has been loaded.';
+	showStats();
 }
 
 window.setInterval(function(){ // autosave
