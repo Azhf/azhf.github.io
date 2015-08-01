@@ -43,7 +43,7 @@ h3 {
         border-radius: 10px;
 }
  
-button {
+.main {
         font-weight: bold;
         font-size: 200.0%;
         height: 50px;
@@ -76,5 +76,6 @@ body {
         -webkit-border-radius: 10px;
         -moz-border-radius: 10px;
         border-radius: 10px;
-		float: right
+		position: fixed;
+		right: 5px;
 }
