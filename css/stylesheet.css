@@ -2,12 +2,25 @@ html {
    font-size: 62.5%;
 }
 
-div { 										/* DONT FORGET COLONS */
-	height: 20em;
+#stats { 										/* DONT FORGET COLONS */
+	height: 15em;
 	width: 25em;
-	margin: 20px;
+	margin: 7px;
 	border-style: solid;
-	border-width: 5px;
+	border-width: 2px;
+	border-color: #FF1919;
+	background-color: #FF4D4D;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+#log {
+	height: 2em;
+	width: 10em;
+	margin: 8px;
+	border-style: solid;
+	border-width: 2px;
 	border-color: #FF1919;
 	background-color: #FF4D4D;
 	-webkit-border-radius: 10px;
