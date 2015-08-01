@@ -2,14 +2,14 @@ html {
    font-size: 62.5%;
 }
 
-div {
-	height 20em;
-	width 25em;
-	margin 20px;
-	border-style solid;
-	border-width 5px;
-	border-color #FF1919;
-	background-color #FF4D4D;
+div { 										/* DONT FORGET COLONS */
+	height: 20em;
+	width: 25em;
+	margin: 20px;
+	border-style: solid;
+	border-width: 5px;
+	border-color: #FF1919;
+	background-color: #FF4D4D;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	border-radius: 10px;
