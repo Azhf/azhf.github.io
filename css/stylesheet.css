@@ -3,8 +3,8 @@ html {
 }
 
 #stats { 										/* DONT FORGET COLONS */
-	height: 17em;
-	width: 25em;
+	height: 170px;
+	width: 250px;
 	margin: 7px;
 	border-style: solid;
 	border-width: 2px;
@@ -16,8 +16,8 @@ html {
 }
 
 #log {
-	height: 3em;
-	width: 25em;
+	height: 30px;
+	width: 250px;
 	margin: 8px;
 	border-style: solid;
 	border-width: 2px;
