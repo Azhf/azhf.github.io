@@ -149,10 +149,64 @@ function deleteSave() {
 	
 // Upgrades
 
-function purchaseMapMemory() {
+function purchaseNavigateSpikes() {
+	mech = mech + 10;
+	// DONT FORGET TO TAKE CURRENCY USED TO BUY UPGRADES :)
+}
+
+function purchaseDefense() {
+	mech = mech + 10;
+}
+
+function purchaseType() {
+	comms = comms + 10;
+}
+
+function purchaseButton() {
 	logic = logic + 10;
 }
 
+function purchaseGrab() {
+	mech = mech + 10;
+	logic = logic + 5;
+}
+
+function purchaseContain() {
+	mech = mech + 10;
+}
+
+function purchaseRegrab() {
+	logic = logic + 10;
+}
+
+function purchaseTeamTiles() {
+	logic = logic + 10;
+}
+
+function purchasePups() {
+	logic = logic + 10;
+}
+
+function purchaseDiagonalMovement() {
+	mech = mech + 10;
+	logic = logic + 5;
+}
+
+function purchaseUseBombs() {
+	logic = logic + 10;
+}
+
+function purchase() {
+	= + 10;
+}
+
+function purchase() {
+	= + 10;
+}
+
+function purchase() {
+	= + 10;
+}
 // Required	
 
 function degreesCalc() {
