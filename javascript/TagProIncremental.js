@@ -47,6 +47,101 @@ var hubSkill = 1;
 var leagueStats = 'none';
 var streak = 0;
 
+// Savegame
+
+function save() {
+	var save = {
+    wins: wins, 									// The basics
+    losses: losses,
+    ties: ties,
+	games: games,
+	degreeProgress: degreeProgress,
+	winsNeeded: winsNeeded,
+	degrees: degrees,
+	winpercent: winpercent,
+	comms: comms, 									//IRL Skills
+	logic: logic,
+	mech: mech,
+	ricochetSkill: ricochetSkill,					//Map Skills
+	velocitySkill: velocitySkill,
+	wormySkill: wormySkill,
+	commandCenterSkill: commandCenterSkill,
+	cloudSkill: cloudSkill,
+	smirkSkill: smirkSkill,
+	boomboxSkill: boomboxSkill,
+	geoKoalaSkill: geoKoalaSkill,
+	constrictionSkill: constrictionSkill,
+	ironSkill: ironSkill,
+	hornswoggleSkill: hornswoggleSkill,
+	womboComboSkill: womboComboSkill,
+	draftSkill: draftSkill,
+	transilioSkill: transilioSkill,
+	pilotSkill: pilotSkill,
+	bulldogSkill: bulldogSkill,
+	ultraDriveSkill: ultraDriveSkill,
+	emeraldSkill: emeraldSkill,
+	platypusSkill: platypusSkill,
+	dz4Skill: dz4Skill,
+	renegadeSkill: renegadeSkill,
+	hubSkill: hubSkill
+	};
+	localStorage.setItem("save",JSON.stringify(save));
+	document.getElementById('log2').innerHTML = 'The game has been saved.';
+}
+
+function load() {
+	var savegame = JSON.parse(localStorage.getItem("save"));
+	if (typeof savegame.wins !== "undefined") wins = savegame.wins;
+	if (typeof savegame.losses !== "undefined") losses = savegame.losses;
+	if (typeof savegame.ties !== "undefined") ties = savegame.ties;
+	if (typeof savegame.games !== "undefined") games = savegame.games;
+	if (typeof savegame.degreeProgress !== "undefined") degreeProgress = savegame.degreeProgress;
+	if (typeof savegame.winsNeeded !== "undefined") winsNeeded = savegame.winsNeeded;
+	if (typeof savegame.degrees !== "undefined") degrees = savegame.degrees;
+	if (typeof savegame.winpercent !== "undefined") winpercent = savegame.winpercent;
+	if (typeof savegame.comms !== "undefined") comms = savegame.comms;
+	if (typeof savegame.logic !== "undefined") logic = savegame.logic;
+	if (typeof savegame.mech !== "undefined") mech = savegame.mech;
+	if (typeof savegame.ricochetSkill !== "undefined") ricochetSkill = savegame.ricochetSkill;
+	if (typeof savegame.velocitySkill !== "undefined") velocitySkill = savegame.velocitySkill;
+	if (typeof savegame.wormySkill !== "undefined") wormySkill = savegame.wormySkill;
+	if (typeof savegame.commandCenterSkill !== "undefined") commandCenterSkill = savegame.commandCenterSkill;
+	if (typeof savegame.cloudSkill !== "undefined") cloudSkill = savegame.cloudSkill;
+	if (typeof savegame.smirkSkill !== "undefined") smirkSkill = savegame.smirkSkill;
+	if (typeof savegame.boomboxSkill !== "undefined") boomboxSkill = savegame.boomboxSkill;
+	if (typeof savegame.geoKoalaSkill !== "undefined") geoKoalaSkill = savegame.geoKoalaSkill;
+	if (typeof savegame.constrictionSkill !== "undefined") constrictionSkill = savegame.constrictionSkill;
+	if (typeof savegame.ironSkill !== "undefined") ironSkill = savegame.ironSkill;
+	if (typeof savegame.hornswoggleSkill !== "undefined") hornswoggleSkill = savegame.hornswoggleSkill;
+	if (typeof savegame.womboComboSkill !== "undefined") womboComboSkill = savegame.womboComboSkill;
+	if (typeof savegame.draftSkill !== "undefined") draftSkill = savegame.draftSkill;
+	if (typeof savegame.transilioSkill !== "undefined") transilioSkill = savegame.transilioSkill;
+	if (typeof savegame.pilotSkill !== "undefined") pilotSkill = savegame.pilotSkill;
+	if (typeof savegame.bulldogSkill !== "undefined") bulldogSkill = savegame.bulldogSkill;
+	if (typeof savegame.ultraDriveSkill !== "undefined") ultraDriveSkill = savegame.ultraDriveSkill;
+	if (typeof savegame.emeraldSkill !== "undefined") emeraldSkill = savegame.emeraldSkill;
+	if (typeof savegame.platypusSkill !== "undefined") platypusSkill = savegame.platypusSkill;
+	if (typeof savegame.dz4Skill !== "undefined") dz4Skill = savegame.dz4Skill;
+	if (typeof savegame.renegadeSkill !== "undefined") renegadeSkill = savegame.renegadeSkill;
+	if (typeof savegame.hubSkill !== "undefined") hubSkill = savegame.hubSkill;
+	document.getElementById('log2').innerHTML = 'The game has been loaded.';
+}
+
+window.setInterval(function(){ // autosave
+	
+	save();
+	document.getElementById('log2').innerHTML = 'The game has been saved.';
+	
+}, 60000);
+
+function deleteSave() {
+	var userResponse = prompt("Are you sure?")
+	if(userResponse === 'yes') {
+		localStorage.removeItem("save");
+		document.getElementById('log2').innerHTML = 'The save game has been deleted.';
+	};	
+}
+
 // ----------------------------------------------- //
 
 	// Functions
