@@ -160,39 +160,69 @@ function purchaseNavigateSpikes() {
 }
 
 function purchaseDefense() {
-	mech = mech + 10;
-	$('#Defense').remove();
+		if (tagCoins >= 5) {
+		mech = mech + 10;
+		tagCoins = tagCoins - 5;
+		document.getElementById('log2').innerHTML = 'You learned how to defend!';
+		$('#Defense').remove();
+	};
 }
 
 function purchaseType() {
-	comms = comms + 10;
-	$('#Type').remove();
+		if (tagCoins >= 5) {
+		comms = comms + 10;
+		tagCoins = tagCoins - 5;
+		document.getElementById('log2').innerHTML = 'You learned to type!';
+		$('#Type').remove();
+	};
 }
 
+// DIFF 3
+
 function purchaseButton() {
-	logic = logic + 10;
-	$('#ButtonPurchase').remove();
+	if (tagCoins >= 5) {
+		logic = logic + 10;
+		tagCoins = tagCoins - 5;
+		document.getElementById('log2').innerHTML = 'You learned to hold buttons at the right time!';
+		$('#Button').remove();
+	};
 }
 
 function purchaseGrab() {
-	mech = mech + 10;
-	logic = logic + 5;
-	$('#Grab').remove();
+	if (tagCoins >= 5) {
+		mech = mech + 10;
+		logic = logic + 5;
+		tagCoins = tagCoins - 5;
+		document.getElementById('log2').innerHTML = 'You learned to grab the flag at the right time!';
+		$('#Grab').remove();
+	};
 }
 
 function purchaseContain() {
-	mech = mech + 10;
-	$('#Contain').remove();
+	if (tagCoins >= 5) {
+		mech = mech + 10;
+		tagCoins = tagCoins - 5;
+		document.getElementById('log2').innerHTML = 'You learned to contain!';
+		$('#Contain').remove();
+	};
 }
 
 function purchaseRegrab() {
-	logic = logic + 10;
-	$('#Regrab').remove();
+	if (tagCoins >= 5) {
+		logic = logic + 10;
+		tagCoins = tagCoins - 5;
+		document.getElementById('log2').innerHTML = 'You learned to get regrab!';
+		$('#Regrab').remove();
+	};
 }
 
 function purchaseTeamTiles() {
-	logic = logic + 10;
-	$('#TeamTiles').remove();
+	if (tagCoins >= 5) {
+		logic = logic + 10;
+		tagCoins = tagCoins - 5;
+		document.getElementById('log2').innerHTML = 'You learned what team tiles are!';
+		$('#TeamTiles').remove();
+	};
 }
 
 function purchasePups() {
