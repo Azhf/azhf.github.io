@@ -147,11 +147,12 @@ function deleteSave() {
 
 	// Functions
 	
-// Upgrades
+// Upgrades (In order of when you get them)
 
 function purchaseNavigateSpikes() {
 	mech = mech + 10;
 	// DONT FORGET TO TAKE CURRENCY USED TO BUY UPGRADES :)
+	$('#NavigateSpikes').remove();
 }
 
 function purchaseDefense() {
@@ -196,16 +197,16 @@ function purchaseUseBombs() {
 	logic = logic + 10;
 }
 
-function purchase() {
-	= + 10;
+function purchaseMemorizeMaps() {
+	logic = logic + 10;
 }
 
-function purchase() {
-	= + 10;
+function purchaseTypeFast() {
+	comms = comms + 10;
 }
 
-function purchase() {
-	= + 10;
+function purchaseNotGrab() {
+	logic = logic + 10;
 }
 // Required	
 
