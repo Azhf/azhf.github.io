@@ -10,6 +10,7 @@ var degrees = 0;
 var degreeProgress = 0;
 var winsNeeded = 1;
 var winPercent = 0;
+var tagCoins = 0;
 
 // IRL Skills
 
@@ -151,63 +152,150 @@ function deleteSave() {
 
 function purchaseNavigateSpikes() {
 	mech = mech + 10;
-	// DONT FORGET TO TAKE CURRENCY USED TO BUY UPGRADES :)
+	tagCoins = tagCoins - 5;
+	document.getElementById('log2').innerHTML = 'You learned to navigate spikes!';
 	$('#NavigateSpikes').remove();
 }
 
 function purchaseDefense() {
 	mech = mech + 10;
+	$('#Defense').remove();
 }
 
 function purchaseType() {
 	comms = comms + 10;
+	$('#Type').remove();
 }
 
 function purchaseButton() {
 	logic = logic + 10;
+	$('#ButtonPurchase').remove();
 }
 
 function purchaseGrab() {
 	mech = mech + 10;
 	logic = logic + 5;
+	$('#Grab').remove();
 }
 
 function purchaseContain() {
 	mech = mech + 10;
+	$('#Contain').remove();
 }
 
 function purchaseRegrab() {
 	logic = logic + 10;
+	$('#Regrab').remove();
 }
 
 function purchaseTeamTiles() {
 	logic = logic + 10;
+	$('#TeamTiles').remove();
 }
 
 function purchasePups() {
 	logic = logic + 10;
+	$('#Pups').remove();
 }
 
 function purchaseDiagonalMovement() {
 	mech = mech + 10;
 	logic = logic + 5;
+	$('#DiagonalMovement').remove();
 }
 
 function purchaseUseBombs() {
 	logic = logic + 10;
+	$('#UseBombs').remove();
 }
 
 function purchaseMemorizeMaps() {
 	logic = logic + 10;
+	$('#MemorizeMaps').remove();
 }
 
 function purchaseTypeFast() {
 	comms = comms + 10;
+	$('#TypeFast').remove();
 }
 
 function purchaseNotGrab() {
 	logic = logic + 10;
+	$('#NotGrab').remove();
 }
+
+function purchaseMacro() {
+	comms = comms + 10;
+	$('#Macros').remove();
+}
+
+function purchaseKiss() {
+	logic = logic + 10;
+	$('#Kiss').remove();
+}
+
+function purchaseSnipe() {
+	mech = mech + 10;
+	$('#Snipe').remove();
+}
+
+function purchaseJuke() {
+	mech = mech + 10;
+	$('#Juke').remove();
+}
+
+function purchaseTimePups() {
+	comms = comms + 10;
+	logic = logic + 5;
+	$('#TimePups').remove();
+}
+
+function purchaseTagproLead() {
+	mech = mech + 10;
+	$('#TagproLead').remove();
+}
+
+function purchasePosition() {
+	mech = mech + 10;
+	logic = logic + 5;
+	$('#position').remove();
+}
+
+function purchaseMumble() {
+	comms = comms + 10;
+	$('#Mumble').remove();
+}
+
+function purchaseDankMacros() {
+	comms = comms + 10;
+	$('#DankMacros').remove();
+}
+
+function purchaseImportantCallOuts() {
+	comms = comms + 10;
+	$('#ImportantCallOuts').remove();
+}
+
+function purchaseMicroJuke() {
+	mech = mech + 10;
+	$('#MicroJuke').remove();
+}
+
+function purchaseCheapMic() {
+	comms = comms + 10;
+	$('#CheapMic').remove();
+}
+
+function purchaseBetterMic() {
+	comms = comms + 10;
+	$('#BetterMic').remove();
+}
+
+function purchaseClearMic() {
+	comms = comms + 10;
+	$('#ClearMic').remove();
+}
+
 // Required	
 
 function degreesCalc() {
@@ -233,6 +321,10 @@ function showStats() {
 	document.getElementById('winpercent').innerHTML = winPercent;
 }
 
+function collectTagCoins() {
+	tagCoins = tagCoins + 1;
+	document.getElementById('log2').innerHTML = 'You collected a TagCoin, used to purchase upgrades.';
+}
 /* function rolling300() {
 	???
 } */
