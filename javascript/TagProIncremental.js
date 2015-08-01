@@ -122,18 +122,18 @@ function pubRicochet(ricochetSkill) {														// Ricochet
 			ricochetSkill = ricochetSkill + 2;
 		}
 		
-		if (ricochetSkill >= 10 && < 50) {
+		if (ricochetSkill >= 10 && ricochetSkill < 50) {
 			ricochetSkill = ricochetSkill + 1;
 		}
 		
-		if (ricochetSkill >= 50 && < 80) {
+		if (ricochetSkill >= 50 && ricochetSkill < 80) {
 			skillChance = Math.round(Math.random());
 			if (skillChance === 1) {
 				ricochetSkill = ricochetSkill + 1;
 			}
 		}
 		
-		if (ricochetSkill >= 80 && < 100) {
+		if (ricochetSkill >= 80 && ricochetSkill < 100) {
 			skillChance = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 			if (skillChance > 75) {
 				ricochetSkill = ricochetSkill + 1;
@@ -179,18 +179,18 @@ function pubVelocity(velocitySkill) {														// velocity
 			velocitySkill = velocitySkill + 2;
 		}
 		
-		if (velocitySkill >= 10 && < 50) {
+		if (velocitySkill >= 10 && velocitySkill < 50) {
 			velocitySkill = velocitySkill + 1;
 		}
 		
-		if (velocitySkill >= 50 && < 80) {
+		if (velocitySkill >= 50 && velocitySkill < 80) {
 			skillChance = Math.round(Math.random());
 			if (skillChance === 1) {
 				velocitySkill = velocitySkill + 1;
 			}
 		}
 		
-		if (velocitySkill >= 80 && < 100) {
+		if (velocitySkill >= 80 && velocitySkill < 100) {
 			skillChance = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 			if (skillChance > 75) {
 				velocitySkill = velocitySkill + 1;
@@ -236,18 +236,18 @@ function pubWormy(wormySkill) {														// wormy
 			wormySkill = wormySkill + 2;
 		}
 		
-		if (wormySkill >= 10 && < 50) {
+		if (wormySkill >= 10 && wormySkill < 50) {
 			wormySkill = wormySkill + 1;
 		}
 		
-		if (wormySkill >= 50 && < 80) {
+		if (wormySkill >= 50 && wormySkill < 80) {
 			skillChance = Math.round(Math.random());
 			if (skillChance === 1) {
 				wormySkill = wormySkill + 1;
 			}
 		}
 		
-		if (wormySkill >= 80 && < 100) {
+		if (wormySkill >= 80 && wormySkill < 100) {
 			skillChance = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 			if (skillChance > 75) {
 				wormySkill = wormySkill + 1;
@@ -293,18 +293,18 @@ function pubCloud(cloudSkill) {														// cloud
 			cloudSkill = cloudSkill + 2;
 		}
 		
-		if (cloudSkill >= 10 && < 50) {
+		if (cloudSkill >= 10 && cloudSkill < 50) {
 			cloudSkill = cloudSkill + 1;
 		}
 		
-		if (cloudSkill >= 50 && < 80) {
+		if (cloudSkill >= 50 && cloudSkill < 80) {
 			skillChance = Math.round(Math.random());
 			if (skillChance === 1) {
 				cloudSkill = cloudSkill + 1;
 			}
 		}
 		
-		if (cloudSkill >= 80 && < 100) {
+		if (cloudSkill >= 80 && cloudSkill < 100) {
 			skillChance = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 			if (skillChance > 75) {
 				cloudSkill = cloudSkill + 1;
@@ -350,18 +350,18 @@ function pubCommandCenter(commandCenterSkill) {														// commandCenter
 			commandCenterSkill = commandCenterSkill + 2;
 		}
 		
-		if (commandCenterSkill >= 10 && < 50) {
+		if (commandCenterSkill >= 10 && commandCenterSkill < 50) {
 			commandCenterSkill = commandCenterSkill + 1;
 		}
 		
-		if (commandCenterSkill >= 50 && < 80) {
+		if (commandCenterSkill >= 50 && commandCenterSkill < 80) {
 			skillChance = Math.round(Math.random());
 			if (skillChance === 1) {
 				commandCenterSkill = commandCenterSkill + 1;
 			}
 		}
 		
-		if (commandCenterSkill >= 80 && < 100) {
+		if (commandCenterSkill >= 80 && commandCenterSkill < 100) {
 			skillChance = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 			if (skillChance > 75) {
 				commandCenterSkill = commandCenterSkill + 1;
@@ -407,18 +407,18 @@ function pubSmirk(smirkSkill) {														// smirk
 			smirkSkill = smirkSkill + 2;
 		}
 		
-		if (smirkSkill >= 10 && < 50) {
+		if (smirkSkill >= 10 && smirkSkill < 50) {
 			smirkSkill = smirkSkill + 1;
 		}
 		
-		if (smirkSkill >= 50 && < 80) {
+		if (smirkSkill >= 50 && smirkSkill < 80) {
 			skillChance = Math.round(Math.random());
 			if (skillChance === 1) {
 				smirkSkill = smirkSkill + 1;
 			}
 		}
 		
-		if (smirkSkill >= 80 && < 100) {
+		if (smirkSkill >= 80 && smirkSkill < 100) {
 			skillChance = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 			if (skillChance > 75) {
 				smirkSkill = smirkSkill + 1;
@@ -464,18 +464,18 @@ function pubBoombox(boomboxSkill) {														// boombox
 			boomboxSkill = boomboxSkill + 2;
 		}
 		
-		if (boomboxSkill >= 10 && < 50) {
+		if (boomboxSkill >= 10 && boomboxSkill < 50) {
 			boomboxSkill = boomboxSkill + 1;
 		}
 		
-		if (boomboxSkill >= 50 && < 80) {
+		if (boomboxSkill >= 50 && boomboxSkill < 80) {
 			skillChance = Math.round(Math.random());
 			if (skillChance === 1) {
 				boomboxSkill = boomboxSkill + 1;
 			}
 		}
 		
-		if (boomboxSkill >= 80 && < 100) {
+		if (boomboxSkill >= 80 && boomboxSkill < 100) {
 			skillChance = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 			if (skillChance > 75) {
 				boomboxSkill = boomboxSkill + 1;
@@ -521,18 +521,18 @@ function pubIron(ironSkill) {														// iron
 			ironSkill = ironSkill + 2;
 		}
 		
-		if (ironSkill >= 10 && < 50) {
+		if (ironSkill >= 10 && ironSkill < 50) {
 			ironSkill = ironSkill + 1;
 		}
 		
-		if (ironSkill >= 50 && < 80) {
+		if (ironSkill >= 50 && ironSkill < 80) {
 			skillChance = Math.round(Math.random());
 			if (skillChance === 1) {
 				ironSkill = ironSkill + 1;
 			}
 		}
 		
-		if (ironSkill >= 80 && < 100) {
+		if (ironSkill >= 80 && ironSkill < 100) {
 			skillChance = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 			if (skillChance > 75) {
 				ironSkill = ironSkill + 1;
@@ -578,18 +578,18 @@ function pubGeoKoala(geoKoalaSkill) {														// geoKoala
 			geoKoalaSkill = geoKoalaSkill + 2;
 		}
 		
-		if (geoKoalaSkill >= 10 && < 50) {
+		if (geoKoalaSkill >= 10 && geoKoalaSkill < 50) {
 			geoKoalaSkill = geoKoalaSkill + 1;
 		}
 		
-		if (geoKoalaSkill >= 50 && < 80) {
+		if (geoKoalaSkill >= 50 && geoKoalaSkill < 80) {
 			skillChance = Math.round(Math.random());
 			if (skillChance === 1) {
 				geoKoalaSkill = geoKoalaSkill + 1;
 			}
 		}
 		
-		if (geoKoalaSkill >= 80 && < 100) {
+		if (geoKoalaSkill >= 80 && geoKoalaSkill < 100) {
 			skillChance = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 			if (skillChance > 75) {
 				geoKoalaSkill = geoKoalaSkill + 1;
@@ -635,18 +635,18 @@ function pubConstriction(constrictionSkill) {														// constriction
 			constrictionSkill = constrictionSkill + 2;
 		}
 		
-		if (constrictionSkill >= 10 && < 50) {
+		if (constrictionSkill >= 10 && constrictionSkill < 50) {
 			constrictionSkill = constrictionSkill + 1;
 		}
 		
-		if (constrictionSkill >= 50 && < 80) {
+		if (constrictionSkill >= 50 && constrictionSkill < 80) {
 			skillChance = Math.round(Math.random());
 			if (skillChance === 1) {
 				constrictionSkill = constrictionSkill + 1;
 			}
 		}
 		
-		if (constrictionSkill >= 80 && < 100) {
+		if (constrictionSkill >= 80 && constrictionSkill < 100) {
 			skillChance = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 			if (skillChance > 75) {
 				constrictionSkill = constrictionSkill + 1;
@@ -692,18 +692,18 @@ function pubHornswoggle(hornswoggleSkill) {														// hornswoggle
 			hornswoggleSkill = hornswoggleSkill + 2;
 		}
 		
-		if (hornswoggleSkill >= 10 && < 50) {
+		if (hornswoggleSkill >= 10 && hornswoggleSkill < 50) {
 			hornswoggleSkill = hornswoggleSkill + 1;
 		}
 		
-		if (hornswoggleSkill >= 50 && < 80) {
+		if (hornswoggleSkill >= 50 && hornswoggleSkill < 80) {
 			skillChance = Math.round(Math.random());
 			if (skillChance === 1) {
 				hornswoggleSkill = hornswoggleSkill + 1;
 			}
 		}
 		
-		if (hornswoggleSkill >= 80 && < 100) {
+		if (hornswoggleSkill >= 80 && hornswoggleSkill < 100) {
 			skillChance = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 			if (skillChance > 75) {
 				hornswoggleSkill = hornswoggleSkill + 1;
@@ -749,18 +749,18 @@ function pubWomboCombo(womboComboSkill) {														// womboCombo
 			womboComboSkill = womboComboSkill + 2;
 		}
 		
-		if (womboComboSkill >= 10 && < 50) {
+		if (womboComboSkill >= 10 && womboComboSkill < 50) {
 			womboComboSkill = womboComboSkill + 1;
 		}
 		
-		if (womboComboSkill >= 50 && < 80) {
+		if (womboComboSkill >= 50 && womboComboSkill < 80) {
 			skillChance = Math.round(Math.random());
 			if (skillChance === 1) {
 				womboComboSkill = womboComboSkill + 1;
 			}
 		}
 		
-		if (womboComboSkill >= 80 && < 100) {
+		if (womboComboSkill >= 80 && womboComboSkill < 100) {
 			skillChance = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 			if (skillChance > 75) {
 				womboComboSkill = womboComboSkill + 1;
@@ -806,18 +806,18 @@ function pubDraft(draftSkill) {														// draft
 			draftSkill = draftSkill + 2;
 		}
 		
-		if (draftSkill >= 10 && < 50) {
+		if (draftSkill >= 10 && draftSkill < 50) {
 			draftSkill = draftSkill + 1;
 		}
 		
-		if (draftSkill >= 50 && < 80) {
+		if (draftSkill >= 50 && draftSkill < 80) {
 			skillChance = Math.round(Math.random());
 			if (skillChance === 1) {
 				draftSkill = draftSkill + 1;
 			}
 		}
 		
-		if (draftSkill >= 80 && < 100) {
+		if (draftSkill >= 80 && draftSkill < 100) {
 			skillChance = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 			if (skillChance > 75) {
 				draftSkill = draftSkill + 1;
@@ -863,18 +863,18 @@ function pubTransilio(transilioSkill) {														// transilio
 			transilioSkill = transilioSkill + 2;
 		}
 		
-		if (transilioSkill >= 10 && < 50) {
+		if (transilioSkill >= 10 && transilioSkill < 50) {
 			transilioSkill = transilioSkill + 1;
 		}
 		
-		if (transilioSkill >= 50 && < 80) {
+		if (transilioSkill >= 50 && transilioSkill < 80) {
 			skillChance = Math.round(Math.random());
 			if (skillChance === 1) {
 				transilioSkill = transilioSkill + 1;
 			}
 		}
 		
-		if (transilioSkill >= 80 && < 100) {
+		if (transilioSkill >= 80 && transilioSkill < 100) {
 			skillChance = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 			if (skillChance > 75) {
 				transilioSkill = transilioSkill + 1;
@@ -920,18 +920,18 @@ function pubPilot(pilotSkill) {														// pilot
 			pilotSkill = pilotSkill + 2;
 		}
 		
-		if (pilotSkill >= 10 && < 50) {
+		if (pilotSkill >= 10 && pilotSkill < 50) {
 			pilotSkill = pilotSkill + 1;
 		}
 		
-		if (pilotSkill >= 50 && < 80) {
+		if (pilotSkill >= 50 && pilotSkill < 80) {
 			skillChance = Math.round(Math.random());
 			if (skillChance === 1) {
 				pilotSkill = pilotSkill + 1;
 			}
 		}
 		
-		if (pilotSkill >= 80 && < 100) {
+		if (pilotSkill >= 80 && pilotSkill < 100) {
 			skillChance = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 			if (skillChance > 75) {
 				pilotSkill = pilotSkill + 1;
@@ -977,18 +977,18 @@ function pubbulldog(bulldogSkill) {														// bulldog
 			bulldogSkill = bulldogSkill + 2;
 		}
 		
-		if (bulldogSkill >= 10 && < 50) {
+		if (bulldogSkill >= 10 && bulldogSkill < 50) {
 			bulldogSkill = bulldogSkill + 1;
 		}
 		
-		if (bulldogSkill >= 50 && < 80) {
+		if (bulldogSkill >= 50 && bulldogSkill < 80) {
 			skillChance = Math.round(Math.random());
 			if (skillChance === 1) {
 				bulldogSkill = bulldogSkill + 1;
 			}
 		}
 		
-		if (bulldogSkill >= 80 && < 100) {
+		if (bulldogSkill >= 80 && bulldogSkill < 100) {
 			skillChance = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 			if (skillChance > 75) {
 				bulldogSkill = bulldogSkill + 1;
@@ -1034,18 +1034,18 @@ function pubUltraDrive(ultraDriveSkill) {														// ultraDrive
 			ultraDriveSkill = ultraDriveSkill + 2;
 		}
 		
-		if (ultraDriveSkill >= 10 && < 50) {
+		if (ultraDriveSkill >= 10 && ultraDriveSkill < 50) {
 			ultraDriveSkill = ultraDriveSkill + 1;
 		}
 		
-		if (ultraDriveSkill >= 50 && < 80) {
+		if (ultraDriveSkill >= 50 && ultraDriveSkill < 80) {
 			skillChance = Math.round(Math.random());
 			if (skillChance === 1) {
 				ultraDriveSkill = ultraDriveSkill + 1;
 			}
 		}
 		
-		if (ultraDriveSkill >= 80 && < 100) {
+		if (ultraDriveSkill >= 80 && ultraDriveSkill < 100) {
 			skillChance = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 			if (skillChance > 75) {
 				ultraDriveSkill = ultraDriveSkill + 1;
@@ -1091,18 +1091,18 @@ function pubEmerald(emeraldSkill) {														// emerald
 			emeraldSkill = emeraldSkill + 2;
 		}
 		
-		if (emeraldSkill >= 10 && < 50) {
+		if (emeraldSkill >= 10 && emeraldSkill < 50) {
 			emeraldSkill = emeraldSkill + 1;
 		}
 		
-		if (emeraldSkill >= 50 && < 80) {
+		if (emeraldSkill >= 50 && emeraldSkill < 80) {
 			skillChance = Math.round(Math.random());
 			if (skillChance === 1) {
 				emeraldSkill = emeraldSkill + 1;
 			}
 		}
 		
-		if (emeraldSkill >= 80 && < 100) {
+		if (emeraldSkill >= 80 && emeraldSkill < 100) {
 			skillChance = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 			if (skillChance > 75) {
 				emeraldSkill = emeraldSkill + 1;
@@ -1148,18 +1148,18 @@ function pubPlatypus(platypusSkill) {														// platypus
 			platypusSkill = platypusSkill + 2;
 		}
 		
-		if (platypusSkill >= 10 && < 50) {
+		if (platypusSkill >= 10 && platypusSkill < 50) {
 			platypusSkill = platypusSkill + 1;
 		}
 		
-		if (platypusSkill >= 50 && < 80) {
+		if (platypusSkill >= 50 && platypusSkill < 80) {
 			skillChance = Math.round(Math.random());
 			if (skillChance === 1) {
 				platypusSkill = platypusSkill + 1;
 			}
 		}
 		
-		if (platypusSkill >= 80 && < 100) {
+		if (platypusSkill >= 80 && platypusSkill < 100) {
 			skillChance = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 			if (skillChance > 75) {
 				platypusSkill = platypusSkill + 1;
@@ -1205,18 +1205,18 @@ function pubDz4(dz4Skill) {														// dz4
 			dz4Skill = dz4Skill + 2;
 		}
 		
-		if (dz4Skill >= 10 && < 50) {
+		if (dz4Skill >= 10 && dz4Skill < 50) {
 			dz4Skill = dz4Skill + 1;
 		}
 		
-		if (dz4Skill >= 50 && < 80) {
+		if (dz4Skill >= 50 && dz4Skill < 80) {
 			skillChance = Math.round(Math.random());
 			if (skillChance === 1) {
 				dz4Skill = dz4Skill + 1;
 			}
 		}
 		
-		if (dz4Skill >= 80 && < 100) {
+		if (dz4Skill >= 80 && dz4Skill < 100) {
 			skillChance = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 			if (skillChance > 75) {
 				dz4Skill = dz4Skill + 1;
@@ -1262,18 +1262,18 @@ function pubRenegade(renegadeSkill) {														// renegade
 			renegadeSkill = renegadeSkill + 2;
 		}
 		
-		if (renegadeSkill >= 10 && < 50) {
+		if (renegadeSkill >= 10 && renegadeSkill < 50) {
 			renegadeSkill = renegadeSkill + 1;
 		}
 		
-		if (renegadeSkill >= 50 && < 80) {
+		if (renegadeSkill >= 50 && renegadeSkill < 80) {
 			skillChance = Math.round(Math.random());
 			if (skillChance === 1) {
 				renegadeSkill = renegadeSkill + 1;
 			}
 		}
 		
-		if (renegadeSkill >= 80 && < 100) {
+		if (renegadeSkill >= 80 && renegadeSkill < 100) {
 			skillChance = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 			if (skillChance > 75) {
 				renegadeSkill = renegadeSkill + 1;
@@ -1318,18 +1318,18 @@ function pubHub(hubSkill) {														// hub
 			hubSkill = hubSkill + 2;
 		}
 		
-		if (hubSkill >= 10 && < 50) {
+		if (hubSkill >= 10 && hubSkill < 50) {
 			hubSkill = hubSkill + 1;
 		}
 		
-		if (hubSkill >= 50 && < 80) {
+		if (hubSkill >= 50 && hubSkill < 80) {
 			skillChance = Math.round(Math.random());
 			if (skillChance === 1) {
 				hubSkill = hubSkill + 1;
 			}
 		}
 		
-		if (hubSkill >= 80 && < 100) {
+		if (hubSkill >= 80 && hubSkill < 100) {
 			skillChance = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 			if (skillChance > 75) {
 				hubSkill = hubSkill + 1;
