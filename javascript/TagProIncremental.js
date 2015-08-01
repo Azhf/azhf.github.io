@@ -150,9 +150,9 @@ function deleteSave() {
 // Upgrades
 
 function purchaseMapMemory() {
-	logic = logic + 10
+	logic = logic + 10;
 }
-	
+
 // Required	
 
 function degreesCalc() {
