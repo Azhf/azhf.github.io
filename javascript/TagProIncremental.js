@@ -53,7 +53,7 @@ var streak = 0;
 	
 // Upgrades
 
-function purchaseMapMemory {
+function purchaseMapMemory() {
 	logic = logic + 10
 }
 	
