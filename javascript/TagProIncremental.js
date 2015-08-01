@@ -106,10 +106,28 @@ function pubRicochet(ricochetSkill) {														// Ricochet
 		losses = losses + 1;
 		games = games +1;
 	}
+	
 	if (ricochetSkill < 100){													// 50% chance of improving your skill
-		skillChance = Math.round(Math.random());
-		if (skillChance === 1) {
+		if (ricochetSkill < 10) {
+			ricochetSkill = ricochetSkill + 2;
+		}
+		
+		if (ricochetSkill >= 10 && < 50) {
 			ricochetSkill = ricochetSkill + 1;
+		}
+		
+		if (ricochetSkill >= 50 && < 80) {
+			skillChance = Math.round(Math.random());
+			if (skillChance === 1) {
+				ricochetSkill = ricochetSkill + 1;
+			}
+		}
+		
+		if (ricochetSkill >= 80 && < 100) {
+			skillChance = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
+			if (skillChance > 75) {
+				ricochetSkill = ricochetSkill + 1;
+			}
 		}
 	}
 	degreesCalc();
@@ -147,9 +165,26 @@ function pubVelocity(velocitySkill) {														// velocity
 		games = games +1;
 	}
 	if (velocitySkill < 100){													// 50% chance of improving your skill
-		skillChance = Math.round(Math.random());
-		if (skillChance === 1) {
+		if (velocitySkill < 10) {
+			velocitySkill = velocitySkill + 2;
+		}
+		
+		if (velocitySkill >= 10 && < 50) {
 			velocitySkill = velocitySkill + 1;
+		}
+		
+		if (velocitySkill >= 50 && < 80) {
+			skillChance = Math.round(Math.random());
+			if (skillChance === 1) {
+				velocitySkill = velocitySkill + 1;
+			}
+		}
+		
+		if (velocitySkill >= 80 && < 100) {
+			skillChance = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
+			if (skillChance > 75) {
+				velocitySkill = velocitySkill + 1;
+			}
 		}
 	}
 	degreesCalc();
@@ -187,9 +222,26 @@ function pubWormy(wormySkill) {														// wormy
 		games = games +1;
 	}
 	if (wormySkill < 100){													// 50% chance of improving your skill
-		skillChance = Math.round(Math.random());
-		if (skillChance === 1) {
+		if (wormySkill < 10) {
+			wormySkill = wormySkill + 2;
+		}
+		
+		if (wormySkill >= 10 && < 50) {
 			wormySkill = wormySkill + 1;
+		}
+		
+		if (wormySkill >= 50 && < 80) {
+			skillChance = Math.round(Math.random());
+			if (skillChance === 1) {
+				wormySkill = wormySkill + 1;
+			}
+		}
+		
+		if (wormySkill >= 80 && < 100) {
+			skillChance = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
+			if (skillChance > 75) {
+				wormySkill = wormySkill + 1;
+			}
 		}
 	}
 	degreesCalc();
@@ -227,9 +279,26 @@ function pubCloud(cloudSkill) {														// cloud
 		games = games +1;
 	}
 	if (cloudSkill < 100){													// 50% chance of improving your skill
-		skillChance = Math.round(Math.random());
-		if (skillChance === 1) {
+		if (cloudSkill < 10) {
+			cloudSkill = cloudSkill + 2;
+		}
+		
+		if (cloudSkill >= 10 && < 50) {
 			cloudSkill = cloudSkill + 1;
+		}
+		
+		if (cloudSkill >= 50 && < 80) {
+			skillChance = Math.round(Math.random());
+			if (skillChance === 1) {
+				cloudSkill = cloudSkill + 1;
+			}
+		}
+		
+		if (cloudSkill >= 80 && < 100) {
+			skillChance = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
+			if (skillChance > 75) {
+				cloudSkill = cloudSkill + 1;
+			}
 		}
 	}
 	degreesCalc();
@@ -267,9 +336,26 @@ function pubCommandCenter(commandCenterSkill) {														// commandCenter
 		games = games +1;
 	}
 	if (commandCenterSkill < 100){													// 50% chance of improving your skill
-		skillChance = Math.round(Math.random());
-		if (skillChance === 1) {
+		if (commandCenterSkill < 10) {
+			commandCenterSkill = commandCenterSkill + 2;
+		}
+		
+		if (commandCenterSkill >= 10 && < 50) {
 			commandCenterSkill = commandCenterSkill + 1;
+		}
+		
+		if (commandCenterSkill >= 50 && < 80) {
+			skillChance = Math.round(Math.random());
+			if (skillChance === 1) {
+				commandCenterSkill = commandCenterSkill + 1;
+			}
+		}
+		
+		if (commandCenterSkill >= 80 && < 100) {
+			skillChance = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
+			if (skillChance > 75) {
+				commandCenterSkill = commandCenterSkill + 1;
+			}
 		}
 	}
 	degreesCalc();
@@ -307,9 +393,26 @@ function pubSmirk(smirkSkill) {														// smirk
 		games = games +1;
 	}
 	if (smirkSkill < 100){													// 50% chance of improving your skill
-		skillChance = Math.round(Math.random());
-		if (skillChance === 1) {
+		if (smirkSkill < 10) {
+			smirkSkill = smirkSkill + 2;
+		}
+		
+		if (smirkSkill >= 10 && < 50) {
 			smirkSkill = smirkSkill + 1;
+		}
+		
+		if (smirkSkill >= 50 && < 80) {
+			skillChance = Math.round(Math.random());
+			if (skillChance === 1) {
+				smirkSkill = smirkSkill + 1;
+			}
+		}
+		
+		if (smirkSkill >= 80 && < 100) {
+			skillChance = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
+			if (skillChance > 75) {
+				smirkSkill = smirkSkill + 1;
+			}
 		}
 	}
 	degreesCalc();
@@ -347,9 +450,26 @@ function pubBoombox(boomboxSkill) {														// boombox
 		games = games +1;
 	}
 	if (boomboxSkill < 100){													// 50% chance of improving your skill
-		skillChance = Math.round(Math.random());
-		if (skillChance === 1) {
+		if (boomboxSkill < 10) {
+			boomboxSkill = boomboxSkill + 2;
+		}
+		
+		if (boomboxSkill >= 10 && < 50) {
 			boomboxSkill = boomboxSkill + 1;
+		}
+		
+		if (boomboxSkill >= 50 && < 80) {
+			skillChance = Math.round(Math.random());
+			if (skillChance === 1) {
+				boomboxSkill = boomboxSkill + 1;
+			}
+		}
+		
+		if (boomboxSkill >= 80 && < 100) {
+			skillChance = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
+			if (skillChance > 75) {
+				boomboxSkill = boomboxSkill + 1;
+			}
 		}
 	}
 	degreesCalc();
@@ -387,9 +507,26 @@ function pubIron(ironSkill) {														// iron
 		games = games +1;
 	}
 	if (ironSkill < 100){													// 50% chance of improving your skill
-		skillChance = Math.round(Math.random());
-		if (skillChance === 1) {
+		if (ironSkill < 10) {
+			ironSkill = ironSkill + 2;
+		}
+		
+		if (ironSkill >= 10 && < 50) {
 			ironSkill = ironSkill + 1;
+		}
+		
+		if (ironSkill >= 50 && < 80) {
+			skillChance = Math.round(Math.random());
+			if (skillChance === 1) {
+				ironSkill = ironSkill + 1;
+			}
+		}
+		
+		if (ironSkill >= 80 && < 100) {
+			skillChance = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
+			if (skillChance > 75) {
+				ironSkill = ironSkill + 1;
+			}
 		}
 	}
 	degreesCalc();
@@ -427,9 +564,26 @@ function pubGeoKoala(geoKoalaSkill) {														// geoKoala
 		games = games +1;
 	}
 	if (geoKoalaSkill < 100){													// 50% chance of improving your skill
-		skillChance = Math.round(Math.random());
-		if (skillChance === 1) {
+		if (geoKoalaSkill < 10) {
+			geoKoalaSkill = geoKoalaSkill + 2;
+		}
+		
+		if (geoKoalaSkill >= 10 && < 50) {
 			geoKoalaSkill = geoKoalaSkill + 1;
+		}
+		
+		if (geoKoalaSkill >= 50 && < 80) {
+			skillChance = Math.round(Math.random());
+			if (skillChance === 1) {
+				geoKoalaSkill = geoKoalaSkill + 1;
+			}
+		}
+		
+		if (geoKoalaSkill >= 80 && < 100) {
+			skillChance = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
+			if (skillChance > 75) {
+				geoKoalaSkill = geoKoalaSkill + 1;
+			}
 		}
 	}
 	degreesCalc();
@@ -467,9 +621,26 @@ function pubConstriction(constrictionSkill) {														// constriction
 		games = games +1;
 	}
 	if (constrictionSkill < 100){													// 50% chance of improving your skill
-		skillChance = Math.round(Math.random());
-		if (skillChance === 1) {
+		if (constrictionSkill < 10) {
+			constrictionSkill = constrictionSkill + 2;
+		}
+		
+		if (constrictionSkill >= 10 && < 50) {
 			constrictionSkill = constrictionSkill + 1;
+		}
+		
+		if (constrictionSkill >= 50 && < 80) {
+			skillChance = Math.round(Math.random());
+			if (skillChance === 1) {
+				constrictionSkill = constrictionSkill + 1;
+			}
+		}
+		
+		if (constrictionSkill >= 80 && < 100) {
+			skillChance = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
+			if (skillChance > 75) {
+				constrictionSkill = constrictionSkill + 1;
+			}
 		}
 	}
 	degreesCalc();
@@ -507,9 +678,26 @@ function pubHornswoggle(hornswoggleSkill) {														// hornswoggle
 		games = games +1;
 	}
 	if (hornswoggleSkill < 100){													// 50% chance of improving your skill
-		skillChance = Math.round(Math.random());
-		if (skillChance === 1) {
+		if (hornswoggleSkill < 10) {
+			hornswoggleSkill = hornswoggleSkill + 2;
+		}
+		
+		if (hornswoggleSkill >= 10 && < 50) {
 			hornswoggleSkill = hornswoggleSkill + 1;
+		}
+		
+		if (hornswoggleSkill >= 50 && < 80) {
+			skillChance = Math.round(Math.random());
+			if (skillChance === 1) {
+				hornswoggleSkill = hornswoggleSkill + 1;
+			}
+		}
+		
+		if (hornswoggleSkill >= 80 && < 100) {
+			skillChance = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
+			if (skillChance > 75) {
+				hornswoggleSkill = hornswoggleSkill + 1;
+			}
 		}
 	}
 	degreesCalc();
@@ -547,9 +735,26 @@ function pubWomboCombo(womboComboSkill) {														// womboCombo
 		games = games +1;
 	}
 	if (womboComboSkill < 100){													// 50% chance of improving your skill
-		skillChance = Math.round(Math.random());
-		if (skillChance === 1) {
+		if (womboComboSkill < 10) {
+			womboComboSkill = womboComboSkill + 2;
+		}
+		
+		if (womboComboSkill >= 10 && < 50) {
 			womboComboSkill = womboComboSkill + 1;
+		}
+		
+		if (womboComboSkill >= 50 && < 80) {
+			skillChance = Math.round(Math.random());
+			if (skillChance === 1) {
+				womboComboSkill = womboComboSkill + 1;
+			}
+		}
+		
+		if (womboComboSkill >= 80 && < 100) {
+			skillChance = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
+			if (skillChance > 75) {
+				womboComboSkill = womboComboSkill + 1;
+			}
 		}
 	}
 	degreesCalc();
@@ -587,9 +792,26 @@ function pubDraft(draftSkill) {														// draft
 		games = games +1;
 	}
 	if (draftSkill < 100){													// 50% chance of improving your skill
-		skillChance = Math.round(Math.random());
-		if (skillChance === 1) {
+		if (draftSkill < 10) {
+			draftSkill = draftSkill + 2;
+		}
+		
+		if (draftSkill >= 10 && < 50) {
 			draftSkill = draftSkill + 1;
+		}
+		
+		if (draftSkill >= 50 && < 80) {
+			skillChance = Math.round(Math.random());
+			if (skillChance === 1) {
+				draftSkill = draftSkill + 1;
+			}
+		}
+		
+		if (draftSkill >= 80 && < 100) {
+			skillChance = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
+			if (skillChance > 75) {
+				draftSkill = draftSkill + 1;
+			}
 		}
 	}
 	degreesCalc();
@@ -627,9 +849,26 @@ function pubTransilio(transilioSkill) {														// transilio
 		games = games +1;
 	}
 	if (transilioSkill < 100){													// 50% chance of improving your skill
-		skillChance = Math.round(Math.random());
-		if (skillChance === 1) {
+		if (transilioSkill < 10) {
+			transilioSkill = transilioSkill + 2;
+		}
+		
+		if (transilioSkill >= 10 && < 50) {
 			transilioSkill = transilioSkill + 1;
+		}
+		
+		if (transilioSkill >= 50 && < 80) {
+			skillChance = Math.round(Math.random());
+			if (skillChance === 1) {
+				transilioSkill = transilioSkill + 1;
+			}
+		}
+		
+		if (transilioSkill >= 80 && < 100) {
+			skillChance = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
+			if (skillChance > 75) {
+				transilioSkill = transilioSkill + 1;
+			}
 		}
 	}
 	degreesCalc();
@@ -667,9 +906,26 @@ function pubPilot(pilotSkill) {														// pilot
 		games = games +1;
 	}
 	if (pilotSkill < 100){													// 50% chance of improving your skill
-		skillChance = Math.round(Math.random());
-		if (skillChance === 1) {
+		if (pilotSkill < 10) {
+			pilotSkill = pilotSkill + 2;
+		}
+		
+		if (pilotSkill >= 10 && < 50) {
 			pilotSkill = pilotSkill + 1;
+		}
+		
+		if (pilotSkill >= 50 && < 80) {
+			skillChance = Math.round(Math.random());
+			if (skillChance === 1) {
+				pilotSkill = pilotSkill + 1;
+			}
+		}
+		
+		if (pilotSkill >= 80 && < 100) {
+			skillChance = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
+			if (skillChance > 75) {
+				pilotSkill = pilotSkill + 1;
+			}
 		}
 	}
 	degreesCalc();
@@ -707,9 +963,26 @@ function pubbulldog(bulldogSkill) {														// bulldog
 		games = games +1;
 	}
 	if (bulldogSkill < 100){													// 50% chance of improving your skill
-		skillChance = Math.round(Math.random());
-		if (skillChance === 1) {
+		if (bulldogSkill < 10) {
+			bulldogSkill = bulldogSkill + 2;
+		}
+		
+		if (bulldogSkill >= 10 && < 50) {
 			bulldogSkill = bulldogSkill + 1;
+		}
+		
+		if (bulldogSkill >= 50 && < 80) {
+			skillChance = Math.round(Math.random());
+			if (skillChance === 1) {
+				bulldogSkill = bulldogSkill + 1;
+			}
+		}
+		
+		if (bulldogSkill >= 80 && < 100) {
+			skillChance = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
+			if (skillChance > 75) {
+				bulldogSkill = bulldogSkill + 1;
+			}
 		}
 	}
 	degreesCalc();
@@ -747,9 +1020,26 @@ function pubUltraDrive(ultraDriveSkill) {														// ultraDrive
 		games = games +1;
 	}
 	if (ultraDriveSkill < 100){													// 50% chance of improving your skill
-		skillChance = Math.round(Math.random());
-		if (skillChance === 1) {
+		if (ultraDriveSkill < 10) {
+			ultraDriveSkill = ultraDriveSkill + 2;
+		}
+		
+		if (ultraDriveSkill >= 10 && < 50) {
 			ultraDriveSkill = ultraDriveSkill + 1;
+		}
+		
+		if (ultraDriveSkill >= 50 && < 80) {
+			skillChance = Math.round(Math.random());
+			if (skillChance === 1) {
+				ultraDriveSkill = ultraDriveSkill + 1;
+			}
+		}
+		
+		if (ultraDriveSkill >= 80 && < 100) {
+			skillChance = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
+			if (skillChance > 75) {
+				ultraDriveSkill = ultraDriveSkill + 1;
+			}
 		}
 	}
 	degreesCalc();
@@ -787,9 +1077,26 @@ function pubEmerald(emeraldSkill) {														// emerald
 		games = games +1;
 	}
 	if (emeraldSkill < 100){													// 50% chance of improving your skill
-		skillChance = Math.round(Math.random());
-		if (skillChance === 1) {
+		if (emeraldSkill < 10) {
+			emeraldSkill = emeraldSkill + 2;
+		}
+		
+		if (emeraldSkill >= 10 && < 50) {
 			emeraldSkill = emeraldSkill + 1;
+		}
+		
+		if (emeraldSkill >= 50 && < 80) {
+			skillChance = Math.round(Math.random());
+			if (skillChance === 1) {
+				emeraldSkill = emeraldSkill + 1;
+			}
+		}
+		
+		if (emeraldSkill >= 80 && < 100) {
+			skillChance = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
+			if (skillChance > 75) {
+				emeraldSkill = emeraldSkill + 1;
+			}
 		}
 	}
 	degreesCalc();
@@ -827,9 +1134,26 @@ function pubPlatypus(platypusSkill) {														// platypus
 		games = games +1;
 	}
 	if (platypusSkill < 100){													// 50% chance of improving your skill
-		skillChance = Math.round(Math.random());
-		if (skillChance === 1) {
+		if (platypusSkill < 10) {
+			platypusSkill = platypusSkill + 2;
+		}
+		
+		if (platypusSkill >= 10 && < 50) {
 			platypusSkill = platypusSkill + 1;
+		}
+		
+		if (platypusSkill >= 50 && < 80) {
+			skillChance = Math.round(Math.random());
+			if (skillChance === 1) {
+				platypusSkill = platypusSkill + 1;
+			}
+		}
+		
+		if (platypusSkill >= 80 && < 100) {
+			skillChance = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
+			if (skillChance > 75) {
+				platypusSkill = platypusSkill + 1;
+			}
 		}
 	}
 	degreesCalc();
@@ -867,9 +1191,26 @@ function pubDz4(dz4Skill) {														// dz4
 		games = games +1;
 	}
 	if (dz4Skill < 100){													// 50% chance of improving your skill
-		skillChance = Math.round(Math.random());
-		if (skillChance === 1) {
+		if (dz4Skill < 10) {
+			dz4Skill = dz4Skill + 2;
+		}
+		
+		if (dz4Skill >= 10 && < 50) {
 			dz4Skill = dz4Skill + 1;
+		}
+		
+		if (dz4Skill >= 50 && < 80) {
+			skillChance = Math.round(Math.random());
+			if (skillChance === 1) {
+				dz4Skill = dz4Skill + 1;
+			}
+		}
+		
+		if (dz4Skill >= 80 && < 100) {
+			skillChance = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
+			if (skillChance > 75) {
+				dz4Skill = dz4Skill + 1;
+			}
 		}
 	}
 	degreesCalc();
@@ -907,9 +1248,26 @@ function pubRenegade(renegadeSkill) {														// renegade
 		games = games +1;
 	}
 	if (renegadeSkill < 100){													// 50% chance of improving your skill
-		skillChance = Math.round(Math.random());
-		if (skillChance === 1) {
+		if (renegadeSkill < 10) {
+			renegadeSkill = renegadeSkill + 2;
+		}
+		
+		if (renegadeSkill >= 10 && < 50) {
 			renegadeSkill = renegadeSkill + 1;
+		}
+		
+		if (renegadeSkill >= 50 && < 80) {
+			skillChance = Math.round(Math.random());
+			if (skillChance === 1) {
+				renegadeSkill = renegadeSkill + 1;
+			}
+		}
+		
+		if (renegadeSkill >= 80 && < 100) {
+			skillChance = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
+			if (skillChance > 75) {
+				renegadeSkill = renegadeSkill + 1;
+			}
 		}
 	}
 	degreesCalc();
@@ -946,9 +1304,26 @@ function pubHub(hubSkill) {														// hub
 		games = games +1;
 	}
 	if (hubSkill < 100){													// 50% chance of improving your skill
-		skillChance = Math.round(Math.random());
-		if (skillChance === 1) {
+		if (hubSkill < 10) {
+			hubSkill = hubSkill + 2;
+		}
+		
+		if (hubSkill >= 10 && < 50) {
 			hubSkill = hubSkill + 1;
+		}
+		
+		if (hubSkill >= 50 && < 80) {
+			skillChance = Math.round(Math.random());
+			if (skillChance === 1) {
+				hubSkill = hubSkill + 1;
+			}
+		}
+		
+		if (hubSkill >= 80 && < 100) {
+			skillChance = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
+			if (skillChance > 75) {
+				hubSkill = hubSkill + 1;
+			}
 		}
 	}
 	degreesCalc();
