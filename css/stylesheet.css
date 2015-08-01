@@ -61,7 +61,7 @@ body {
 }
 
 #upgrades {
-        text-align: center;
+        text-align: center;	/*Github pls. Start recognizing and updating without an extra commit or 2 required to actually see it.*/
         color: #FFF;
         font: sans-serif;
         font-weight: bold;
@@ -79,3 +79,5 @@ body {
 		position: fixed;
 		right: 5px;
 }
+
+/*Github. Pls.*/
