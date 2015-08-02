@@ -574,6 +574,7 @@ function winPercent2() {
 function collectTagCoins() {
 	tagCoins = tagCoins + 1;
 	document.getElementById('log2').innerHTML = 'You collected a TagCoin, used to purchase upgrades.';
+	showStats();
 }
 
 
