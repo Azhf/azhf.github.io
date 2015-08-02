@@ -2,6 +2,20 @@
 	
 $(document).ready(function(){
 	$("#pugSelect").hide();
+	$("#CheapMic").hide();
+	$("#ImportantCallOuts").hide();
+	$("#BetterMic").hide();
+	$("#ClearMic").hide();
+	$("#TypeFast").hide();
+	$("#Macro").hide();
+	$("#DankMacros").hide();
+	$("#Contain").hide();
+	$("#Snipe").hide();
+	$("#Position").hide();
+	$("#Regrab").hide();
+	$("#NotGrab").hide();
+	$("#Juke").hide();
+	$("#MicroJuke").hide();
 });
 
 // Wins and losses
@@ -143,8 +157,90 @@ function save() {
 	maxTagCoins: maxTagCoins,
 	tcSpent: tcSpent,
 	};
+	ach1: ach1,
+	ach2: ach2,
+	ach3: ach3,
+	ach4: ach4,
+	ach5: ach5,
+	ach6: ach6,
+	ach7: ach7,
+	ach8: ach8,
+	ach9: ach9,
+	ach10: ach10,
+	ach11: ach11,
+	ach12: ach12,
+	ach13: ach13,
 	localStorage.setItem("TPsaveGame",JSON.stringify(saveGame));
 	document.getElementById('log2').innerHTML = 'The game has been saved.';
+}
+
+var ach1 = false;
+var ach2 = false;
+var ach3 = false;
+var ach4 = false;
+var ach5 = false;
+var ach6 = false;
+var ach7 = false;
+var ach8 = false;
+var ach9 = false;
+var ach10 = false;
+var ach11 = false;
+var ach12 = false;
+var ach13 = false;
+
+function achievementCheck() {
+	if(games >= 1 && ach1 !== true) {
+		document.getElementById('log2').innerHTML = 'You have earned the achievement: Welcome to TagPro: Pub once!';
+		ach1 = true;
+	};
+	if(games >= 100 && ach2 !== true) {
+		document.getElementById('log2').innerHTML = 'You have earned the achievement: Pubster: Play 100 pubs!';
+		ach2 = true;
+	};
+	if(games >= 1000 && ach3 !== true) {
+		document.getElementById('log2').innerHTML = 'You have earned the achievement: Pubmaster: Play 1000 pubs!';
+		ach3 = true;
+	};
+	if(winPercent >= 55 && ach4 !== true) {
+		document.getElementById('log2').innerHTML = 'You have earned the achievement: Slasher: Obtain 55% Win Percentage!';
+		ach4 = true;
+	};
+	if(winPercent >= 65 && ach5 !== true) {
+		document.getElementById('log2').innerHTML = 'You have earned the achievement: Working Class: Obtain 65% Win Percentage!';
+		ach5 = true;
+	};
+	if(winPercent >= 75 && ach6 !== true) {
+		document.getElementById('log2').innerHTML = 'You have earned the achievement: Viking: Obtain 75% Win Percentage!';
+		ach6 = true;
+	};
+	if(winPercent >= 90 && ach7 !== true) {
+		document.getElementById('log2').innerHTML = 'You have earned the achievement: Juke King: Obtain 90% Win Percentage!';
+		ach7 = true;
+	};
+	if(streak >= 5 && ach8 !== true) {
+		document.getElementById('log2').innerHTML = 'You have earned the achievement: Good Streak: Obtain a 5 win streak!';
+		ach8 = true;
+	};
+	if(streak >= 20 && ach9 !== true) {
+		document.getElementById('log2').innerHTML = 'You have earned the achievement: Great Streak: Obtain a 20 win streak!';
+		ach9 = true;
+	};
+	if(streak >= 50 && ach10 !== true) {
+		document.getElementById('log2').innerHTML = 'You have earned the achievement: Insane Streak: Obtain a 50 win streak!';
+		ach10 = true;
+	};
+	if(upgrades.hasDankMacros = true && ach11 !== true) {
+		document.getElementById('log2').innerHTML = 'You have earned the achievement: Memecros: Obtain dank macros!';
+		ach11 = true;
+	};
+	if(upgrades.hasRegrab = true && ach12 !== true) {
+		document.getElementById('log2').innerHTML = 'You have earned the achievement: Learn to regrab: Self explanatory.!';
+		ach12 = true;
+	};
+	if(upgrades.hasClearMic = true && ach13 !== true) {
+		document.getElementById('log2').innerHTML = 'You have earned the achievement: All mics: Self explanatory.!';
+		ach13 = true;
+	};
 }
 
 window.setInterval(function(){ // autosave
@@ -157,6 +253,7 @@ window.setInterval(function(){ // autosave
 window.setInterval(function(){ // updates stats every second, automagically.
 	
 	showStats();
+	achievementCheck();
 	
 }, 1000);
 
@@ -269,6 +366,7 @@ function purchaseDefense() {
 		$('#upgrades:empty').parent().remove();
 		tcSpent = tcSpent + 5;
 		maxTC();
+		$("#Contain").show();
 	};
 }
 
@@ -282,6 +380,7 @@ function purchaseType() {
 		$('#upgrades:empty').parent().remove();
 		tcSpent = tcSpent + 5;
 		maxTC();
+		$("#TypeFast").show();
 	};
 }
 
@@ -311,6 +410,7 @@ function purchaseGrab() {
 		$('#upgrades:empty').parent().remove();
 		tcSpent = tcSpent + 10;
 		maxTC();
+		$("#Regrab").show();
 	};
 }
 
@@ -324,6 +424,7 @@ function purchaseContain() {
 		$('#upgrades:empty').parent().remove();
 		tcSpent = tcSpent + 10;
 		maxTC();
+		$("#Snipe").show();
 	};
 }
 
@@ -337,6 +438,7 @@ function purchaseRegrab() {
 		$('#upgrades:empty').parent().remove();
 		tcSpent = tcSpent + 10;
 		maxTC();
+		$("#NotGrab").show();
 	};
 }
 
@@ -418,6 +520,7 @@ function purchaseTypeFast() {
 		$('#upgrades:empty').parent().remove();
 		tcSpent = tcSpent + 15;
 		maxTC();
+		$("#Macro").show();
 	};
 }
 
@@ -431,6 +534,7 @@ function purchaseNotGrab() {
 		$('#upgrades:empty').parent().remove();
 		tcSpent = tcSpent + 15;
 		maxTC();
+		$("#Juke").show();
 	};
 }
 
@@ -446,6 +550,7 @@ function purchaseMacro() {
 		$('#upgrades:empty').parent().remove();
 		tcSpent = tcSpent + 20;
 		maxTC();
+		$("#DankMacros").show();
 	};
 }
 
@@ -472,6 +577,7 @@ function purchaseSnipe() {
 		$('#upgrades:empty').parent().remove();
 		tcSpent = tcSpent + 20;
 		maxTC();
+		$("#Position").show();
 	};
 }
 
@@ -485,6 +591,7 @@ function purchaseJuke() {
 		$('#upgrades:empty').parent().remove();
 		tcSpent = tcSpent + 20;
 		maxTC();
+		$("#MicroJuke").show();
 	};
 }
 
@@ -538,6 +645,7 @@ function purchaseMumble() {
 		document.getElementById('log2').innerHTML = 'You learned to use mumble!';
 		$('#Mumble').remove();
 		$("#pugSelect").show();
+		$("#CheapMic").show();
 		upgrades.hasMumble = true;
 		$('#upgrades:empty').parent().remove();
 		tcSpent = tcSpent + 25;
@@ -596,6 +704,8 @@ function purchaseCheapMic() {
 		tagCoins = tagCoins - 25;
 		document.getElementById('log2').innerHTML = 'You purchased a cheap mic!';
 		$('#CheapMic').remove();
+		$("#ImportantCallOuts").show();
+		$("#BetterMic").show();
 		upgrades.hasCheapMic = true;
 		$('#upgrades:empty').parent().remove();
 		tcSpent = tcSpent + 25;
@@ -609,6 +719,7 @@ function purchaseBetterMic() {  //Github pls actually update the code when you s
 		tagCoins = tagCoins - 30;
 		document.getElementById('log2').innerHTML = 'You purchased a better mic!';
 		$('#BetterMic').remove();
+		$("#ClearMic").show();
 		upgrades.hasBetterMic = true;
 		$('#upgrades:empty').parent().remove();
 		tcSpent = tcSpent + 30;
@@ -643,7 +754,6 @@ function degreesCalc() {
 function winPercent2() {
 	var winPercUnrounded = (wins / games) * 100;
 	winPercent = Math.ceil(winPercUnrounded);
-	console.log(winPercent + " % - Win Percentage!");
 }
 
 function collectTagCoins() {
@@ -787,6 +897,19 @@ function load() {
 	if (typeof savegame.upgrades !== "undefined") upgrades = savegame.upgrades;
 	if (typeof savegame.maxTagCoins !== "undefined") maxTagCoins = savegame.maxTagCoins;
 	if (typeof savegame.tcSpent !== "undefined") tcSpent = savegame.tcSpent;
+	if (typeof savegame.ach1 !== "undefined") ach1 = savegame.ach1;
+	if (typeof savegame.ach2 !== "undefined") ach2 = savegame.ach2;
+	if (typeof savegame.ach3 !== "undefined") ach3 = savegame.ach3;
+	if (typeof savegame.ach4 !== "undefined") ach4 = savegame.ach4;
+	if (typeof savegame.ach5 !== "undefined") ach5 = savegame.ach5;
+	if (typeof savegame.ach6 !== "undefined") ach6 = savegame.ach6;
+	if (typeof savegame.ach7 !== "undefined") ach7 = savegame.ach7;
+	if (typeof savegame.ach8 !== "undefined") ach8 = savegame.ach8;
+	if (typeof savegame.ach9 !== "undefined") ach9 = savegame.ach9;
+	if (typeof savegame.ach10 !== "undefined") ach10 = savegame.ach10;
+	if (typeof savegame.ach11 !== "undefined") ach11 = savegame.ach11;
+	if (typeof savegame.ach12 !== "undefined") ach12 = savegame.ach12;
+	if (typeof savegame.ach13 !== "undefined") ach13 = savegame.ach13;
 	document.getElementById('log2').innerHTML = 'The game has been loaded.';
 	showStats();
 	upgradeCheck();
