@@ -148,6 +148,37 @@ function deleteSave() {
 
 	// Functions
 	
+var upgrades = {
+	hasNavigateSpikes: false;
+	hasDefense: false;
+	hasType: false;
+	hasButton: false;
+	hasGrab: false;
+	hasContain: false;
+	hasRegrab: false;
+	hasTeamTiles: false;
+	hasPups: false;
+	hasDiagonalMovement: false;
+	hasUseBombs: false;
+	hasMemorizeMaps: false;
+	hasTypeFast: false;
+	hasNotGrab: false;
+	hasMacro: false;
+	hasKiss: false;
+	hasSnipe: false;
+	hasJuke: false;
+	hasTimePups: false;
+	hasTagproLead: false;
+	hasPosition: false;
+	hasMumble: false;
+	hasDankMacros: false;
+	hasImportantCallOuts: false;
+	hasMicroJuke: false;
+	hasCheapMic: false;
+	hasBetterMic: false;
+	hasClearMic: false;
+}
+	
 // Upgrades (In order of when you get them)
 
 function purchaseNavigateSpikes() {
@@ -156,6 +187,7 @@ function purchaseNavigateSpikes() {
 		tagCoins = tagCoins - 5;
 		document.getElementById('log2').innerHTML = 'You learned to navigate spikes!';
 		$('#NavigateSpikes').remove();
+		upgrades.hasNavigateSpikes = true;
 	};
 }
 
@@ -165,6 +197,7 @@ function purchaseDefense() {
 		tagCoins = tagCoins - 5;
 		document.getElementById('log2').innerHTML = 'You learned how to defend!';
 		$('#Defense').remove();
+		upgrades.hasDefense = true;
 	};
 }
 
@@ -174,158 +207,277 @@ function purchaseType() {
 		tagCoins = tagCoins - 5;
 		document.getElementById('log2').innerHTML = 'You learned to type!';
 		$('#Type').remove();
+		upgrades.hasType = true;
 	};
 }
 
 // DIFF 3
 
 function purchaseButton() {
-	if (tagCoins >= 5) {
+	if (tagCoins >= 10) {
 		logic = logic + 10;
-		tagCoins = tagCoins - 5;
+		tagCoins = tagCoins - 10;
 		document.getElementById('log2').innerHTML = 'You learned to hold buttons at the right time!';
 		$('#Button').remove();
+		upgrades.hasButton = true;
 	};
 }
 
 function purchaseGrab() {
-	if (tagCoins >= 5) {
+	if (tagCoins >= 10) {
 		mech = mech + 10;
 		logic = logic + 5;
-		tagCoins = tagCoins - 5;
+		tagCoins = tagCoins - 10;
 		document.getElementById('log2').innerHTML = 'You learned to grab the flag at the right time!';
 		$('#Grab').remove();
+		upgrades.hasGrab = true;
 	};
 }
 
 function purchaseContain() {
-	if (tagCoins >= 5) {
+	if (tagCoins >= 10) {
 		mech = mech + 10;
-		tagCoins = tagCoins - 5;
+		tagCoins = tagCoins - 10;
 		document.getElementById('log2').innerHTML = 'You learned to contain!';
 		$('#Contain').remove();
+		upgrades.hasContain = true;
 	};
 }
 
 function purchaseRegrab() {
-	if (tagCoins >= 5) {
+	if (tagCoins >= 10) {
 		logic = logic + 10;
-		tagCoins = tagCoins - 5;
+		tagCoins = tagCoins - 10;
 		document.getElementById('log2').innerHTML = 'You learned to get regrab!';
 		$('#Regrab').remove();
+		upgrades.hasRegrab = true;
 	};
 }
 
 function purchaseTeamTiles() {
-	if (tagCoins >= 5) {
+	if (tagCoins >= 10) {
 		logic = logic + 10;
-		tagCoins = tagCoins - 5;
+		tagCoins = tagCoins - 10;
 		document.getElementById('log2').innerHTML = 'You learned what team tiles are!';
 		$('#TeamTiles').remove();
+		upgrades.hasTeamTiles = true;
 	};
 }
 
 function purchasePups() {
-	logic = logic + 10;
-	$('#Pups').remove();
+	if (tagCoins >= 10) {
+		logic = logic + 10;
+		tagCoins = tagCoins - 10;
+		document.getElementById('log2').innerHTML = 'You learned to get pups!';
+		$('#Pups').remove();
+		upgrades.hasPups = true;
+	};
 }
 
+// DIFF 4
+
 function purchaseDiagonalMovement() {
-	mech = mech + 10;
-	logic = logic + 5;
-	$('#DiagonalMovement').remove();
+	if (tagCoins >= 15) {
+		mech = mech + 10;
+		logic = logic + 5;
+		tagCoins = tagCoins - 15;
+		document.getElementById('log2').innerHTML = 'You learned that diagonal movement is faster!';
+		$('#DiagonalMovement').remove();
+		upgrades.hasDiagonalMovement = true;
+	};
 }
 
 function purchaseUseBombs() {
-	logic = logic + 10;
-	$('#UseBombs').remove();
+	if (tagCoins >= 15) {
+		logic = logic + 10;
+		tagCoins = tagCoins - 15;
+		document.getElementById('log2').innerHTML = 'You learned to use bombs effectively!';
+		$('#UseBombs').remove();
+		upgrades.hasUseBombs = true;
+	};
 }
 
 function purchaseMemorizeMaps() {
-	logic = logic + 10;
-	$('#MemorizeMaps').remove();
+	if (tagCoins >= 15) {
+		logic = logic + 10;
+		tagCoins = tagCoins - 15;
+		document.getElementById('log2').innerHTML = 'You memorized all of the maps!';
+		$('#MemorizeMaps').remove();
+		upgrades.hasMemorizeMaps = true;
+	};
 }
 
 function purchaseTypeFast() {
-	comms = comms + 10;
-	$('#TypeFast').remove();
+	if (tagCoins >= 15) {
+		comms = comms + 10;
+		tagCoins = tagCoins - 15;
+		document.getElementById('log2').innerHTML = 'You learned to type faster!';
+		$('#TypeFast').remove();
+		upgrades.hasTypeFast = true;
+	};
 }
 
 function purchaseNotGrab() {
-	logic = logic + 10;
-	$('#NotGrab').remove();
+	if (tagCoins >= 15) {
+		logic = logic + 10;
+		tagCoins = tagCoins - 15;
+		document.getElementById('log2').innerHTML = "You learned when you shouldn't grab!";
+		$('#NotGrab').remove();
+		upgrades.hasNotGrab = true;
+	};
 }
 
+// DIFF 5
+
 function purchaseMacro() {
-	comms = comms + 10;
-	$('#Macros').remove();
+	if (tagCoins >= 20) {
+		comms = comms + 10;
+		tagCoins = tagCoins - 20;
+		document.getElementById('log2').innerHTML = 'You learned to use macros!';
+		$('#Macro').remove();
+		upgrades.hasMacro = true;
+	};
 }
 
 function purchaseKiss() {
-	logic = logic + 10;
-	$('#Kiss').remove();
+	if (tagCoins >= 20) {
+		logic = logic + 10;
+		tagCoins = tagCoins - 20;
+		document.getElementById('log2').innerHTML = 'You learned to kiss!';
+		$('#Kiss').remove();
+		upgrades.hasKiss = true;
+	};
 }
 
 function purchaseSnipe() {
-	mech = mech + 10;
-	$('#Snipe').remove();
+	if (tagCoins >= 20) {
+		mech = mech + 10;
+		tagCoins = tagCoins - 20;
+		document.getElementById('log2').innerHTML = 'You learned to snipe!';
+		$('#Snipe').remove();
+		upgrades.hasSnipe = true;
+	};
 }
 
 function purchaseJuke() {
-	mech = mech + 10;
-	$('#Juke').remove();
+	if (tagCoins >= 20) {
+		mech = mech + 10;
+		tagCoins = tagCoins - 20;
+		document.getElementById('log2').innerHTML = 'You learned to juke!';
+		$('#Juke').remove();
+		upgrades.hasJuke = true;
+	};
 }
 
 function purchaseTimePups() {
-	comms = comms + 10;
-	logic = logic + 5;
-	$('#TimePups').remove();
+	if (tagCoins >= 20) {
+		comms = comms + 10;
+		logic = logic + 5;
+		tagCoins = tagCoins - 20;
+		document.getElementById('log2').innerHTML = 'You learned to time pups!';
+		$('#TimePups').remove();
+		upgrades.hasTimePups = true;
+	};
 }
 
 function purchaseTagproLead() {
-	mech = mech + 10;
-	$('#TagproLead').remove();
+	if (tagCoins >= 20) {
+		mech = mech + 10;
+		tagCoins = tagCoins - 20;
+		document.getElementById('log2').innerHTML = 'You learned to tagpro lead!';
+		$('#TagproLead').remove();
+		upgrades.hasTagproLead = true;
+	};
 }
 
 function purchasePosition() {
-	mech = mech + 10;
-	logic = logic + 5;
-	$('#position').remove();
+	if (tagCoins >= 20) {
+		mech = mech + 10;
+		logic = logic + 5;
+		tagCoins = tagCoins - 20;
+		document.getElementById('log2').innerHTML = 'You learned to position yourself!';
+		$('#Position').remove();
+		upgrades.hasPosition = true;
+	};
 }
+
+// DIFF 6
 
 function purchaseMumble() {
-	comms = comms + 10;
-	$('#Mumble').remove();
+	if (tagCoins >= 25) {
+		comms = comms + 10;
+		tagCoins = tagCoins - 25;
+		document.getElementById('log2').innerHTML = 'You learned to use mumble!';
+		$('#Mumble').remove();
+		$('#mumbleAdder').add(<button onClick="selectPug()" class="main">Enter a PUG</button>)
+		upgrades.hasMumble = true;
+	};
 }
 
+// DIFF 7
+
 function purchaseDankMacros() {
-	comms = comms + 10;
-	$('#DankMacros').remove();
+	if (tagCoins >= 30) {
+		comms = comms + 10;
+		tagCoins = tagCoins - 30;
+		document.getElementById('log2').innerHTML = 'You learned to use DANK macros!';
+		$('#DankMacro').remove();
+		upgrades.hasDankMacros = true;
+	};
 }
 
 function purchaseImportantCallOuts() {
-	comms = comms + 10;
-	$('#ImportantCallOuts').remove();
+	if (tagCoins >= 30) {
+		comms = comms + 10;
+		tagCoins = tagCoins - 30;
+		document.getElementById('log2').innerHTML = 'You learned to call out important things!';
+		$('#ImportantCallOuts').remove();
+		upgrades.hasImportantCallOuts = true;
+	};
 }
+
+// DIFF 9
 
 function purchaseMicroJuke() {
-	mech = mech + 10;
-	$('#MicroJuke').remove();
+	if (tagCoins >= 40) {
+		mech = mech + 10;
+		tagCoins = tagCoins - 40;
+		document.getElementById('log2').innerHTML = 'You learned to microjuke!';
+		$('#MicroJuke').remove();
+		upgrades.hasMicroJuke = true;
+	};
 }
 
+// PURCHASES
+
 function purchaseCheapMic() {
-	comms = comms + 10;
-	$('#CheapMic').remove();
+	if (tagCoins >= 25) {
+		comms = comms + 10;
+		tagCoins = tagCoins - 25;
+		document.getElementById('log2').innerHTML = 'You purchased a cheap mic!';
+		$('#CheapMic').remove();
+		upgrades.hasCheapMic = true;
+	};
 }
 
 function purchaseBetterMic() {
-	comms = comms + 10;
-	$('#BetterMic').remove();
+	if (tagCoins >= 30) {
+		comms = comms + 10;
+		tagCoins = tagCoins - 30;
+		document.getElementById('log2').innerHTML = 'You purchased a better mic!';
+		$('#BetterMic').remove();
+		upgrades.hasBetterMic = true;
+	};
 }
 
 function purchaseClearMic() {
-	comms = comms + 10;
-	$('#ClearMic').remove();
+	if (tagCoins >= 35) {
+		comms = comms + 10;
+		tagCoins = tagCoins - 35;
+		document.getElementById('log2').innerHTML = 'You purchased a clear mic!';
+		$('#ClearMic').remove();
+		upgrades.hasClearMic = true;
+	};
 }
 
 // Required	
