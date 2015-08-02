@@ -1,5 +1,4 @@
 	// Declaring variables:
-
 	
 $(document).ready(function(){
 	$("#pugSelect").hide();
@@ -15,12 +14,7 @@ var degreeProgress = 0;
 var winsNeeded = 1;
 var winPercent = 0;
 var tagCoins = 0;
-var maxTagCoins = 0;
-
-function maxTC() {
-	var max = Math.floor(wins * .5);
-	maxTagCoins = max;
-}
+var maxTagCoins = Math.floor(wins / 2);
 
 // IRL Skills
 
@@ -99,6 +93,14 @@ function showStats() {
 	document.getElementById('tagcoins').innerHTML = tagCoins;
 }
 
+var tcSpent = 0;
+
+function maxTC() {
+	var max = Math.floor(wins / 2);
+	maxTagCoins = max;
+	maxTagCoins = max - tcSpent;
+}
+
 // Savegame
 
 function save() {
@@ -138,7 +140,8 @@ function save() {
 	hubSkill: hubSkill,
 	tagCoins: tagCoins,
 	upgrades: upgrades,
-	maxTagCoins: maxTagCoins
+	maxTagCoins: maxTagCoins,
+	tcSpent: tcSpent,
 	};
 	localStorage.setItem("TPsaveGame",JSON.stringify(saveGame));
 	document.getElementById('log2').innerHTML = 'The game has been saved.';
@@ -244,7 +247,8 @@ function purchaseNavigateSpikes() {
 		$('#NavigateSpikes').remove();
 		upgrades.hasNavigateSpikes = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = (wins / 2) - 5;
+		tcSpent = tcSpent + 5;
+		maxTC();
 	};
 }
 
@@ -256,7 +260,8 @@ function purchaseDefense() {
 		$('#Defense').remove();
 		upgrades.hasDefense = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = (wins / 2) - 5;
+		tcSpent = tcSpent + 5;
+		maxTC();
 	};
 }
 
@@ -268,7 +273,8 @@ function purchaseType() {
 		$('#Type').remove();
 		upgrades.hasType = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = (wins / 2) - 5;
+		tcSpent = tcSpent + 5;
+		maxTC();
 	};
 }
 
@@ -282,7 +288,8 @@ function purchaseButton() {
 		$('#Button').remove();
 		upgrades.hasButton = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = (wins / 2) - 10;
+		tcSpent = tcSpent + 10;
+		maxTC();
 	};
 }
 
@@ -295,7 +302,8 @@ function purchaseGrab() {
 		$('#Grab').remove();
 		upgrades.hasGrab = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = (wins / 2) - 10;
+		tcSpent = tcSpent + 10;
+		maxTC();
 	};
 }
 
@@ -307,7 +315,8 @@ function purchaseContain() {
 		$('#Contain').remove();
 		upgrades.hasContain = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = (wins / 2) - 10;
+		tcSpent = tcSpent + 10;
+		maxTC();
 	};
 }
 
@@ -319,7 +328,8 @@ function purchaseRegrab() {
 		$('#Regrab').remove();
 		upgrades.hasRegrab = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = (wins / 2) - 10;
+		tcSpent = tcSpent + 10;
+		maxTC();
 	};
 }
 
@@ -331,7 +341,8 @@ function purchaseTeamTiles() {
 		$('#TeamTiles').remove();
 		upgrades.hasTeamTiles = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = (wins / 2) - 10;
+		tcSpent = tcSpent + 10;
+		maxTC();
 	};
 }
 
@@ -343,7 +354,8 @@ function purchasePups() {
 		$('#Pups').remove();
 		upgrades.hasPups = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = (wins / 2) - 10;
+		tcSpent = tcSpent + 10;
+		maxTC();
 	};
 }
 
@@ -358,7 +370,8 @@ function purchaseDiagonalMovement() {
 		$('#DiagonalMovement').remove();
 		upgrades.hasDiagonalMovement = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = (wins / 2) - 15;
+		tcSpent = tcSpent + 15;
+		maxTC();
 	};
 }
 
@@ -370,7 +383,8 @@ function purchaseUseBombs() {
 		$('#UseBombs').remove();
 		upgrades.hasUseBombs = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = (wins / 2) - 15;
+		tcSpent = tcSpent + 15;
+		maxTC();
 	};
 }
 
@@ -382,7 +396,8 @@ function purchaseMemorizeMaps() {
 		$('#MemorizeMaps').remove();
 		upgrades.hasMemorizeMaps = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = (wins / 2) - 15;
+		tcSpent = tcSpent + 15;
+		maxTC();
 	};
 }
 
@@ -394,7 +409,8 @@ function purchaseTypeFast() {
 		$('#TypeFast').remove();
 		upgrades.hasTypeFast = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = (wins / 2) - 15;
+		tcSpent = tcSpent + 15;
+		maxTC();
 	};
 }
 
@@ -406,7 +422,8 @@ function purchaseNotGrab() {
 		$('#NotGrab').remove();
 		upgrades.hasNotGrab = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = (wins / 2) - 15;
+		tcSpent = tcSpent + 15;
+		maxTC();
 	};
 }
 
@@ -420,7 +437,8 @@ function purchaseMacro() {
 		$('#Macro').remove();
 		upgrades.hasMacro = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = (wins / 2) - 20;
+		tcSpent = tcSpent + 20;
+		maxTC();
 	};
 }
 
@@ -432,7 +450,8 @@ function purchaseKiss() {
 		$('#Kiss').remove();
 		upgrades.hasKiss = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = (wins / 2) - 20;
+		tcSpent = tcSpent + 20;
+		maxTC();
 	};
 }
 
@@ -444,7 +463,8 @@ function purchaseSnipe() {
 		$('#Snipe').remove();
 		upgrades.hasSnipe = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = (wins / 2) - 20;
+		tcSpent = tcSpent + 20;
+		maxTC();
 	};
 }
 
@@ -456,7 +476,8 @@ function purchaseJuke() {
 		$('#Juke').remove();
 		upgrades.hasJuke = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = (wins / 2) - 20;
+		tcSpent = tcSpent + 20;
+		maxTC();
 	};
 }
 
@@ -469,7 +490,8 @@ function purchaseTimePups() {
 		$('#TimePups').remove();
 		upgrades.hasTimePups = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = (wins / 2) - 20;
+		tcSpent = tcSpent + 20;
+		maxTC();
 	};
 }
 
@@ -481,7 +503,8 @@ function purchaseTagproLead() {
 		$('#TagproLead').remove();
 		upgrades.hasTagproLead = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = (wins / 2) - 20;
+		tcSpent = tcSpent + 20;
+		maxTC();
 	};
 }
 
@@ -494,7 +517,8 @@ function purchasePosition() {
 		$('#Position').remove();
 		upgrades.hasPosition = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = (wins / 2) - 20;
+		tcSpent = tcSpent + 20;
+		maxTC();
 	};
 }
 
@@ -509,7 +533,8 @@ function purchaseMumble() {
 		$("#pugSelect").show();
 		upgrades.hasMumble = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = (wins / 2) - 25;
+		tcSpent = tcSpent + 25;
+		maxTC();
 	};
 }
 
@@ -523,7 +548,8 @@ function purchaseDankMacros() {
 		$('#DankMacros').remove();
 		upgrades.hasDankMacros = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = (wins / 2) - 30;
+		tcSpent = tcSpent + 30;
+		maxTC();
 	};
 }
 
@@ -535,7 +561,8 @@ function purchaseImportantCallOuts() {
 		$('#ImportantCallOuts').remove();
 		upgrades.hasImportantCallOuts = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = (wins / 2) - 30;
+		tcSpent = tcSpent + 30;
+		maxTC();
 	};
 }
 
@@ -549,7 +576,8 @@ function purchaseMicroJuke() {
 		$('#MicroJuke').remove();
 		upgrades.hasMicroJuke = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = (wins / 2) - 40;
+		tcSpent = tcSpent + 40;
+		maxTC();
 	};
 }
 
@@ -563,7 +591,8 @@ function purchaseCheapMic() {
 		$('#CheapMic').remove();
 		upgrades.hasCheapMic = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = (wins / 2) - 25;
+		tcSpent = tcSpent + 25;
+		maxTC();
 	};
 }
 
@@ -575,7 +604,8 @@ function purchaseBetterMic() {  //Github pls actually update the code when you s
 		$('#BetterMic').remove();
 		upgrades.hasBetterMic = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = (wins / 2) - 30;
+		tcSpent = tcSpent + 30;
+		maxTC();
 	};
 }
 
@@ -588,7 +618,8 @@ function purchaseClearMic() {
 		upgrades.hasClearMic = true;
 		$('#uphead').remove();
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = (wins / 2) - 35;
+		tcSpent = tcSpent + 35;
+		maxTC();
 	};
 }
 
@@ -609,15 +640,14 @@ function winPercent2() {
 }
 
 function collectTagCoins() {
-	maxTC();
 	if (tagCoins >= maxTagCoins) {
 		document.getElementById('log2').innerHTML = 'You must win more to collect another tagcoin.';
 	} else {
 		tagCoins = tagCoins + 1;
 		document.getElementById('log2').innerHTML = 'You collected a TagCoin, used to purchase upgrades.';
 		showStats();
+		maxTC();
 	};
-	maxTC();
 }
 
 
@@ -747,7 +777,8 @@ function load() {
 	if (typeof savegame.renegadeSkill !== "undefined") renegadeSkill = savegame.renegadeSkill;
 	if (typeof savegame.hubSkill !== "undefined") hubSkill = savegame.hubSkill;
 	if (typeof savegame.tagCoins !== "undefined") tagCoins = savegame.tagCoins;
-	if (typeof savegame.upgrades !== "undefined") upgrades = savegame.upgrades;
+	if (typeof savegame.maxTagCoins !== "undefined") maxTagCoins = savegame.maxTagCoins;
+	if (typeof savegame.tcSpent !== "undefined") tcSpent = savegame.tcSpent;
 	document.getElementById('log2').innerHTML = 'The game has been loaded.';
 	showStats();
 	upgradeCheck();
