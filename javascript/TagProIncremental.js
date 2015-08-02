@@ -151,12 +151,12 @@ window.setInterval(function(){ // autosave
 	
 }, 60000);
 
-/* function deleteSave() {
+function deleteSave() {
 	var userResponse = prompt("Are you sure?")  										// Making sure
 	if(userResponse === 'yes') {
 		//localStorage.remove("TPsaveGame");
 		localStorage.clear();
-		var wins = 0;																	// Resetting variables
+		/* var wins = 0;																	// Resetting variables
 		var losses = 0;												//Game Stats
 		var games = 0;
 		var ties = 0;
@@ -223,9 +223,10 @@ window.setInterval(function(){ // autosave
 			hasBetterMic: false,
 			hasClearMic: false
 		};
+		*/
 		showStats();
 		document.getElementById('log2').innerHTML = 'The save game has been deleted, please refresh to finish the process!';
-	};
+	}; 
 } */
 
 // ----------------------------------------------- //
@@ -234,7 +235,7 @@ window.setInterval(function(){ // autosave
 
 	
 // Upgrades (In order of when you get them)
-
+s
 function purchaseNavigateSpikes() {
 	if (tagCoins >= 5) {
 		mech = mech + 10;
