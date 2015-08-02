@@ -48,6 +48,15 @@ var hubSkill = 1;
 var leagueStats = 'none';
 var streak = 0;
 
+function showStats() {
+	document.getElementById('wins').innerHTML = wins;
+	document.getElementById('losses').innerHTML = losses;
+	document.getElementById('ties').innerHTML = ties;
+	document.getElementById('games').innerHTML = games;
+	document.getElementById('streak').innerHTML = streak;
+	document.getElementById('winpercent').innerHTML = winPercent;
+}
+
 // Savegame
 
 function save() {
@@ -84,11 +93,503 @@ function save() {
 	platypusSkill: platypusSkill,
 	dz4Skill: dz4Skill,
 	renegadeSkill: renegadeSkill,
-	hubSkill: hubSkill
+	hubSkill: hubSkill,
+	tagCoins: tagCoins,
+	upgrades: upgrades
 	};
 	localStorage.setItem("save",JSON.stringify(save));
 	document.getElementById('log2').innerHTML = 'The game has been saved.';
 }
+
+window.setInterval(function(){ // autosave
+	
+	save();
+	document.getElementById('log2').innerHTML = 'The game has been saved.';
+	
+}, 60000);
+
+function deleteSave() {
+	var userResponse = prompt("Are you sure?")
+	if(userResponse === 'yes') {
+		localStorage.removeItem("save");
+		document.getElementById('log2').innerHTML = 'The save game has been deleted.';
+	};	
+}
+
+// ----------------------------------------------- //
+
+	// Functions
+	
+var upgrades = {
+	hasNavigateSpikes: false,
+	hasDefense: false,
+	hasType: false,
+	hasButton: false,
+	hasGrab: false,
+	hasContain: false,
+	hasRegrab: false,
+	hasTeamTiles: false,
+	hasPups: false,
+	hasDiagonalMovement: false,
+	hasUseBombs: false,
+	hasMemorizeMaps: false,
+	hasTypeFast: false,
+	hasNotGrab: false,
+	hasMacro: false,
+	hasKiss: false,
+	hasSnipe: false,
+	hasJuke: false,
+	hasTimePups: false,
+	hasTagproLead: false,
+	hasPosition: false,
+	hasMumble: false,
+	hasDankMacros: false,
+	hasImportantCallOuts: false,
+	hasMicroJuke: false,
+	hasCheapMic: false,
+	hasBetterMic: false,
+	hasClearMic: false
+}
+	
+// Upgrades (In order of when you get them)
+
+function purchaseNavigateSpikes() {
+	if (tagCoins >= 5) {
+		mech = mech + 10;
+		tagCoins = tagCoins - 5;
+		document.getElementById('log2').innerHTML = 'You learned to navigate spikes!';
+		$('#NavigateSpikes').remove();
+		upgrades.hasNavigateSpikes = true;
+		$('#upgrades:empty').parent().remove();
+	};
+}
+
+function purchaseDefense() {
+		if (tagCoins >= 5) {
+		mech = mech + 10;
+		tagCoins = tagCoins - 5;
+		document.getElementById('log2').innerHTML = 'You learned how to defend!';
+		$('#Defense').remove();
+		upgrades.hasDefense = true;
+		$('#upgrades:empty').parent().remove();
+	};
+}
+
+function purchaseType() {
+		if (tagCoins >= 5) {
+		comms = comms + 10;
+		tagCoins = tagCoins - 5;
+		document.getElementById('log2').innerHTML = 'You learned to type!';
+		$('#Type').remove();
+		upgrades.hasType = true;
+		$('#upgrades:empty').parent().remove();
+	};
+}
+
+// DIFF 3
+
+function purchaseButton() {
+	if (tagCoins >= 10) {
+		logic = logic + 10;
+		tagCoins = tagCoins - 10;
+		document.getElementById('log2').innerHTML = 'You learned to hold buttons at the right time!';
+		$('#Button').remove();
+		upgrades.hasButton = true;
+		$('#upgrades:empty').parent().remove();
+	};
+}
+
+function purchaseGrab() {
+	if (tagCoins >= 10) {
+		mech = mech + 10;
+		logic = logic + 5;
+		tagCoins = tagCoins - 10;
+		document.getElementById('log2').innerHTML = 'You learned to grab the flag at the right time!';
+		$('#Grab').remove();
+		upgrades.hasGrab = true;
+		$('#upgrades:empty').parent().remove();
+	};
+}
+
+function purchaseContain() {
+	if (tagCoins >= 10) {
+		mech = mech + 10;
+		tagCoins = tagCoins - 10;
+		document.getElementById('log2').innerHTML = 'You learned to contain!';
+		$('#Contain').remove();
+		upgrades.hasContain = true;
+		$('#upgrades:empty').parent().remove();
+	};
+}
+
+function purchaseRegrab() {
+	if (tagCoins >= 10) {
+		logic = logic + 10;
+		tagCoins = tagCoins - 10;
+		document.getElementById('log2').innerHTML = 'You learned to get regrab!';
+		$('#Regrab').remove();
+		upgrades.hasRegrab = true;
+		$('#upgrades:empty').parent().remove();
+	};
+}
+
+function purchaseTeamTiles() {
+	if (tagCoins >= 10) {
+		logic = logic + 10;
+		tagCoins = tagCoins - 10;
+		document.getElementById('log2').innerHTML = 'You learned what team tiles are!';
+		$('#TeamTiles').remove();
+		upgrades.hasTeamTiles = true;
+		$('#upgrades:empty').parent().remove();
+	};
+}
+
+function purchasePups() {
+	if (tagCoins >= 10) {
+		logic = logic + 10;
+		tagCoins = tagCoins - 10;
+		document.getElementById('log2').innerHTML = 'You learned to get pups!';
+		$('#Pups').remove();
+		upgrades.hasPups = true;
+		$('#upgrades:empty').parent().remove();
+	};
+}
+
+// DIFF 4
+
+function purchaseDiagonalMovement() {
+	if (tagCoins >= 15) {
+		mech = mech + 10;
+		logic = logic + 5;
+		tagCoins = tagCoins - 15;
+		document.getElementById('log2').innerHTML = 'You learned that diagonal movement is faster!';
+		$('#DiagonalMovement').remove();
+		upgrades.hasDiagonalMovement = true;
+		$('#upgrades:empty').parent().remove();
+	};
+}
+
+function purchaseUseBombs() {
+	if (tagCoins >= 15) {
+		logic = logic + 10;
+		tagCoins = tagCoins - 15;
+		document.getElementById('log2').innerHTML = 'You learned to use bombs effectively!';
+		$('#UseBombs').remove();
+		upgrades.hasUseBombs = true;
+		$('#upgrades:empty').parent().remove();
+	};
+}
+
+function purchaseMemorizeMaps() {
+	if (tagCoins >= 15) {
+		logic = logic + 10;
+		tagCoins = tagCoins - 15;
+		document.getElementById('log2').innerHTML = 'You memorized all of the maps!';
+		$('#MemorizeMaps').remove();
+		upgrades.hasMemorizeMaps = true;
+		$('#upgrades:empty').parent().remove();
+	};
+}
+
+function purchaseTypeFast() {
+	if (tagCoins >= 15) {
+		comms = comms + 10;
+		tagCoins = tagCoins - 15;
+		document.getElementById('log2').innerHTML = 'You learned to type faster!';
+		$('#TypeFast').remove();
+		upgrades.hasTypeFast = true;
+		$('#upgrades:empty').parent().remove();
+	};
+}
+
+function purchaseNotGrab() {
+	if (tagCoins >= 15) {
+		logic = logic + 10;
+		tagCoins = tagCoins - 15;
+		document.getElementById('log2').innerHTML = "You learned when you shouldn't grab!";
+		$('#NotGrab').remove();
+		upgrades.hasNotGrab = true;
+		$('#upgrades:empty').parent().remove();
+	};
+}
+
+// DIFF 5
+
+function purchaseMacro() {
+	if (tagCoins >= 20) {
+		comms = comms + 10;
+		tagCoins = tagCoins - 20;
+		document.getElementById('log2').innerHTML = 'You learned to use macros!';
+		$('#Macro').remove();
+		upgrades.hasMacro = true;
+		$('#upgrades:empty').parent().remove();
+	};
+}
+
+function purchaseKiss() {
+	if (tagCoins >= 20) {
+		logic = logic + 10;
+		tagCoins = tagCoins - 20;
+		document.getElementById('log2').innerHTML = 'You learned to kiss!';
+		$('#Kiss').remove();
+		upgrades.hasKiss = true;
+		$('#upgrades:empty').parent().remove();
+	};
+}
+
+function purchaseSnipe() {
+	if (tagCoins >= 20) {
+		mech = mech + 10;
+		tagCoins = tagCoins - 20;
+		document.getElementById('log2').innerHTML = 'You learned to snipe!';
+		$('#Snipe').remove();
+		upgrades.hasSnipe = true;
+		$('#upgrades:empty').parent().remove();
+	};
+}
+
+function purchaseJuke() {
+	if (tagCoins >= 20) {
+		mech = mech + 10;
+		tagCoins = tagCoins - 20;
+		document.getElementById('log2').innerHTML = 'You learned to juke!';
+		$('#Juke').remove();
+		upgrades.hasJuke = true;
+		$('#upgrades:empty').parent().remove();
+	};
+}
+
+function purchaseTimePups() {
+	if (tagCoins >= 20) {
+		comms = comms + 10;
+		logic = logic + 5;
+		tagCoins = tagCoins - 20;
+		document.getElementById('log2').innerHTML = 'You learned to time pups!';
+		$('#TimePups').remove();
+		upgrades.hasTimePups = true;
+		$('#upgrades:empty').parent().remove();
+	};
+}
+
+function purchaseTagproLead() {
+	if (tagCoins >= 20) {
+		mech = mech + 10;
+		tagCoins = tagCoins - 20;
+		document.getElementById('log2').innerHTML = 'You learned to tagpro lead!';
+		$('#TagproLead').remove();
+		upgrades.hasTagproLead = true;
+		$('#upgrades:empty').parent().remove();
+	};
+}
+
+function purchasePosition() {
+	if (tagCoins >= 20) {
+		mech = mech + 10;
+		logic = logic + 5;
+		tagCoins = tagCoins - 20;
+		document.getElementById('log2').innerHTML = 'You learned to position yourself!';
+		$('#Position').remove();
+		upgrades.hasPosition = true;
+		$('#upgrades:empty').parent().remove();
+	};
+}
+
+// DIFF 6
+
+function purchaseMumble() {
+	if (tagCoins >= 25) {
+		comms = comms + 10;
+		tagCoins = tagCoins - 25;
+		document.getElementById('log2').innerHTML = 'You learned to use mumble!';
+		$('#Mumble').remove();
+		$('#mumbleAdder').add(<button onClick="selectPug()" class="main">Enter a PUG</button>)
+		upgrades.hasMumble = true;
+		$('#upgrades:empty').parent().remove();
+	};
+}
+
+// DIFF 7
+
+function purchaseDankMacros() {
+	if (tagCoins >= 30) {
+		comms = comms + 10;
+		tagCoins = tagCoins - 30;
+		document.getElementById('log2').innerHTML = 'You learned to use DANK macros!';
+		$('#DankMacros').remove();
+		upgrades.hasDankMacros = true;
+		$('#upgrades:empty').parent().remove();
+	};
+}
+
+function purchaseImportantCallOuts() {
+	if (tagCoins >= 30) {
+		comms = comms + 10;
+		tagCoins = tagCoins - 30;
+		document.getElementById('log2').innerHTML = 'You learned to call out important things!';
+		$('#ImportantCallOuts').remove();
+		upgrades.hasImportantCallOuts = true;
+		$('#upgrades:empty').parent().remove();
+	};
+}
+
+// DIFF 9
+
+function purchaseMicroJuke() {
+	if (tagCoins >= 40) {
+		mech = mech + 10;
+		tagCoins = tagCoins - 40;
+		document.getElementById('log2').innerHTML = 'You learned to microjuke!';
+		$('#MicroJuke').remove();
+		upgrades.hasMicroJuke = true;
+		$('#upgrades:empty').parent().remove();
+	};
+}
+
+// PURCHASES
+
+function purchaseCheapMic() {
+	if (tagCoins >= 25) {
+		comms = comms + 10;
+		tagCoins = tagCoins - 25;
+		document.getElementById('log2').innerHTML = 'You purchased a cheap mic!';
+		$('#CheapMic').remove();
+		upgrades.hasCheapMic = true;
+		$('#upgrades:empty').parent().remove();
+	};
+}
+
+function purchaseBetterMic() {  //Github pls actually update the code when you sync like wtf I shouldn't have to make a dummy comment
+	if (tagCoins >= 30) {
+		comms = comms + 10;
+		tagCoins = tagCoins - 30;
+		document.getElementById('log2').innerHTML = 'You purchased a better mic!';
+		$('#BetterMic').remove();
+		upgrades.hasBetterMic = true;
+		$('#upgrades:empty').parent().remove();
+	};
+}
+
+function purchaseClearMic() {
+	if (tagCoins >= 35) {
+		comms = comms + 10;
+		tagCoins = tagCoins - 35;
+		document.getElementById('log2').innerHTML = 'You purchased a clear mic!';
+		$('#ClearMic').remove();
+		upgrades.hasClearMic = true;
+		$('#upgrades:empty').parent().remove();
+	};
+}
+
+// Required	
+
+function degreesCalc() {
+	if (degreeProgress === winsNeeded) {
+		degreeProgress = 0;
+		degrees = degrees + 1;
+		// winsNeeded = // PUT THE TAGPRO DEGREE WINS NEEDED CALCULATION ALGORITHM THINGY HERE
+	}
+}
+
+function winPercent2() {
+	var winPercUnrounded = (wins / games) * 100;
+	winPercent = Math.ceil(winPercUnrounded);
+	console.log(winPercent + " % - Win Percentage!");
+}
+
+function collectTagCoins() {
+	tagCoins = tagCoins + 1;
+	document.getElementById('log2').innerHTML = 'You collected a TagCoin, used to purchase upgrades.';
+}
+
+
+function upgradeCheck() {
+	if (upgrade.hasNavigateSpikes === true) {
+		$('#NavigateSpikes').remove();
+	};
+	if (upgrade.hasDefense === true) {
+		$('#Defense').remove();
+	};
+	if (upgrade.hasType === true) {
+		$('#Type').remove();
+	};
+	if (upgrade.hasButton === true) {
+		$('#Button').remove();
+	};
+	if (upgrade.hasGrab === true) {
+		$('#Grab').remove();
+	};
+	if (upgrade.hasContain === true) {
+		$('#Contain').remove();
+	};
+	if (upgrade.hasRegrab === true) {
+		$('#Regrab').remove();
+	};
+	if (upgrade.hasTeamTiles === true) {
+		$('#TeamTiles').remove();
+	};
+	if (upgrade.hasPups === true) {
+		$('#Pups').remove();
+	};
+	if (upgrade.hasDiagonalMovement === true) {
+		$('#DiagonalMovement').remove();
+	};
+	if (upgrade.hasUseBombs === true) {
+		$('#UseBombs').remove();
+	};
+	if (upgrade.hasMemorizeMaps === true) {
+		$('#MemorizeMaps').remove();
+	};
+	if (upgrade.hasTypeFast === true) {
+		$('#TypeFast').remove();
+	};
+	if (upgrade.hasNotGrab === true) {
+		$('#NotGrab').remove();
+	};
+	if (upgrade.hasMacro === true) {
+		$('#Macro').remove();
+	};
+	if (upgrade.hasKiss === true) {
+		$('#Kiss').remove();
+	};
+	if (upgrade.hasSnipe === true) {
+		$('#Snipe').remove();
+	};
+	if (upgrade.hasJuke === true) {
+		$('#Juke').remove();
+	};
+	if (upgrade.hasTimePups === true) {
+		$('#TimePups').remove();
+	};
+	if (upgrade.hasTagproLead === true) {
+		$('#TagproLead').remove();
+	};
+	if (upgrade.hasPosition === true) {
+		$('#Position').remove();
+	};
+	if (upgrade.hasMumble === true) {
+		$('#Mumble').remove();
+	};
+	if (upgrade.hasDankMacros === true) {
+		$('#DankMacros').remove();
+	};
+	if (upgrade.hasImportantCallOuts === true) {
+		$('#ImportantCallOuts').remove();
+	};
+	if (upgrade.hasMicroJuke === true) {
+		$('#MicroJuke').remove();
+	};
+	if (upgrade.hasCheapMic === true) {
+		$('#CheapMic').remove();
+	};
+	if (upgrade.hasBetterMic === true) {
+		$('#BetterMic').remove();
+	};
+	if (upgrade.hasClearMic === true) {
+		$('#ClearMic').remove();
+	};
+}
+
+// LOADING
 
 function load() {
 	var savegame = JSON.parse(localStorage.getItem("save"));
@@ -125,390 +626,13 @@ function load() {
 	if (typeof savegame.dz4Skill !== "undefined") dz4Skill = savegame.dz4Skill;
 	if (typeof savegame.renegadeSkill !== "undefined") renegadeSkill = savegame.renegadeSkill;
 	if (typeof savegame.hubSkill !== "undefined") hubSkill = savegame.hubSkill;
+	if (typeof savegame.tagCoins !== "undefined") tagCoins = savegame.tagCoins;
+	if (typeof savegame.upgrades !== "undefined") upgrades = savegame.upgrades;
 	document.getElementById('log2').innerHTML = 'The game has been loaded.';
 	showStats();
+	upgradeCheck();
 }
 
-window.setInterval(function(){ // autosave
-	
-	save();
-	document.getElementById('log2').innerHTML = 'The game has been saved.';
-	
-}, 60000);
-
-function deleteSave() {
-	var userResponse = prompt("Are you sure?")
-	if(userResponse === 'yes') {
-		localStorage.removeItem("save");
-		document.getElementById('log2').innerHTML = 'The save game has been deleted.';
-	};	
-}
-
-// ----------------------------------------------- //
-
-	// Functions
-	
-var upgrades = {
-	hasNavigateSpikes: false;
-	hasDefense: false;
-	hasType: false;
-	hasButton: false;
-	hasGrab: false;
-	hasContain: false;
-	hasRegrab: false;
-	hasTeamTiles: false;
-	hasPups: false;
-	hasDiagonalMovement: false;
-	hasUseBombs: false;
-	hasMemorizeMaps: false;
-	hasTypeFast: false;
-	hasNotGrab: false;
-	hasMacro: false;
-	hasKiss: false;
-	hasSnipe: false;
-	hasJuke: false;
-	hasTimePups: false;
-	hasTagproLead: false;
-	hasPosition: false;
-	hasMumble: false;
-	hasDankMacros: false;
-	hasImportantCallOuts: false;
-	hasMicroJuke: false;
-	hasCheapMic: false;
-	hasBetterMic: false;
-	hasClearMic: false;
-}
-	
-// Upgrades (In order of when you get them)
-
-function purchaseNavigateSpikes() {
-	if (tagCoins >= 5) {
-		mech = mech + 10;
-		tagCoins = tagCoins - 5;
-		document.getElementById('log2').innerHTML = 'You learned to navigate spikes!';
-		$('#NavigateSpikes').remove();
-		upgrades.hasNavigateSpikes = true;
-	};
-}
-
-function purchaseDefense() {
-		if (tagCoins >= 5) {
-		mech = mech + 10;
-		tagCoins = tagCoins - 5;
-		document.getElementById('log2').innerHTML = 'You learned how to defend!';
-		$('#Defense').remove();
-		upgrades.hasDefense = true;
-	};
-}
-
-function purchaseType() {
-		if (tagCoins >= 5) {
-		comms = comms + 10;
-		tagCoins = tagCoins - 5;
-		document.getElementById('log2').innerHTML = 'You learned to type!';
-		$('#Type').remove();
-		upgrades.hasType = true;
-	};
-}
-
-// DIFF 3
-
-function purchaseButton() {
-	if (tagCoins >= 10) {
-		logic = logic + 10;
-		tagCoins = tagCoins - 10;
-		document.getElementById('log2').innerHTML = 'You learned to hold buttons at the right time!';
-		$('#Button').remove();
-		upgrades.hasButton = true;
-	};
-}
-
-function purchaseGrab() {
-	if (tagCoins >= 10) {
-		mech = mech + 10;
-		logic = logic + 5;
-		tagCoins = tagCoins - 10;
-		document.getElementById('log2').innerHTML = 'You learned to grab the flag at the right time!';
-		$('#Grab').remove();
-		upgrades.hasGrab = true;
-	};
-}
-
-function purchaseContain() {
-	if (tagCoins >= 10) {
-		mech = mech + 10;
-		tagCoins = tagCoins - 10;
-		document.getElementById('log2').innerHTML = 'You learned to contain!';
-		$('#Contain').remove();
-		upgrades.hasContain = true;
-	};
-}
-
-function purchaseRegrab() {
-	if (tagCoins >= 10) {
-		logic = logic + 10;
-		tagCoins = tagCoins - 10;
-		document.getElementById('log2').innerHTML = 'You learned to get regrab!';
-		$('#Regrab').remove();
-		upgrades.hasRegrab = true;
-	};
-}
-
-function purchaseTeamTiles() {
-	if (tagCoins >= 10) {
-		logic = logic + 10;
-		tagCoins = tagCoins - 10;
-		document.getElementById('log2').innerHTML = 'You learned what team tiles are!';
-		$('#TeamTiles').remove();
-		upgrades.hasTeamTiles = true;
-	};
-}
-
-function purchasePups() {
-	if (tagCoins >= 10) {
-		logic = logic + 10;
-		tagCoins = tagCoins - 10;
-		document.getElementById('log2').innerHTML = 'You learned to get pups!';
-		$('#Pups').remove();
-		upgrades.hasPups = true;
-	};
-}
-
-// DIFF 4
-
-function purchaseDiagonalMovement() {
-	if (tagCoins >= 15) {
-		mech = mech + 10;
-		logic = logic + 5;
-		tagCoins = tagCoins - 15;
-		document.getElementById('log2').innerHTML = 'You learned that diagonal movement is faster!';
-		$('#DiagonalMovement').remove();
-		upgrades.hasDiagonalMovement = true;
-	};
-}
-
-function purchaseUseBombs() {
-	if (tagCoins >= 15) {
-		logic = logic + 10;
-		tagCoins = tagCoins - 15;
-		document.getElementById('log2').innerHTML = 'You learned to use bombs effectively!';
-		$('#UseBombs').remove();
-		upgrades.hasUseBombs = true;
-	};
-}
-
-function purchaseMemorizeMaps() {
-	if (tagCoins >= 15) {
-		logic = logic + 10;
-		tagCoins = tagCoins - 15;
-		document.getElementById('log2').innerHTML = 'You memorized all of the maps!';
-		$('#MemorizeMaps').remove();
-		upgrades.hasMemorizeMaps = true;
-	};
-}
-
-function purchaseTypeFast() {
-	if (tagCoins >= 15) {
-		comms = comms + 10;
-		tagCoins = tagCoins - 15;
-		document.getElementById('log2').innerHTML = 'You learned to type faster!';
-		$('#TypeFast').remove();
-		upgrades.hasTypeFast = true;
-	};
-}
-
-function purchaseNotGrab() {
-	if (tagCoins >= 15) {
-		logic = logic + 10;
-		tagCoins = tagCoins - 15;
-		document.getElementById('log2').innerHTML = "You learned when you shouldn't grab!";
-		$('#NotGrab').remove();
-		upgrades.hasNotGrab = true;
-	};
-}
-
-// DIFF 5
-
-function purchaseMacro() {
-	if (tagCoins >= 20) {
-		comms = comms + 10;
-		tagCoins = tagCoins - 20;
-		document.getElementById('log2').innerHTML = 'You learned to use macros!';
-		$('#Macro').remove();
-		upgrades.hasMacro = true;
-	};
-}
-
-function purchaseKiss() {
-	if (tagCoins >= 20) {
-		logic = logic + 10;
-		tagCoins = tagCoins - 20;
-		document.getElementById('log2').innerHTML = 'You learned to kiss!';
-		$('#Kiss').remove();
-		upgrades.hasKiss = true;
-	};
-}
-
-function purchaseSnipe() {
-	if (tagCoins >= 20) {
-		mech = mech + 10;
-		tagCoins = tagCoins - 20;
-		document.getElementById('log2').innerHTML = 'You learned to snipe!';
-		$('#Snipe').remove();
-		upgrades.hasSnipe = true;
-	};
-}
-
-function purchaseJuke() {
-	if (tagCoins >= 20) {
-		mech = mech + 10;
-		tagCoins = tagCoins - 20;
-		document.getElementById('log2').innerHTML = 'You learned to juke!';
-		$('#Juke').remove();
-		upgrades.hasJuke = true;
-	};
-}
-
-function purchaseTimePups() {
-	if (tagCoins >= 20) {
-		comms = comms + 10;
-		logic = logic + 5;
-		tagCoins = tagCoins - 20;
-		document.getElementById('log2').innerHTML = 'You learned to time pups!';
-		$('#TimePups').remove();
-		upgrades.hasTimePups = true;
-	};
-}
-
-function purchaseTagproLead() {
-	if (tagCoins >= 20) {
-		mech = mech + 10;
-		tagCoins = tagCoins - 20;
-		document.getElementById('log2').innerHTML = 'You learned to tagpro lead!';
-		$('#TagproLead').remove();
-		upgrades.hasTagproLead = true;
-	};
-}
-
-function purchasePosition() {
-	if (tagCoins >= 20) {
-		mech = mech + 10;
-		logic = logic + 5;
-		tagCoins = tagCoins - 20;
-		document.getElementById('log2').innerHTML = 'You learned to position yourself!';
-		$('#Position').remove();
-		upgrades.hasPosition = true;
-	};
-}
-
-// DIFF 6
-
-function purchaseMumble() {
-	if (tagCoins >= 25) {
-		comms = comms + 10;
-		tagCoins = tagCoins - 25;
-		document.getElementById('log2').innerHTML = 'You learned to use mumble!';
-		$('#Mumble').remove();
-		$('#mumbleAdder').add(<button onClick="selectPug()" class="main">Enter a PUG</button>)
-		upgrades.hasMumble = true;
-	};
-}
-
-// DIFF 7
-
-function purchaseDankMacros() {
-	if (tagCoins >= 30) {
-		comms = comms + 10;
-		tagCoins = tagCoins - 30;
-		document.getElementById('log2').innerHTML = 'You learned to use DANK macros!';
-		$('#DankMacro').remove();
-		upgrades.hasDankMacros = true;
-	};
-}
-
-function purchaseImportantCallOuts() {
-	if (tagCoins >= 30) {
-		comms = comms + 10;
-		tagCoins = tagCoins - 30;
-		document.getElementById('log2').innerHTML = 'You learned to call out important things!';
-		$('#ImportantCallOuts').remove();
-		upgrades.hasImportantCallOuts = true;
-	};
-}
-
-// DIFF 9
-
-function purchaseMicroJuke() {
-	if (tagCoins >= 40) {
-		mech = mech + 10;
-		tagCoins = tagCoins - 40;
-		document.getElementById('log2').innerHTML = 'You learned to microjuke!';
-		$('#MicroJuke').remove();
-		upgrades.hasMicroJuke = true;
-	};
-}
-
-// PURCHASES
-
-function purchaseCheapMic() {
-	if (tagCoins >= 25) {
-		comms = comms + 10;
-		tagCoins = tagCoins - 25;
-		document.getElementById('log2').innerHTML = 'You purchased a cheap mic!';
-		$('#CheapMic').remove();
-		upgrades.hasCheapMic = true;
-	};
-}
-
-function purchaseBetterMic() {  //Github pls actually update the code when you sync like wtf I shouldn't have to make a dummy comment
-	if (tagCoins >= 30) {
-		comms = comms + 10;
-		tagCoins = tagCoins - 30;
-		document.getElementById('log2').innerHTML = 'You purchased a better mic!';
-		$('#BetterMic').remove();
-		upgrades.hasBetterMic = true;
-	};
-}
-
-function purchaseClearMic() {
-	if (tagCoins >= 35) {
-		comms = comms + 10;
-		tagCoins = tagCoins - 35;
-		document.getElementById('log2').innerHTML = 'You purchased a clear mic!';
-		$('#ClearMic').remove();
-		upgrades.hasClearMic = true;
-	};
-}
-
-// Required	
-
-function degreesCalc() {
-	if (degreeProgress === winsNeeded) {
-		degreeProgress = 0;
-		degrees = degrees + 1;
-		// winsNeeded = // PUT THE TAGPRO DEGREE WINS NEEDED CALCULATION ALGORITHM THINGY HERE
-	}
-}
-
-function winPercent2() {
-	var winPercUnrounded = (wins / games) * 100;
-	winPercent = Math.ceil(winPercUnrounded);
-	console.log(winPercent + " % - Win Percentage!");
-}
-
-function showStats() {
-	document.getElementById('wins').innerHTML = wins;
-	document.getElementById('losses').innerHTML = losses;
-	document.getElementById('ties').innerHTML = ties;
-	document.getElementById('games').innerHTML = games;
-	document.getElementById('streak').innerHTML = streak;
-	document.getElementById('winpercent').innerHTML = winPercent;
-}
-
-function collectTagCoins() {
-	tagCoins = tagCoins + 1;
-	document.getElementById('log2').innerHTML = 'You collected a TagCoin, used to purchase upgrades.';
-}
 /* function rolling300() {
 	???
 } */
@@ -517,7 +641,7 @@ function collectTagCoins() {
 
 function pubRicochet(ricochetSkill) {														// Ricochet
 	
-	var pubSkill = ricochetSkill;
+	var pubSkill = Math.round(logic * .35) + Math.round(mech * .35) + Math.round(comms * .20) + Math.round(ricochetSkillSkill * .20);
 	var allySkill1 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 	var allySkill2 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 	var allySkill3 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
@@ -575,7 +699,7 @@ function pubRicochet(ricochetSkill) {														// Ricochet
 
 function pubVelocity(velocitySkill) {														// velocity
 	
-	var pubSkill = velocitySkill;
+	var pubSkill = Math.round(logic * .35) + Math.round(mech * .35) + Math.round(comms * .20) + Math.round(velocitySkill * .20);
 	var allySkill1 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 	var allySkill2 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 	var allySkill3 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
@@ -632,7 +756,7 @@ function pubVelocity(velocitySkill) {														// velocity
 
 function pubWormy(wormySkill) {														// wormy
 	
-	var pubSkill = wormySkill;
+	var pubSkill = Math.round(logic * .35) + Math.round(mech * .35) + Math.round(comms * .20) + Math.round(wormySkill * .20);
 	var allySkill1 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 	var allySkill2 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 	var allySkill3 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
@@ -689,7 +813,7 @@ function pubWormy(wormySkill) {														// wormy
 
 function pubCloud(cloudSkill) {														// cloud
 	
-	var pubSkill = cloudSkill;
+	var pubSkill = Math.round(logic * .35) + Math.round(mech * .35) + Math.round(comms * .20) + Math.round(cloudSkill * .20);
 	var allySkill1 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 	var allySkill2 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 	var allySkill3 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
@@ -746,7 +870,7 @@ function pubCloud(cloudSkill) {														// cloud
 
 function pubCommandCenter(commandCenterSkill) {														// commandCenter
 	
-	var pubSkill = commandCenterSkill;
+	var pubSkill = Math.round(logic * .35) + Math.round(mech * .35) + Math.round(comms * .20) + Math.round(commandCenterSkill * .20);
 	var allySkill1 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 	var allySkill2 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 	var allySkill3 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
@@ -803,7 +927,7 @@ function pubCommandCenter(commandCenterSkill) {														// commandCenter
 
 function pubSmirk(smirkSkill) {														// smirk
 	
-	var pubSkill = smirkSkill;
+	var pubSkill = Math.round(logic * .35) + Math.round(mech * .35) + Math.round(comms * .20) + Math.round(smirkSkill * .20);
 	var allySkill1 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 	var allySkill2 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 	var allySkill3 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
@@ -860,7 +984,7 @@ function pubSmirk(smirkSkill) {														// smirk
 
 function pubBoombox(boomboxSkill) {														// boombox
 	
-	var pubSkill = boomboxSkill;
+	var pubSkill = Math.round(logic * .35) + Math.round(mech * .35) + Math.round(comms * .20) + Math.round(boomboxSkill * .20);
 	var allySkill1 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 	var allySkill2 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 	var allySkill3 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
@@ -917,7 +1041,7 @@ function pubBoombox(boomboxSkill) {														// boombox
 
 function pubIron(ironSkill) {														// iron
 	
-	var pubSkill = ironSkill;
+	var pubSkill = Math.round(logic * .35) + Math.round(mech * .35) + Math.round(comms * .20) + Math.round(ironSkill * .20);
 	var allySkill1 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 	var allySkill2 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 	var allySkill3 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
@@ -974,7 +1098,7 @@ function pubIron(ironSkill) {														// iron
 
 function pubGeoKoala(geoKoalaSkill) {														// geoKoala
 	
-	var pubSkill = geoKoalaSkill;
+	var pubSkill = Math.round(logic * .35) + Math.round(mech * .35) + Math.round(comms * .20) + Math.round(geoKoalaSkill * .20);
 	var allySkill1 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 	var allySkill2 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 	var allySkill3 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
@@ -1031,7 +1155,7 @@ function pubGeoKoala(geoKoalaSkill) {														// geoKoala
 
 function pubConstriction(constrictionSkill) {														// constriction
 	
-	var pubSkill = constrictionSkill;
+	var pubSkill = Math.round(logic * .35) + Math.round(mech * .35) + Math.round(comms * .20) + Math.round(constrictionSkill * .20);
 	var allySkill1 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 	var allySkill2 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 	var allySkill3 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
@@ -1088,7 +1212,7 @@ function pubConstriction(constrictionSkill) {														// constriction
 
 function pubHornswoggle(hornswoggleSkill) {														// hornswoggle
 	
-	var pubSkill = hornswoggleSkill;
+	var pubSkill = Math.round(logic * .35) + Math.round(mech * .35) + Math.round(comms * .20) + Math.round(hornswoggleSkill * .20);
 	var allySkill1 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 	var allySkill2 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 	var allySkill3 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
@@ -1145,7 +1269,7 @@ function pubHornswoggle(hornswoggleSkill) {														// hornswoggle
 
 function pubWomboCombo(womboComboSkill) {														// womboCombo
 	
-	var pubSkill = womboComboSkill;
+	var pubSkill = Math.round(logic * .35) + Math.round(mech * .35) + Math.round(comms * .20) + Math.round(womboComboSkill * .20);
 	var allySkill1 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 	var allySkill2 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 	var allySkill3 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
@@ -1202,7 +1326,7 @@ function pubWomboCombo(womboComboSkill) {														// womboCombo
 
 function pubDraft(draftSkill) {														// draft
 	
-	var pubSkill = draftSkill;
+	var pubSkill = Math.round(logic * .35) + Math.round(mech * .35) + Math.round(comms * .20) + Math.round(draftSkill * .20);
 	var allySkill1 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 	var allySkill2 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 	var allySkill3 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
@@ -1259,7 +1383,7 @@ function pubDraft(draftSkill) {														// draft
 
 function pubTransilio(transilioSkill) {														// transilio
 	
-	var pubSkill = transilioSkill;
+	var pubSkill = Math.round(logic * .35) + Math.round(mech * .35) + Math.round(comms * .20) + Math.round(transilioSkill * .20);
 	var allySkill1 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 	var allySkill2 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 	var allySkill3 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
@@ -1316,7 +1440,7 @@ function pubTransilio(transilioSkill) {														// transilio
 
 function pubPilot(pilotSkill) {														// pilot
 	
-	var pubSkill = pilotSkill;
+	var pubSkill = Math.round(logic * .35) + Math.round(mech * .35) + Math.round(comms * .20) + Math.round(pilotSkill * .20);
 	var allySkill1 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 	var allySkill2 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 	var allySkill3 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
@@ -1373,7 +1497,7 @@ function pubPilot(pilotSkill) {														// pilot
 
 function pubbulldog(bulldogSkill) {														// bulldog
 	
-	var pubSkill = bulldogSkill;
+	var pubSkill = Math.round(logic * .35) + Math.round(mech * .35) + Math.round(comms * .20) + Math.round(bulldogSkill * .20);
 	var allySkill1 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 	var allySkill2 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 	var allySkill3 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
@@ -1430,7 +1554,7 @@ function pubbulldog(bulldogSkill) {														// bulldog
 
 function pubUltraDrive(ultraDriveSkill) {														// ultraDrive
 	
-	var pubSkill = ultraDriveSkill;
+	var pubSkill = Math.round(logic * .35) + Math.round(mech * .35) + Math.round(comms * .20) + Math.round(ultraDriveSkill * .20);
 	var allySkill1 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 	var allySkill2 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 	var allySkill3 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
@@ -1487,7 +1611,7 @@ function pubUltraDrive(ultraDriveSkill) {														// ultraDrive
 
 function pubEmerald(emeraldSkill) {														// emerald
 	
-	var pubSkill = emeraldSkill;
+	var pubSkill = Math.round(logic * .35) + Math.round(mech * .35) + Math.round(comms * .20) + Math.round(emeraldSkill * .20);
 	var allySkill1 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 	var allySkill2 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 	var allySkill3 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
@@ -1544,7 +1668,7 @@ function pubEmerald(emeraldSkill) {														// emerald
 
 function pubPlatypus(platypusSkill) {														// platypus
 	
-	var pubSkill = platypusSkill;
+	var pubSkill = Math.round(logic * .35) + Math.round(mech * .35) + Math.round(comms * .20) + Math.round(platypusSkill * .20);
 	var allySkill1 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 	var allySkill2 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 	var allySkill3 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
@@ -1601,7 +1725,7 @@ function pubPlatypus(platypusSkill) {														// platypus
 
 function pubDz4(dz4Skill) {														// dz4
 	
-	var pubSkill = dz4Skill;
+	var pubSkill = Math.round(logic * .35) + Math.round(mech * .35) + Math.round(comms * .20) + Math.round(dz4Skill * .20);
 	var allySkill1 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 	var allySkill2 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 	var allySkill3 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
@@ -1658,7 +1782,7 @@ function pubDz4(dz4Skill) {														// dz4
 
 function pubRenegade(renegadeSkill) {														// renegade
 	
-	var pubSkill = renegadeSkill;
+	var pubSkill = Math.round(logic * .35) + Math.round(mech * .35) + Math.round(comms * .20) + Math.round(renegadeSkill * .20);
 	var allySkill1 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 	var allySkill2 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 	var allySkill3 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
@@ -1714,7 +1838,8 @@ function pubRenegade(renegadeSkill) {														// renegade
 ///////////////////////////////////////////////////////////////////////////
 
 function pubHub(hubSkill) {														// hub
-	var pubSkill = hubSkill;
+
+	var pubSkill = Math.round(logic * .35) + Math.round(mech * .35) + Math.round(comms * .20) + Math.round(hubSkill * .20);
 	var allySkill1 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 	var allySkill2 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 	var allySkill3 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
