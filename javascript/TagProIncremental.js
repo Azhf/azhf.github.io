@@ -460,7 +460,7 @@ function purchaseCheapMic() {
 	};
 }
 
-function purchaseBetterMic() {
+function purchaseBetterMic() {  //Github pls actually update the code when you sync like wtf I shouldn't have to make a dummy comment
 	if (tagCoins >= 30) {
 		comms = comms + 10;
 		tagCoins = tagCoins - 30;
