@@ -3,7 +3,7 @@
 	
 $(document).ready(function(){
 	$("#pugSelect").hide();
-};
+});
 
 // Wins and losses
 var wins = 0;
