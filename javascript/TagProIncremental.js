@@ -95,7 +95,7 @@ function showStats() {
 // Savegame
 
 function save() {
-	var save = {
+	var saveGame = {
     wins: wins, 									// The basics
     losses: losses,
     ties: ties,
@@ -132,7 +132,7 @@ function save() {
 	tagCoins: tagCoins,
 	upgrades: upgrades
 	};
-	localStorage.setItem("save",JSON.stringify(save));
+	localStorage.setItem("TPsaveGame",JSON.stringify(saveGame));
 	document.getElementById('log2').innerHTML = 'The game has been saved.';
 }
 
@@ -598,7 +598,7 @@ function upgradeCheck() {
 // LOADING
 
 function load() {
-	var savegame = JSON.parse(localStorage.getItem("save"));
+	var savegame = JSON.parse(localStorage.getItem("TPsaveGame"));
 	if (typeof savegame.wins !== "undefined") wins = savegame.wins;
 	if (typeof savegame.losses !== "undefined") losses = savegame.losses;
 	if (typeof savegame.ties !== "undefined") ties = savegame.ties;
@@ -647,7 +647,7 @@ function load() {
 
 function pubRicochet(ricochetSkill) {														// Ricochet
 	
-	var pubSkill = Math.round(logic * .35) + Math.round(mech * .35) + Math.round(comms * .20) + Math.round(ricochetSkillSkill * .20);
+	var pubSkill = Math.round(logic * .35) + Math.round(mech * .35) + Math.round(comms * .20) + Math.round(ricochetSkill * .20);
 	var allySkill1 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 	var allySkill2 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 	var allySkill3 = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
