@@ -144,11 +144,78 @@ window.setInterval(function(){ // autosave
 }, 60000);
 
 function deleteSave() {
-	var userResponse = prompt("Are you sure?")
+	var userResponse = prompt("Are you sure?")  										// Making sure
 	if(userResponse === 'yes') {
 		localStorage.removeItem("save");
+		var wins = 0;																	// Resetting variables
+		var losses = 0;												//Game Stats
+		var games = 0;
+		var ties = 0;
+		var degrees = 0;
+		var degreeProgress = 0;
+		var winsNeeded = 1;
+		var winPercent = 0;
+		var tagCoins = 0;																				
+		var comms = 0;												// IRL Skills
+		var mech = 0;
+		var logic = 0;
+		var ricochetSkill = 1;										// Map Skills
+		var velocitySkill = 1;
+		var wormySkill = 1;
+		var commandCenterSkill = 1;
+		var cloudSkill = 1;				//
+		var smirkSkill = 1;
+		var boomboxSkill = 1;
+		var geoKoalaSkill = 1;
+		var constrictionSkill = 1;
+		var ironSkill = 1;				//
+		var hornswoggleSkill = 1;
+		var womboComboSkill = 1;
+		var draftSkill = 1;
+		var transilioSkill = 1;
+		var pilotSkill = 1;				//
+		var bulldogSkill = 1;
+		var ultraDriveSkill = 1;
+		var emeraldSkill = 1;
+		var platypusSkill = 1;
+		var dz4Skill = 1;				//
+		var renegadeSkill = 1;
+		var hubSkill = 1;
+		var leagueStats = 'none';									//Other
+		var streak = 0;
+		var upgrades = {
+			hasNavigateSpikes: false,
+			hasDefense: false,
+			hasType: false,
+			hasButton: false,
+			hasGrab: false,
+			hasContain: false,
+			hasRegrab: false,
+			hasTeamTiles: false,
+			hasPups: false,
+			hasDiagonalMovement: false,
+			hasUseBombs: false,
+			hasMemorizeMaps: false,
+			hasTypeFast: false,
+			hasNotGrab: false,
+			hasMacro: false,
+			hasKiss: false,
+			hasSnipe: false,
+			hasJuke: false,
+			hasTimePups: false,
+			hasTagproLead: false,
+			hasPosition: false,
+			hasMumble: false,
+			hasDankMacros: false,
+			hasImportantCallOuts: false,
+			hasMicroJuke: false,
+			hasCheapMic: false,
+			hasBetterMic: false,
+			hasClearMic: false
+		};
+		showStats();
 		document.getElementById('log2').innerHTML = 'The save game has been deleted.';
-	};	
+	};
 }
 
 // ----------------------------------------------- //
