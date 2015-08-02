@@ -235,7 +235,7 @@ function deleteSave() {
 
 	
 // Upgrades (In order of when you get them)
-s
+
 function purchaseNavigateSpikes() {
 	if (tagCoins >= 5) {
 		mech = mech + 10;
