@@ -402,8 +402,11 @@ function purchaseMumble() {
 		tagCoins = tagCoins - 25;
 		document.getElementById('log2').innerHTML = 'You learned to use mumble!';
 		$('#Mumble').remove();
-		$('#mumbleAdder').add(<button onClick="selectPug()" class="main">Enter a PUG</button>)
 		upgrades.hasMumble = true;
+		var mumbleButtonAdd = document.createElement("BUTTON onClick='selectPug()' class='main'");        // Create a <button> element
+		var mumbleButtonText = document.createTextNode("CLICK ME");       // Create a text node
+		mumbleButtonAdd.appendChild(mumbleButtonText);                                // Append the text to <button>
+		document.body.appendChild(mumbleButtonAdd);    
 		$('#upgrades:empty').parent().remove();
 	};
 }

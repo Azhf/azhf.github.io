@@ -41,6 +41,7 @@ h3 {
         -webkit-border-radius: 10px;
         -moz-border-radius: 10px;
         border-radius: 10px;
+		overflow:scroll;
 }
  
 .main {
@@ -79,6 +80,7 @@ body {
 		position: fixed;
 		right: 5px;
 		top: 5px;
+		overflow:scroll;
 }
 
 /*Github. Pls.*/
