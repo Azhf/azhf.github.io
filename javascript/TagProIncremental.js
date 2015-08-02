@@ -143,7 +143,7 @@ window.setInterval(function(){ // autosave
 	
 }, 60000);
 
-function deleteSave() {
+/* function deleteSave() {
 	var userResponse = prompt("Are you sure?")  										// Making sure
 	if(userResponse === 'yes') {
 		//localStorage.remove("TPsaveGame");
@@ -217,7 +217,7 @@ function deleteSave() {
 		showStats();
 		document.getElementById('log2').innerHTML = 'The save game has been deleted, please refresh to finish the process!';
 	};
-}
+} */
 
 // ----------------------------------------------- //
 
