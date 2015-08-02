@@ -146,7 +146,8 @@ window.setInterval(function(){ // autosave
 function deleteSave() {
 	var userResponse = prompt("Are you sure?")  										// Making sure
 	if(userResponse === 'yes') {
-		localStorage.removeItem("TPsaveGame");
+		//localStorage.remove("TPsaveGame");
+		localStorage.clear();
 		var wins = 0;																	// Resetting variables
 		var losses = 0;												//Game Stats
 		var games = 0;

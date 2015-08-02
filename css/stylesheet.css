@@ -41,7 +41,6 @@ h3 {
         -webkit-border-radius: 10px;
         -moz-border-radius: 10px;
         border-radius: 10px;
-		overflow:scroll;
 }
  /*I just finished the upgrade update! */
 .main {
@@ -80,7 +79,6 @@ body {
 		position: fixed;
 		right: 5px;
 		top: 5px;
-		overflow:scroll;
 }
 
 #settings {
