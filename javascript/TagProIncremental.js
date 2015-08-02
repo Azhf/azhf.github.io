@@ -15,6 +15,12 @@ var degreeProgress = 0;
 var winsNeeded = 1;
 var winPercent = 0;
 var tagCoins = 0;
+var maxTagCoins = 0;
+
+function maxTC() {
+	var max = wins * .5;
+	var maxTagCoins = max;
+}
 
 // IRL Skills
 
@@ -572,9 +578,14 @@ function winPercent2() {
 }
 
 function collectTagCoins() {
-	tagCoins = tagCoins + 1;
-	document.getElementById('log2').innerHTML = 'You collected a TagCoin, used to purchase upgrades.';
-	showStats();
+	if (tagCoins >= maxTagCoins) {
+		document.getElementById('log2').innerHTML = 'You must win more to collect another tagcoin.';
+	} else {
+		tagCoins = tagCoins + 1;
+		document.getElementById('log2').innerHTML = 'You collected a TagCoin, used to purchase upgrades.';
+		showStats();
+	};
+	maxTC();
 }
 
 
@@ -2051,4 +2062,5 @@ function selectPub() {
 					}
 				};
 	showStats();
+	maxTC();
 }
