@@ -19,7 +19,7 @@ var maxTagCoins = 0;
 
 function maxTC() {
 	var max = wins * .5;
-	var maxTagCoins = max;
+	maxTagCoins = max;
 }
 
 // IRL Skills
@@ -137,7 +137,8 @@ function save() {
 	renegadeSkill: renegadeSkill,
 	hubSkill: hubSkill,
 	tagCoins: tagCoins,
-	upgrades: upgrades
+	upgrades: upgrades,
+	maxTagCoins: maxTagCoins
 	};
 	localStorage.setItem("TPsaveGame",JSON.stringify(saveGame));
 	document.getElementById('log2').innerHTML = 'The game has been saved.';
@@ -191,6 +192,7 @@ window.setInterval(function(){ // autosave
 		var hubSkill = 1;
 		var leagueStats = 'none';									//Other
 		var streak = 0;
+		var maxTagCoins = 0;
 		var upgrades = {
 			hasNavigateSpikes: false,
 			hasDefense: false,
@@ -578,7 +580,7 @@ function winPercent2() {
 }
 
 function collectTagCoins() {
-	if (tagCoins >= maxTagCoins) {
+	if (tagCoins === maxTagCoins) {
 		document.getElementById('log2').innerHTML = 'You must win more to collect another tagcoin.';
 	} else {
 		tagCoins = tagCoins + 1;
