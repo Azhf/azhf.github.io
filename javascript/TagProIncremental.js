@@ -16,6 +16,7 @@ $(document).ready(function(){
 	$("#NotGrab").hide();
 	$("#Juke").hide();
 	$("#MicroJuke").hide();
+	$("#achievementLog").hide();
 });
 
 // Wins and losses
