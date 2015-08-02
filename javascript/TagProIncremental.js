@@ -171,19 +171,6 @@ function save() {
 	maxTagCoins: maxTagCoins,
 	tcSpent: tcSpent,
 	};
-	ach1: ach1,
-	ach2: ach2,
-	ach3: ach3,
-	ach4: ach4,
-	ach5: ach5,
-	ach6: ach6,
-	ach7: ach7,
-	ach8: ach8,
-	ach9: ach9,
-	ach10: ach10,
-	ach11: ach11,
-	ach12: ach12,
-	ach13: ach13,
 	localStorage.setItem("TPsaveGame",JSON.stringify(saveGame));
 	document.getElementById('log2').innerHTML = 'The game has been saved.';
 }
