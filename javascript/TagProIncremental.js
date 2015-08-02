@@ -784,6 +784,7 @@ function load() {
 	if (typeof savegame.renegadeSkill !== "undefined") renegadeSkill = savegame.renegadeSkill;
 	if (typeof savegame.hubSkill !== "undefined") hubSkill = savegame.hubSkill;
 	if (typeof savegame.tagCoins !== "undefined") tagCoins = savegame.tagCoins;
+	if (typeof savegame.upgrades !== "undefined") upgrades = savegame.upgrades;
 	if (typeof savegame.maxTagCoins !== "undefined") maxTagCoins = savegame.maxTagCoins;
 	if (typeof savegame.tcSpent !== "undefined") tcSpent = savegame.tcSpent;
 	document.getElementById('log2').innerHTML = 'The game has been loaded.';
