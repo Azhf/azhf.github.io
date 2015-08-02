@@ -3,7 +3,7 @@
 	
 $(document).ready(function(){
 	$("#pugSelect").hide();
-});
+}); // I fixed it. One parentheses. Yet github didn't sync it right or something. So, I added this comment so I can do another commit and sync it again in the hopes that Github fixes it. Github. Pls.
 
 // Wins and losses
 var wins = 0;
