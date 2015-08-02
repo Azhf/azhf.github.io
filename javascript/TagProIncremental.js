@@ -150,13 +150,13 @@ window.setInterval(function(){ // autosave
 	document.getElementById('log2').innerHTML = 'The game has been saved.';
 	
 }, 60000);
-
+/*
 function deleteSave() {
 	var userResponse = prompt("Are you sure?")  										// Making sure
 	if(userResponse === 'yes') {
 		//localStorage.remove("TPsaveGame");
 		localStorage.clear();
-		/* var wins = 0;																	// Resetting variables
+		var wins = 0;																	// Resetting variables
 		var losses = 0;												//Game Stats
 		var games = 0;
 		var ties = 0;
@@ -223,11 +223,11 @@ function deleteSave() {
 			hasBetterMic: false,
 			hasClearMic: false
 		};
-		*/
+		
 		showStats();
 		document.getElementById('log2').innerHTML = 'The save game has been deleted, please refresh to finish the process!';
 	}; 
-}
+}  */
 
 // ----------------------------------------------- //
 
@@ -581,7 +581,8 @@ function winPercent2() {
 }
 
 function collectTagCoins() {
-	if (tagCoins === maxTagCoins) {
+	maxTC();
+	if (tagCoins >= maxTagCoins) {
 		document.getElementById('log2').innerHTML = 'You must win more to collect another tagcoin.';
 	} else {
 		tagCoins = tagCoins + 1;
@@ -658,6 +659,7 @@ function upgradeCheck() {
 	};
 	if (upgrades.hasMumble === true) {
 		$('#Mumble').remove();
+		$("#pugSelect").show();
 	};
 	if (upgrades.hasDankMacros === true) {
 		$('#DankMacros').remove();
