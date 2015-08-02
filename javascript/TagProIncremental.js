@@ -153,6 +153,13 @@ window.setInterval(function(){ // autosave
 	document.getElementById('log2').innerHTML = 'The game has been saved.';
 	
 }, 60000);
+
+window.setInterval(function(){ // updates stats every second, automagically.
+	
+	showStats();
+	
+}, 1000);
+
 /*
 function deleteSave() {
 	var userResponse = prompt("Are you sure?")  										// Making sure
