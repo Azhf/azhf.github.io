@@ -18,7 +18,7 @@ var tagCoins = 0;
 var maxTagCoins = 0;
 
 function maxTC() {
-	var max = wins * .5;
+	var max = Math.ceil(wins * .5);
 	maxTagCoins = max;
 }
 
