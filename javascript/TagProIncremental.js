@@ -509,88 +509,88 @@ function collectTagCoins() {
 
 
 function upgradeCheck() {
-	if (upgrade.hasNavigateSpikes === true) {
+	if (upgrades.hasNavigateSpikes === true) {
 		$('#NavigateSpikes').remove();
 	};
-	if (upgrade.hasDefense === true) {
+	if (upgrades.hasDefense === true) {
 		$('#Defense').remove();
 	};
-	if (upgrade.hasType === true) {
+	if (upgrades.hasType === true) {
 		$('#Type').remove();
 	};
-	if (upgrade.hasButton === true) {
+	if (upgrades.hasButton === true) {
 		$('#Button').remove();
 	};
-	if (upgrade.hasGrab === true) {
+	if (upgrades.hasGrab === true) {
 		$('#Grab').remove();
 	};
-	if (upgrade.hasContain === true) {
+	if (upgrades.hasContain === true) {
 		$('#Contain').remove();
 	};
-	if (upgrade.hasRegrab === true) {
+	if (upgrades.hasRegrab === true) {
 		$('#Regrab').remove();
 	};
-	if (upgrade.hasTeamTiles === true) {
+	if (upgrades.hasTeamTiles === true) {
 		$('#TeamTiles').remove();
 	};
-	if (upgrade.hasPups === true) {
+	if (upgrades.hasPups === true) {
 		$('#Pups').remove();
 	};
-	if (upgrade.hasDiagonalMovement === true) {
+	if (upgrades.hasDiagonalMovement === true) {
 		$('#DiagonalMovement').remove();
 	};
-	if (upgrade.hasUseBombs === true) {
+	if (upgrades.hasUseBombs === true) {
 		$('#UseBombs').remove();
 	};
-	if (upgrade.hasMemorizeMaps === true) {
+	if (upgrades.hasMemorizeMaps === true) {
 		$('#MemorizeMaps').remove();
 	};
-	if (upgrade.hasTypeFast === true) {
+	if (upgrades.hasTypeFast === true) {
 		$('#TypeFast').remove();
 	};
-	if (upgrade.hasNotGrab === true) {
+	if (upgrades.hasNotGrab === true) {
 		$('#NotGrab').remove();
 	};
-	if (upgrade.hasMacro === true) {
+	if (upgrades.hasMacro === true) {
 		$('#Macro').remove();
 	};
-	if (upgrade.hasKiss === true) {
+	if (upgrades.hasKiss === true) {
 		$('#Kiss').remove();
 	};
-	if (upgrade.hasSnipe === true) {
+	if (upgrades.hasSnipe === true) {
 		$('#Snipe').remove();
 	};
-	if (upgrade.hasJuke === true) {
+	if (upgrades.hasJuke === true) {
 		$('#Juke').remove();
 	};
-	if (upgrade.hasTimePups === true) {
+	if (upgrades.hasTimePups === true) {
 		$('#TimePups').remove();
 	};
-	if (upgrade.hasTagproLead === true) {
+	if (upgrades.hasTagproLead === true) {
 		$('#TagproLead').remove();
 	};
-	if (upgrade.hasPosition === true) {
+	if (upgrades.hasPosition === true) {
 		$('#Position').remove();
 	};
-	if (upgrade.hasMumble === true) {
+	if (upgrades.hasMumble === true) {
 		$('#Mumble').remove();
 	};
-	if (upgrade.hasDankMacros === true) {
+	if (upgrades.hasDankMacros === true) {
 		$('#DankMacros').remove();
 	};
-	if (upgrade.hasImportantCallOuts === true) {
+	if (upgrades.hasImportantCallOuts === true) {
 		$('#ImportantCallOuts').remove();
 	};
-	if (upgrade.hasMicroJuke === true) {
+	if (upgrades.hasMicroJuke === true) {
 		$('#MicroJuke').remove();
 	};
-	if (upgrade.hasCheapMic === true) {
+	if (upgrades.hasCheapMic === true) {
 		$('#CheapMic').remove();
 	};
-	if (upgrade.hasBetterMic === true) {
+	if (upgrades.hasBetterMic === true) {
 		$('#BetterMic').remove();
 	};
-	if (upgrade.hasClearMic === true) {
+	if (upgrades.hasClearMic === true) {
 		$('#ClearMic').remove();
 	};
 }
