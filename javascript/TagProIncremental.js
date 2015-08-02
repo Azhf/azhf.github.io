@@ -244,7 +244,7 @@ function purchaseNavigateSpikes() {
 		$('#NavigateSpikes').remove();
 		upgrades.hasNavigateSpikes = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = 0;
+		maxTagCoins = (wins / 2) - 5;
 	};
 }
 
@@ -256,7 +256,7 @@ function purchaseDefense() {
 		$('#Defense').remove();
 		upgrades.hasDefense = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = 0;
+		maxTagCoins = (wins / 2) - 5;
 	};
 }
 
@@ -268,7 +268,7 @@ function purchaseType() {
 		$('#Type').remove();
 		upgrades.hasType = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = 0;
+		maxTagCoins = (wins / 2) - 5;
 	};
 }
 
@@ -282,7 +282,7 @@ function purchaseButton() {
 		$('#Button').remove();
 		upgrades.hasButton = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = 0;
+		maxTagCoins = (wins / 2) - 10;
 	};
 }
 
@@ -295,7 +295,7 @@ function purchaseGrab() {
 		$('#Grab').remove();
 		upgrades.hasGrab = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = 0;
+		maxTagCoins = (wins / 2) - 10;
 	};
 }
 
@@ -307,7 +307,7 @@ function purchaseContain() {
 		$('#Contain').remove();
 		upgrades.hasContain = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = 0;
+		maxTagCoins = (wins / 2) - 10;
 	};
 }
 
@@ -319,7 +319,7 @@ function purchaseRegrab() {
 		$('#Regrab').remove();
 		upgrades.hasRegrab = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = 0;
+		maxTagCoins = (wins / 2) - 10;
 	};
 }
 
@@ -331,7 +331,7 @@ function purchaseTeamTiles() {
 		$('#TeamTiles').remove();
 		upgrades.hasTeamTiles = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = 0;
+		maxTagCoins = (wins / 2) - 10;
 	};
 }
 
@@ -343,7 +343,7 @@ function purchasePups() {
 		$('#Pups').remove();
 		upgrades.hasPups = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = 0;
+		maxTagCoins = (wins / 2) - 10;
 	};
 }
 
@@ -358,7 +358,7 @@ function purchaseDiagonalMovement() {
 		$('#DiagonalMovement').remove();
 		upgrades.hasDiagonalMovement = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = 0;
+		maxTagCoins = (wins / 2) - 15;
 	};
 }
 
@@ -370,7 +370,7 @@ function purchaseUseBombs() {
 		$('#UseBombs').remove();
 		upgrades.hasUseBombs = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = 0;
+		maxTagCoins = (wins / 2) - 15;
 	};
 }
 
@@ -382,7 +382,7 @@ function purchaseMemorizeMaps() {
 		$('#MemorizeMaps').remove();
 		upgrades.hasMemorizeMaps = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = 0;
+		maxTagCoins = (wins / 2) - 15;
 	};
 }
 
@@ -394,7 +394,7 @@ function purchaseTypeFast() {
 		$('#TypeFast').remove();
 		upgrades.hasTypeFast = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = 0;
+		maxTagCoins = (wins / 2) - 15;
 	};
 }
 
@@ -406,7 +406,7 @@ function purchaseNotGrab() {
 		$('#NotGrab').remove();
 		upgrades.hasNotGrab = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = 0;
+		maxTagCoins = (wins / 2) - 15;
 	};
 }
 
@@ -420,7 +420,7 @@ function purchaseMacro() {
 		$('#Macro').remove();
 		upgrades.hasMacro = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = 0;
+		maxTagCoins = (wins / 2) - 20;
 	};
 }
 
@@ -432,7 +432,7 @@ function purchaseKiss() {
 		$('#Kiss').remove();
 		upgrades.hasKiss = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = 0;
+		maxTagCoins = (wins / 2) - 20;
 	};
 }
 
@@ -444,7 +444,7 @@ function purchaseSnipe() {
 		$('#Snipe').remove();
 		upgrades.hasSnipe = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = 0;
+		maxTagCoins = (wins / 2) - 20;
 	};
 }
 
@@ -456,7 +456,7 @@ function purchaseJuke() {
 		$('#Juke').remove();
 		upgrades.hasJuke = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = 0;
+		maxTagCoins = (wins / 2) - 20;
 	};
 }
 
@@ -469,7 +469,7 @@ function purchaseTimePups() {
 		$('#TimePups').remove();
 		upgrades.hasTimePups = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = 0;
+		maxTagCoins = (wins / 2) - 20;
 	};
 }
 
@@ -481,7 +481,7 @@ function purchaseTagproLead() {
 		$('#TagproLead').remove();
 		upgrades.hasTagproLead = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = 0;
+		maxTagCoins = (wins / 2) - 20;
 	};
 }
 
@@ -494,7 +494,7 @@ function purchasePosition() {
 		$('#Position').remove();
 		upgrades.hasPosition = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = 0;
+		maxTagCoins = (wins / 2) - 20;
 	};
 }
 
@@ -509,7 +509,7 @@ function purchaseMumble() {
 		$("#pugSelect").show();
 		upgrades.hasMumble = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = 0;
+		maxTagCoins = (wins / 2) - 25;
 	};
 }
 
@@ -523,7 +523,7 @@ function purchaseDankMacros() {
 		$('#DankMacros').remove();
 		upgrades.hasDankMacros = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = 0;
+		maxTagCoins = (wins / 2) - 30;
 	};
 }
 
@@ -535,7 +535,7 @@ function purchaseImportantCallOuts() {
 		$('#ImportantCallOuts').remove();
 		upgrades.hasImportantCallOuts = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = 0;
+		maxTagCoins = (wins / 2) - 30;
 	};
 }
 
@@ -549,7 +549,7 @@ function purchaseMicroJuke() {
 		$('#MicroJuke').remove();
 		upgrades.hasMicroJuke = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = 0;
+		maxTagCoins = (wins / 2) - 40;
 	};
 }
 
@@ -563,7 +563,7 @@ function purchaseCheapMic() {
 		$('#CheapMic').remove();
 		upgrades.hasCheapMic = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = 0;
+		maxTagCoins = (wins / 2) - 25;
 	};
 }
 
@@ -575,7 +575,7 @@ function purchaseBetterMic() {  //Github pls actually update the code when you s
 		$('#BetterMic').remove();
 		upgrades.hasBetterMic = true;
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = 0;
+		maxTagCoins = (wins / 2) - 30;
 	};
 }
 
@@ -588,7 +588,7 @@ function purchaseClearMic() {
 		upgrades.hasClearMic = true;
 		$('#uphead').remove();
 		$('#upgrades:empty').parent().remove();
-		maxTagCoins = 0;
+		maxTagCoins = (wins / 2) - 35;
 	};
 }
 
