@@ -188,19 +188,19 @@ function achievementCheck() {
 		document.getElementById('log2').innerHTML = 'You have earned the achievement: Pubmaster: Play 1000 pubs!';
 		ach3 = true;
 	};
-	if(winPercent >= 55 && ach4 !== true) {
+	if(winPercent >= 55 && ach4 !== true && games >= 50) {
 		document.getElementById('log2').innerHTML = 'You have earned the achievement: Slasher: Obtain 55% Win Percentage!';
 		ach4 = true;
 	};
-	if(winPercent >= 65 && ach5 !== true) {
+	if(winPercent >= 65 && ach5 !== true && games >= 50) {
 		document.getElementById('log2').innerHTML = 'You have earned the achievement: Working Class: Obtain 65% Win Percentage!';
 		ach5 = true;
 	};
-	if(winPercent >= 75 && ach6 !== true) {
+	if(winPercent >= 75 && ach6 !== true && games >= 50) {
 		document.getElementById('log2').innerHTML = 'You have earned the achievement: Viking: Obtain 75% Win Percentage!';
 		ach6 = true;
 	};
-	if(winPercent >= 90 && ach7 !== true) {
+	if(winPercent >= 90 && ach7 !== true && games >= 50) {
 		document.getElementById('log2').innerHTML = 'You have earned the achievement: Juke King: Obtain 90% Win Percentage!';
 		ach7 = true;
 	};
