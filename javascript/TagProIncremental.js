@@ -183,7 +183,7 @@ function achievementCheck() {
 		window.setTimeout(function() {
 			document.getElementById('achievementLog').innerHTML = '';
 			$("#achievementLog").hide();
-		} 10000);
+		}); 10000;
 	};
 	if(games >= 100 && ach2 !== true) {
 		$("#achievementLog").show();
@@ -192,7 +192,7 @@ function achievementCheck() {
 		window.setTimeout(function() {
 			document.getElementById('achievementLog').innerHTML = '';
 			$("#achievementLog").hide();
-		} 10000);
+		}); 10000;
 	};
 	if(games >= 1000 && ach3 !== true) {
 		$("#achievementLog").show();
@@ -201,7 +201,7 @@ function achievementCheck() {
 		window.setTimeout(function() {
 			document.getElementById('achievementLog').innerHTML = '';
 			$("#achievementLog").hide();
-		} 10000);
+		}); 10000;
 	};
 	if(winPercent >= 55 && ach4 !== true && games >= 50) {
 		$("#achievementLog").show();
@@ -210,7 +210,7 @@ function achievementCheck() {
 		window.setTimeout(function() {
 			document.getElementById('achievementLog').innerHTML = '';
 			$("#achievementLog").hide();
-		} 10000);
+		}); 10000;
 	};
 	if(winPercent >= 65 && ach5 !== true && games >= 50) {
 		$("#achievementLog").show();
@@ -219,7 +219,7 @@ function achievementCheck() {
 		window.setTimeout(function() {
 			document.getElementById('achievementLog').innerHTML = '';
 			$("#achievementLog").hide();
-		} 10000);
+		}); 10000;
 	};
 	if(winPercent >= 75 && ach6 !== true && games >= 50) {
 		$("#achievementLog").show();
@@ -228,7 +228,7 @@ function achievementCheck() {
 		window.setTimeout(function() {
 			document.getElementById('achievementLog').innerHTML = '';
 			$("#achievementLog").hide();
-		} 10000);
+		}); 10000;
 	};
 	if(winPercent >= 90 && ach7 !== true && games >= 50) {
 		$("#achievementLog").show();
@@ -237,7 +237,7 @@ function achievementCheck() {
 		window.setTimeout(function() {
 			document.getElementById('achievementLog').innerHTML = '';
 			$("#achievementLog").hide();
-		} 10000);
+		}); 10000;
 	};
 	if(streak >= 5 && ach8 !== true) {
 		$("#achievementLog").show();
@@ -246,7 +246,7 @@ function achievementCheck() {
 		window.setTimeout(function() {
 			document.getElementById('achievementLog').innerHTML = '';
 			$("#achievementLog").hide();
-		} 10000);
+		}); 10000;
 	};
 	if(streak >= 20 && ach9 !== true) {
 		$("#achievementLog").show();
@@ -255,7 +255,7 @@ function achievementCheck() {
 		window.setTimeout(function() {
 			document.getElementById('achievementLog').innerHTML = '';
 			$("#achievementLog").hide();
-		} 10000);
+		}); 10000;
 	};
 	if(streak >= 50 && ach10 !== true) {
 		$("#achievementLog").show();
@@ -264,7 +264,7 @@ function achievementCheck() {
 		window.setTimeout(function() {
 			document.getElementById('achievementLog').innerHTML = '';
 			$("#achievementLog").hide();
-		} 10000);
+		}); 10000;
 	};
 	if(upgrades.hasDankMacros = true && ach11 !== true) {
 		$("#achievementLog").show();
@@ -274,7 +274,7 @@ function achievementCheck() {
 		$("#achievementLog").show();
 			document.getElementById('achievementLog').innerHTML = '';
 			$("#achievementLog").hide();
-		} 10000);
+		}); 10000;
 	};
 	if(upgrades.hasRegrab = true && ach12 !== true) {
 		$("#achievementLog").show();
@@ -284,7 +284,7 @@ function achievementCheck() {
 		$("#achievementLog").show();
 			document.getElementById('achievementLog').innerHTML = '';
 			$("#achievementLog").hide();
-		} 10000);
+		}); 10000;
 	};
 	if(upgrades.hasClearMic = true && ach13 !== true) {
 		$("#achievementLog").show();
@@ -293,7 +293,7 @@ function achievementCheck() {
 		window.setTimeout(function() {
 			document.getElementById('achievementLog').innerHTML = '';
 			$("#achievementLog").hide();
-		} 10000);
+		}); 10000;
 	};
 }
 
