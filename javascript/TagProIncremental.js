@@ -701,6 +701,10 @@ function pubRicochet(ricochetSkill) {														// Ricochet
 	winPercent2();
 }
 
+$( document ).ready(function() {
+   load();
+});
+
 ////////////////////////////////////////////////////////////////////
 
 function pubVelocity(velocitySkill) {														// velocity

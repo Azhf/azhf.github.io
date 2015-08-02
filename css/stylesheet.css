@@ -84,3 +84,22 @@ body {
 }
 
 /*Github. Pls.*/
+
+#settings {
+        color: black;
+        font: sans-serif;
+        font-size: 130%;
+        font-weight: bold;
+        text-align: center;
+        height: 50px;
+        width: 250px;
+        margin: 5px;
+        border-style: solid;
+        border-width: 4px;
+        border-color: #4D6700;
+        background-color: #CDCDCD;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+		overflow:scroll;
+}
