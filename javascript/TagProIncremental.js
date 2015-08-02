@@ -90,6 +90,7 @@ function showStats() {
 	document.getElementById('games').innerHTML = games;
 	document.getElementById('streak').innerHTML = streak;
 	document.getElementById('winpercent').innerHTML = winPercent;
+	document.getElementById('tagcoins').innerHTML = tagCoins;
 }
 
 // Savegame
