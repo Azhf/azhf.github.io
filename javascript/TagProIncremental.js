@@ -52,6 +52,37 @@ var hubSkill = 1;
 var leagueStats = 'none';
 var streak = 0;
 
+var upgrades = {
+	hasNavigateSpikes: false,
+	hasDefense: false,
+	hasType: false,
+	hasButton: false,
+	hasGrab: false,
+	hasContain: false,
+	hasRegrab: false,
+	hasTeamTiles: false,
+	hasPups: false,
+	hasDiagonalMovement: false,
+	hasUseBombs: false,
+	hasMemorizeMaps: false,
+	hasTypeFast: false,
+	hasNotGrab: false,
+	hasMacro: false,
+	hasKiss: false,
+	hasSnipe: false,
+	hasJuke: false,
+	hasTimePups: false,
+	hasTagproLead: false,
+	hasPosition: false,
+	hasMumble: false,
+	hasDankMacros: false,
+	hasImportantCallOuts: false,
+	hasMicroJuke: false,
+	hasCheapMic: false,
+	hasBetterMic: false,
+	hasClearMic: false
+}
+
 function showStats() {
 	document.getElementById('wins').innerHTML = wins;
 	document.getElementById('losses').innerHTML = losses;
@@ -123,37 +154,7 @@ function deleteSave() {
 // ----------------------------------------------- //
 
 	// Functions
-	
-var upgrades = {
-	hasNavigateSpikes: false,
-	hasDefense: false,
-	hasType: false,
-	hasButton: false,
-	hasGrab: false,
-	hasContain: false,
-	hasRegrab: false,
-	hasTeamTiles: false,
-	hasPups: false,
-	hasDiagonalMovement: false,
-	hasUseBombs: false,
-	hasMemorizeMaps: false,
-	hasTypeFast: false,
-	hasNotGrab: false,
-	hasMacro: false,
-	hasKiss: false,
-	hasSnipe: false,
-	hasJuke: false,
-	hasTimePups: false,
-	hasTagproLead: false,
-	hasPosition: false,
-	hasMumble: false,
-	hasDankMacros: false,
-	hasImportantCallOuts: false,
-	hasMicroJuke: false,
-	hasCheapMic: false,
-	hasBetterMic: false,
-	hasClearMic: false
-}
+
 	
 // Upgrades (In order of when you get them)
 
