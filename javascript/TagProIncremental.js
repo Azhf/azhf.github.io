@@ -227,7 +227,7 @@ function deleteSave() {
 		showStats();
 		document.getElementById('log2').innerHTML = 'The save game has been deleted, please refresh to finish the process!';
 	}; 
-} */
+}
 
 // ----------------------------------------------- //
 
