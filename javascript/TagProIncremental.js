@@ -481,6 +481,7 @@ function purchaseClearMic() {
 		$('#ClearMic').remove();
 		upgrades.hasClearMic = true;
 		$('#upgrades:empty').parent().remove();
+		$('#uphead').remove();
 	};
 }
 
