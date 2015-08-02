@@ -177,56 +177,123 @@ function save() {
 
 function achievementCheck() {
 	if(games >= 1 && ach1 !== true) {
-		document.getElementById('log2').innerHTML = 'You have earned the achievement: Welcome to TagPro: Pub once!';
+		$("#achievementLog").show();
+		document.getElementById('achievementLog').innerHTML = 'You have earned the achievement: Welcome to TagPro: Pub once!';
 		ach1 = true;
+		window.setTimeout(function() {
+			document.getElementById('achievementLog').innerHTML = '';
+			$("#achievementLog").hide();
+		} 10000);
 	};
 	if(games >= 100 && ach2 !== true) {
+		$("#achievementLog").show();
 		document.getElementById('log2').innerHTML = 'You have earned the achievement: Pubster: Play 100 pubs!';
 		ach2 = true;
+		window.setTimeout(function() {
+			document.getElementById('achievementLog').innerHTML = '';
+			$("#achievementLog").hide();
+		} 10000);
 	};
 	if(games >= 1000 && ach3 !== true) {
+		$("#achievementLog").show();
 		document.getElementById('log2').innerHTML = 'You have earned the achievement: Pubmaster: Play 1000 pubs!';
 		ach3 = true;
+		window.setTimeout(function() {
+			document.getElementById('achievementLog').innerHTML = '';
+			$("#achievementLog").hide();
+		} 10000);
 	};
 	if(winPercent >= 55 && ach4 !== true && games >= 50) {
+		$("#achievementLog").show();
 		document.getElementById('log2').innerHTML = 'You have earned the achievement: Slasher: Obtain 55% Win Percentage!';
 		ach4 = true;
+		window.setTimeout(function() {
+			document.getElementById('achievementLog').innerHTML = '';
+			$("#achievementLog").hide();
+		} 10000);
 	};
 	if(winPercent >= 65 && ach5 !== true && games >= 50) {
+		$("#achievementLog").show();
 		document.getElementById('log2').innerHTML = 'You have earned the achievement: Working Class: Obtain 65% Win Percentage!';
 		ach5 = true;
+		window.setTimeout(function() {
+			document.getElementById('achievementLog').innerHTML = '';
+			$("#achievementLog").hide();
+		} 10000);
 	};
 	if(winPercent >= 75 && ach6 !== true && games >= 50) {
+		$("#achievementLog").show();
 		document.getElementById('log2').innerHTML = 'You have earned the achievement: Viking: Obtain 75% Win Percentage!';
 		ach6 = true;
+		window.setTimeout(function() {
+			document.getElementById('achievementLog').innerHTML = '';
+			$("#achievementLog").hide();
+		} 10000);
 	};
 	if(winPercent >= 90 && ach7 !== true && games >= 50) {
+		$("#achievementLog").show();
 		document.getElementById('log2').innerHTML = 'You have earned the achievement: Juke King: Obtain 90% Win Percentage!';
 		ach7 = true;
+		window.setTimeout(function() {
+			document.getElementById('achievementLog').innerHTML = '';
+			$("#achievementLog").hide();
+		} 10000);
 	};
 	if(streak >= 5 && ach8 !== true) {
+		$("#achievementLog").show();
 		document.getElementById('log2').innerHTML = 'You have earned the achievement: Good Streak: Obtain a 5 win streak!';
 		ach8 = true;
+		window.setTimeout(function() {
+			document.getElementById('achievementLog').innerHTML = '';
+			$("#achievementLog").hide();
+		} 10000);
 	};
 	if(streak >= 20 && ach9 !== true) {
+		$("#achievementLog").show();
 		document.getElementById('log2').innerHTML = 'You have earned the achievement: Great Streak: Obtain a 20 win streak!';
 		ach9 = true;
+		window.setTimeout(function() {
+			document.getElementById('achievementLog').innerHTML = '';
+			$("#achievementLog").hide();
+		} 10000);
 	};
 	if(streak >= 50 && ach10 !== true) {
+		$("#achievementLog").show();
 		document.getElementById('log2').innerHTML = 'You have earned the achievement: Insane Streak: Obtain a 50 win streak!';
 		ach10 = true;
+		window.setTimeout(function() {
+			document.getElementById('achievementLog').innerHTML = '';
+			$("#achievementLog").hide();
+		} 10000);
 	};
 	if(upgrades.hasDankMacros = true && ach11 !== true) {
+		$("#achievementLog").show();
 		document.getElementById('log2').innerHTML = 'You have earned the achievement: Memecros: Obtain dank macros!';
 		ach11 = true;
+		window.setTimeout(function() {
+		$("#achievementLog").show();
+			document.getElementById('achievementLog').innerHTML = '';
+			$("#achievementLog").hide();
+		} 10000);
 	};
 	if(upgrades.hasRegrab = true && ach12 !== true) {
+		$("#achievementLog").show();
 		document.getElementById('log2').innerHTML = 'You have earned the achievement: Learn to regrab: Self explanatory.!';
 		ach12 = true;
+		window.setTimeout(function() {
+		$("#achievementLog").show();
+			document.getElementById('achievementLog').innerHTML = '';
+			$("#achievementLog").hide();
+		} 10000);
 	};
 	if(upgrades.hasClearMic = true && ach13 !== true) {
+		$("#achievementLog").show();
 		document.getElementById('log2').innerHTML = 'You have earned the achievement: All mics: Self explanatory.!';
 		ach13 = true;
+		window.setTimeout(function() {
+			document.getElementById('achievementLog').innerHTML = '';
+			$("#achievementLog").hide();
+		} 10000);
 	};
 }
 
