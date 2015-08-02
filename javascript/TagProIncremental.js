@@ -115,6 +115,20 @@ function maxTC() {
 	maxTagCoins = max - tcSpent;
 }
 
+var ach1 = false;
+var ach2 = false;
+var ach3 = false;
+var ach4 = false;
+var ach5 = false;
+var ach6 = false;
+var ach7 = false;
+var ach8 = false;
+var ach9 = false;
+var ach10 = false;
+var ach11 = false;
+var ach12 = false;
+var ach13 = false;
+
 // Savegame
 
 function save() {
@@ -173,20 +187,6 @@ function save() {
 	localStorage.setItem("TPsaveGame",JSON.stringify(saveGame));
 	document.getElementById('log2').innerHTML = 'The game has been saved.';
 }
-
-var ach1 = false;
-var ach2 = false;
-var ach3 = false;
-var ach4 = false;
-var ach5 = false;
-var ach6 = false;
-var ach7 = false;
-var ach8 = false;
-var ach9 = false;
-var ach10 = false;
-var ach11 = false;
-var ach12 = false;
-var ach13 = false;
 
 function achievementCheck() {
 	if(games >= 1 && ach1 !== true) {
