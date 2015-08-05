@@ -16,6 +16,10 @@ $(document).ready(function(){
 	$("#NotGrab").hide();
 	$("#Juke").hide();
 	$("#MicroJuke").hide();
+    $( "#log" ).draggable();
+    $( "#upgrades" ).draggable();
+    $( "#stats" ).draggable();
+    $( "#settings" ).draggable();
 });
 
 // Wins and losses
