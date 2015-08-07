@@ -1316,7 +1316,7 @@ function pubRicochet(ricochetSkill) {														// Ricochet
 			}
 		}
 	}
-	degreesCalc();
+	degreeCheck();
 	winPercent2();
 }
 
@@ -1377,7 +1377,7 @@ function pubVelocity(velocitySkill) {														// velocity
 			}
 		}
 	}
-	degreesCalc();
+	degreeCheck();
 	winPercent2();
 }
 
@@ -1434,7 +1434,7 @@ function pubWormy(wormySkill) {														// wormy
 			}
 		}
 	}
-	degreesCalc();
+	degreeCheck();
 	winPercent2();
 }
 
@@ -1491,7 +1491,7 @@ function pubCloud(cloudSkill) {														// cloud
 			}
 		}
 	}
-	degreesCalc();
+	degreeCheck();
 	winPercent2();
 }
 
@@ -1548,7 +1548,7 @@ function pubCommandCenter(commandCenterSkill) {														// commandCenter
 			}
 		}
 	}
-	degreesCalc();
+	degreeCheck();
 	winPercent2();
 }
 
@@ -1605,7 +1605,7 @@ function pubSmirk(smirkSkill) {														// smirk
 			}
 		}
 	}
-	degreesCalc();
+	degreeCheck();
 	winPercent2();
 }
 
@@ -1662,7 +1662,7 @@ function pubBoombox(boomboxSkill) {														// boombox
 			}
 		}
 	}
-	degreesCalc();
+	degreeCheck();
 	winPercent2();
 }
 
@@ -1719,7 +1719,7 @@ function pubIron(ironSkill) {														// iron
 			}
 		}
 	}
-	degreesCalc();
+	degreeCheck();
 	winPercent2();
 }
 
@@ -1776,7 +1776,7 @@ function pubGeoKoala(geoKoalaSkill) {														// geoKoala
 			}
 		}
 	}
-	degreesCalc();
+	degreeCheck();
 	winPercent2();
 }
 
@@ -1833,7 +1833,7 @@ function pubConstriction(constrictionSkill) {														// constriction
 			}
 		}
 	}
-	degreesCalc();
+	degreeCheck();
 	winPercent2();
 }
 
@@ -1890,7 +1890,7 @@ function pubHornswoggle(hornswoggleSkill) {														// hornswoggle
 			}
 		}
 	}
-	degreesCalc();
+	degreeCheck();
 	winPercent2();
 }
 
@@ -1947,7 +1947,7 @@ function pubWomboCombo(womboComboSkill) {														// womboCombo
 			}
 		}
 	}
-	degreesCalc();
+	degreeCheck();
 	winPercent2();
 }
 
@@ -2004,7 +2004,7 @@ function pubDraft(draftSkill) {														// draft
 			}
 		}
 	}
-	degreesCalc();
+	degreeCheck();
 	winPercent2();
 }
 
@@ -2061,7 +2061,7 @@ function pubTransilio(transilioSkill) {														// transilio
 			}
 		}
 	}
-	degreesCalc();
+	degreeCheck();
 	winPercent2();
 }
 
@@ -2118,7 +2118,7 @@ function pubPilot(pilotSkill) {														// pilot
 			}
 		}
 	}
-	degreesCalc();
+	degreeCheck();
 	winPercent2();
 }
 
@@ -2175,7 +2175,7 @@ function pubbulldog(bulldogSkill) {														// bulldog
 			}
 		}
 	}
-	degreesCalc();
+	degreeCheck();
 	winPercent2();
 }
 
@@ -2232,7 +2232,7 @@ function pubUltraDrive(ultraDriveSkill) {														// ultraDrive
 			}
 		}
 	}
-	degreesCalc();
+	degreeCheck();
 	winPercent2();
 }
 
@@ -2289,7 +2289,7 @@ function pubEmerald(emeraldSkill) {														// emerald
 			}
 		}
 	}
-	degreesCalc();
+	degreeCheck();
 	winPercent2();
 }
 
@@ -2346,7 +2346,7 @@ function pubPlatypus(platypusSkill) {														// platypus
 			}
 		}
 	}
-	degreesCalc();
+	degreeCheck();
 	winPercent2();
 }
 
@@ -2403,7 +2403,7 @@ function pubDz4(dz4Skill) {														// dz4
 			}
 		}
 	}
-	degreesCalc();
+	degreeCheck();
 	winPercent2();
 }
 
@@ -2460,7 +2460,7 @@ function pubRenegade(renegadeSkill) {														// renegade
 			}
 		}
 	}
-	degreesCalc();
+	degreeCheck();
 	winPercent2();
 }
 
@@ -2517,7 +2517,7 @@ function pubHub(hubSkill) {														// hub
 			}
 		}
 	}
-	degreesCalc();
+	degreeCheck();
 	winPercent2();
 }
 function selectPub() {
