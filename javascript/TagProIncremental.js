@@ -1085,13 +1085,13 @@ function purchaseClearMic() {
 
 // Required	
 
-function degreesCalc() {
+/* function degreesCalc() {
 	if (degreeProgress === winsNeeded) {
 		degreeProgress = 0;
 		degrees = degrees + 1;
 		// winsNeeded = // PUT THE TAGPRO DEGREE WINS NEEDED CALCULATION ALGORITHM THINGY HERE
 	}
-}
+} */
 
 function winPercent2() {
 	var winPercUnrounded = (wins / games) * 100;
@@ -2601,4 +2601,5 @@ function selectPub() {
 				};
 	showStats();
 	maxTC();
+	degreeCheck();
 }
