@@ -319,7 +319,7 @@ function degreeCheck() {
 	if (wins > 631 && wins < 660) {
 		degrees = 52;
 	}
-	if (wins >  && wins < 689) {
+	if (wins > 659 && wins < 689) {
 		degrees = 53;
 	}
 	if (wins > 688 && wins < 719) {
