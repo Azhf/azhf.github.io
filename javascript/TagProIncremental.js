@@ -102,6 +102,28 @@ var upgrades = {
 	hasClearMic: false
 }
 
+var flair = {
+	bacon: false,
+	moon: false,
+	snowflake: false,
+	dolphin: false,
+	alien: false,
+	roadSign: false,
+	peaceSign: false,
+	fluxCapacitor: false,
+	microphone: false,
+	boiling: false,
+	dalmatians: false,
+	abc: false,
+	love: false,
+	pokemon: false,
+	phi: false,
+	uturn: false,
+	world: false,
+	bowlingBall: false,
+	pi: false
+}
+
 function showStats() {
 	document.getElementById('wins').innerHTML = wins;
 	document.getElementById('losses').innerHTML = losses;
@@ -110,6 +132,7 @@ function showStats() {
 	document.getElementById('streak').innerHTML = streak;
 	document.getElementById('winpercent').innerHTML = winPercent;
 	document.getElementById('tagcoins').innerHTML = tagCoins;
+	document.getElementById('degrees').innerHTML = degrees;
 }
 
 var tcSpent = 0;
@@ -133,6 +156,319 @@ var ach10 = false;
 var ach11 = false;
 var ach12 = false;
 var ach13 = false;
+
+function degreeCheck() {
+	if (wins > 0 && wins < 2) {
+		degrees = 1;
+	}
+	if (wins > 1 && wins < 4) {
+		degrees = 2;
+	}
+	if (wins > 3 && wins < 6) {
+		degrees = 3;
+	}
+	if (wins > 5 && wins < 9) {
+		degrees = 4;
+	}
+	if (wins > 8 && wins < 11){
+		degrees = 5;
+	}
+	if (wins > 10 && wins < 14) {
+		degrees = 6;
+		flair.bacon = true;
+	}
+	if (wins > 13 && wins < 17) {
+		degrees = 7;
+	}
+	if (wins > 16 && wins < 21) {
+		degrees = 8;
+	}
+	if (wins > 20 && wins < 24) {
+		degrees = 9;
+	}
+	if (wins > 23 && wins < 28) {
+		degrees = 10;
+	}
+	if (wins > 27 && wins < 33) {
+		degrees = 11;
+		flair.moon = true;
+	}
+	if (wins > 32 && wins < 37) {
+		degrees = 12;
+	}
+	if (wins > 36 && wins < 42) {
+		degrees = 13;
+	}
+	if (wins > 41 && wins < 48) {
+		degrees = 14;
+	}
+	if (wins > 47 && wins < 54) {
+		degrees = 15;
+	}
+	if (wins > 53 && wins < 60) {
+		degrees = 16;
+	}
+	if (wins > 59 && wins < 66) {
+		degrees = 17;
+	}
+	if (wins > 65 && wins < 73) {
+		degrees = 18;
+	}
+	if (wins > 72 && wins < 81) {
+		degrees = 19;
+	}
+	if (wins > 80 && wins < 89) {
+		degrees = 20;
+	}
+	if (wins > 88 && wins < 97) {
+		degrees = 21;
+	}
+	if (wins > 96 && wins < 106) {
+		degrees = 22;
+	}
+	if (wins > 105 && wins < 116) {
+		degrees = 23;
+	}
+	if (wins > 115 && wins < 126) {
+		degrees = 24;
+	}
+	if (wins > 125 && wins < 136) {
+		degrees = 25;
+	}
+	if (wins > 135 && wins < 147) {
+		degrees = 26;
+	}
+	if (wins > 146 && wins < 159) {
+		degrees = 27;
+	}
+	if (wins > 158 && wins < 171) {
+		degrees = 28;
+	}
+	if (wins > 170 && wins < 184) {
+		degrees = 29;
+	}
+	if (wins > 183 && wins < 197) {
+		degrees = 30;
+	}
+	if (wins > 196 && wins < 211) {
+		degrees = 31;
+	}
+	if (wins > 210 && wins < 226) {
+		degrees = 32;
+		flair.snowflake = true;
+	}
+	if (wins > 225 && wins < 241) {
+		degrees = 33;
+	}
+	if (wins > 240 && wins < 257) {
+		degrees = 34;
+	}
+	if (wins > 256 && wins < 274) {
+		degrees = 35;
+	}
+	if (wins > 273 && wins < 291) {
+		degrees = 36;
+	}
+	if (wins > 290 && wins < 309) {
+		degrees = 37;
+	}
+	if (wins > 308 && wins < 327) {
+		degrees = 38;
+	}
+	if (wins > 326 && wins < 346) {
+		degrees = 39;
+	}
+	if (wins > 345 && wins < 366) {
+		degrees = 40;
+	}
+	if (wins > 365 && wins < 387) {
+		degrees = 41;
+	}
+	if (wins > 386 && wins < 408) {
+		degrees = 42;
+		flair.dolphin = true;
+	}
+	if (wins > 407 && wins < 430) {
+		degrees = 43;
+	}
+	if (wins > 429 && wins < 453) {
+		degrees = 44;
+	}
+	if (wins > 452 && wins < 476) {
+		degrees = 45;
+	}
+	if (wins > 475 && wins < 500) {
+		degrees = 46;
+	}
+	if (wins > 499 && wins < 525) {
+		degrees = 47;
+	}
+	if (wins > 524 && wins < 551) {
+		degrees = 48;
+	}
+	if (wins > 550 && wins < 577) {
+		degrees = 49;
+	}
+	if (wins > 576 && wins < 604) {
+		degrees = 50;
+	}
+	if (wins > 603 && wins < 632) {
+		degrees = 51;
+		flair.alien = true;
+	}
+	if (wins > 631 && wins < 660) {
+		degrees = 52;
+	}
+	if (wins >  && wins < 689) {
+		degrees = 53;
+	}
+	if (wins > 688 && wins < 719) {
+		degrees = 54;
+	}
+	if (wins > 718 && wins < 749) {
+		degrees = 55;
+	}
+	if (wins > 748 && wins < 780) {
+		degrees = 56;
+	}
+	if (wins > 779 && wins < 812) {
+		degrees = 57;
+	}
+	if (wins > 811 && wins < 845) {
+		degrees = 58;
+	}
+	if (wins > 844 && wins < 878) {
+		degrees = 59;
+	}
+	if (wins > 877 && wins < 912) {
+		degrees = 60;
+	}
+	if (wins > 911 && wins < 947) {
+		degrees = 61;
+	}
+	if (wins > 946 && wins < 982) {
+		degrees = 62;
+	}
+	if (wins > 981 && wins < 1018) {
+		degrees = 63;
+	}
+	if (wins > 1017 && wins < 1054) {
+		degrees = 64;
+	}
+	if (wins > 1053 && wins < 1091) {
+		degrees = 65;
+	}
+	if (wins > 1090 && wins < 1129) {
+		degrees = 66;
+		flair.roadSign = true;
+	}
+	if (wins > 1128 && wins < 1168) {
+		degrees = 67;
+	}
+	if (wins > 1167 && wins < 1207) {
+		degrees = 68;
+	}
+	if (wins > 1206 && wins < 1247) {
+		degrees = 69;
+		flair.peaceSign = true;
+	}
+	if (wins > 1246 && wins < 1287) {
+		degrees = 70;
+	}
+	if (wins > 1286 && wins < 1328) {
+		degrees = 71;
+	}
+	if (wins > 1327 && wins < 1369) {
+		degrees = 72;
+	}
+	if (wins > 1368 && wins < 1412) {
+		degrees = 73;
+	}
+	if (wins > 1411 && wins < 1454) {
+		degrees = 74;
+	}
+	if (wins > 1453 && wins < 1498) {
+		degrees = 75;
+	}
+	if (wins > 1497 && wins < 1541) {
+		degrees = 76;
+	}
+	if (wins > 1540 && wins < 1586) {
+		degrees = 77;
+	}
+	if (wins > 1585 && wins < 1631) {
+		degrees = 78;
+	}
+	if (wins > 1630 && wins < 1676) {
+		degrees = 79;
+	}
+	if (wins > 1675 && wins < 1722) {
+		degrees = 80;
+	}
+	if (wins > 1721 && wins < 1769) {
+		degrees = 81;
+	}
+	if (wins > 1768 && wins < 1816) {
+		degrees = 82;
+	}
+	if (wins > 1815 && wins < 1864) {
+		degrees = 83;
+	}
+	if (wins > 1863 && wins < 1912) {
+		degrees = 84;
+	}
+	if (wins > 1911 && wins < 1960) {
+		degrees = 85;
+	}
+	if (wins > 1959 && wins < 2009) {
+		degrees = 86;
+	}
+	if (wins > 2008 && wins < 2059) {
+		degrees = 87;
+	}
+	if (wins > 2058 && wins < 2109) {
+		degrees = 88;
+		flair.fluxCapacitor = true;
+	}
+	if (wins > 2108 && wins < 2159) {
+		degrees = 89;
+	}
+	if (wins > 2158 && wins < 2210) {
+		degrees = 90;
+	}
+	if (wins > 2209 && wins < 2261) {
+		degrees = 91;
+	}
+	if (wins > 2260 && wins < 2313) {
+		degrees = 92;
+	}
+	if (wins > 2312 && wins < 2365) {
+		degrees = 93;
+	}
+	if (wins > 2364 && wins < 2418) {
+		degrees = 94;
+	}
+	if (wins > 2417 && wins < 2471) {
+		degrees = 95;
+	}
+	if (wins > 2470 && wins < 2524) {
+		degrees = 96;
+	}
+	if (wins > 2523 && wins < 2578) {
+		degrees = 97;
+	}
+	if (wins > 2577 && wins < 2632) {
+		degrees = 98;
+		flair.microphone = true;
+	}
+	if (wins > 2631 && wins < 2687) {
+		degrees = 99;
+	}
+	if (wins > 2686 && wins < 2741) {
+		degrees = 100;
+		flair.boiling = true;
+	}
+}
 
 // Savegame
 
@@ -175,6 +511,7 @@ function save() {
 	upgrades: upgrades,
 	maxTagCoins: maxTagCoins,
 	tcSpent: tcSpent,
+	flair: flair,
 	};
 	localStorage.setItem("TPsaveGame",JSON.stringify(saveGame));
 	document.getElementById('log2').innerHTML = 'The game has been saved.';
@@ -915,6 +1252,7 @@ function load() {
 	if (typeof savegame.ach11 !== "undefined") ach11 = savegame.ach11;
 	if (typeof savegame.ach12 !== "undefined") ach12 = savegame.ach12;
 	if (typeof savegame.ach13 !== "undefined") ach13 = savegame.ach13;
+	if (typeof savegame.flair !== "undefined") flair = savegame.flair;
 	document.getElementById('log2').innerHTML = 'The game has been loaded.';
 	showStats();
 	upgradeCheck();
