@@ -3266,4 +3266,6 @@ function selectPractice() {
 						practiceHub();
 					}
 				};
+				
+		document.getElementById('log2').innerHTML = 'You practiced!';
 }

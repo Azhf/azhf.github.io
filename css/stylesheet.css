@@ -77,8 +77,8 @@ body {
         -moz-border-radius: 10px;
         border-radius: 10px;
 		position: fixed;
-		right: 5px;
-		top: 5px;
+		right: 15px;
+		top: 75px;
 }
 
 #settings {
