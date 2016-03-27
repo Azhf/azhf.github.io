@@ -507,7 +507,7 @@ function save() {
 	dz4Skill: dz4Skill,
 	renegadeSkill: renegadeSkill,
 	hubSkill: hubSkill,
-	tagCoins: tagCoins,
+	tagCoins: tagCoins,								//Other
 	upgrades: upgrades,
 	maxTagCoins: maxTagCoins,
 	tcSpent: tcSpent,
@@ -1197,6 +1197,8 @@ function upgradeCheck() {
 		$('#ClearMic').remove();
 	};
 	$('#upgrades:empty').parent().remove();
+	if ( $.trim( $('#upgrades').text() ) == "")
+    $('.parent').remove();
 }
 
 // LOADING
