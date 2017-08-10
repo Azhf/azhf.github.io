@@ -118,7 +118,8 @@ body {
 }
 
 #build {
-	color: #4286f4;
+	color: black;
+	background-color: #4286f4;
 	font: sans-serif;
 	height: 800px;
 	width: 500px;
