@@ -135,7 +135,7 @@ body {
 
 .messagesent {
    width: 120px;
-   height: 80px;
+   height: auto;
    background: red;
    position: relative;
    -moz-border-radius:    10px;
@@ -151,6 +151,7 @@ body {
 	border-style: solid;
 	border-width: 1px;
 	border-color: #3266ba;
+	padding-right: 5px;
 	color: white;
 	font-size: 28px;
 }
