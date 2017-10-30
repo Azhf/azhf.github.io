@@ -134,10 +134,6 @@ body {
 }
 
 .messagesent {
-
-}
-
-.messagesent {
    width: 120px;
    height: 80px;
    background: red;
@@ -155,27 +151,8 @@ body {
 	border-style: solid;
 	border-width: 1px;
 	border-color: #3266ba;
-}
-.messagesent:before {
-   content:"";
-   position: absolute;
-   right: 100%;
-   top: 26px;
-   width: 0;
-   height: 0;
-   border-top: 13px solid transparent;
-   border-right: 26px solid red;
-   border-bottom: 13px solid transparent;
-	overflow:auto;
-	text-align: right;
-	float: right;
-	color: black;
-	background: #4286f4;
-	font: sans-serif;
-	margin: 2px;
-	border-style: solid;
-	border-width: 1px;
-	border-color: #3266ba;
+	color: white;
+	font-size: 28px;
 }
 
 
